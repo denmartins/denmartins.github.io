@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-I am Denis Mayr Lima Martins, a researcher with extensive experience in Artificial Intelligence and Data Science. My academic and professional journey combines high-impact research, international collaborations, and industry experience, developing innovative solutions that bridge theory and practice.
+I am Denis M. L. Martins, a researcher with extensive experience in Artificial Intelligence and Data Science. My academic and professional journey combines high-impact research, international collaborations, and industry experience, developing innovative solutions that bridge theory and practice.
 
 With a strong background in applied research and technological development, I have led interdisciplinary projects involving Machine Learning and Data-intense systems. I have also worked as a senior researcher at the Samsung R&D Institute Brazil, where I contributed to the design and implementation of AI models for mobile and wearable devices for fitness and healthcare applications.
 
