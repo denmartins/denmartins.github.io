@@ -21,7 +21,7 @@ repository               : "academicpages/academicpages.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "denmartins.jpeg"
+  avatar           : "denmartins.jpg"
   name             : "Denis Martins"
   pronouns         : # example: "she/her"  
   bio              : "I am a passionate AI esearcher working on data-intense systems and machine learning."
