@@ -13,4 +13,4 @@ With a strong background in applied research and technological development, I ha
 
 My mission is to transform data into strategic knowledge, helping companies, researchers, and professionals apply AI and Data Science to drive innovation and real-world impact. Additionally, I am a speaker and mentor, guiding talent development and fostering the next generation of specialists in the field.
 
-Here, I share insights into my research, projects, and perspectives on the latest technological trends shaping the future of computing. Welcome! 🚀
+Here, I share insights into my research, projects, and perspectives on the latest technological trends shaping the future of computing. Welcome!
