@@ -18,7 +18,7 @@ Education
 Work experience
 ======
 * 2023-2025: Senior AI Researcher Specialist
-  * Samsung R\&D Institute Brazil
+  * Samsung R&D Institute Brazil
   * Duties includes: Machine Learning Engineering, Data Analysis, Software Engineering
 
 * 2021-2023: Post-doc Researcher
