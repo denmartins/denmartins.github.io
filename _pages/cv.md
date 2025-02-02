@@ -24,17 +24,17 @@ Work experience
 * 2021-2023: Post-doc Researcher
   * University of Münster
   * Duties included: Teaching, Grant Preparation, Data Preparation and Analysis, Experiment Management
-  * Supervisor:[Prof. Dr. Fabian Gieseke](https://www.wi.uni-muenster.de/department/mlde/people/fabian-gieseke)
+  * Supervisor: [Prof. Dr. Fabian Gieseke](https://www.wi.uni-muenster.de/department/mlde/people/fabian-gieseke)
 
 * 2020-2021: Post-doc Researcher
   * University of Münster
   * Duties included: Teaching, Data Preparation and Analysis, Experiment Management
-  * Supervisor:[Prof. Dr. Gottfried Vossen](https://www.wi.uni-muenster.de/department/former-groups/dbis/people/gottfried-vossen)
+  * Supervisor: [Prof. Dr. Gottfried Vossen](https://www.wi.uni-muenster.de/department/former-groups/dbis/people/gottfried-vossen)
 
 * 2015-2021: Research Assistant
   * University of Münster
   * Duties included: Teaching, Data Preparation and Analysis
-  * Supervisor:[Prof. Dr. Gottfried Vossen](https://www.wi.uni-muenster.de/department/former-groups/dbis/people/gottfried-vossen)
+  * Supervisor: [Prof. Dr. Gottfried Vossen](https://www.wi.uni-muenster.de/department/former-groups/dbis/people/gottfried-vossen)
 
 * 2014-2015: Software Engineer
   * Stefanini Document Solutions
@@ -63,14 +63,14 @@ Certification and Awards
 * MICROSOFT Certified Technology Specialist (MCTS): SharePoint Application Dev. 2011
 * MICROSOFT Certified Professional: .NET Framework 2.0 Web-based Client Dev. 2010
 
-<!-- 
-Publications
+
+<!-- Publications
 ======
   <ul>{% for post in site.publications reversed %}
     {% include archive-single-cv.html %}
-  {% endfor %}</ul>
+  {% endfor %}</ul> -->
   
-Talks
+<!-- Talks
 ======
   <ul>{% for post in site.talks reversed %}
     {% include archive-single-talk-cv.html  %}
@@ -81,7 +81,4 @@ Teaching
   <ul>{% for post in site.teaching reversed %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
+
