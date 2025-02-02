@@ -9,6 +9,6 @@ location: "Münster, Germany"
 ---
 
 
-This course addresses how hardware and software systems are built, using abstraction, and how they work together. Students are guided to build a complete, general-purpose, and working computer system from ground up, starting with elementary logic gates. [https://www.wi.uni-muenster.de/student-affairs/course-offerings/352813](Official course website).
+This course addresses how hardware and software systems are built, using abstraction, and how they work together. Students are guided to build a complete, general-purpose, and working computer system from ground up, starting with elementary logic gates. [Official course website](https://www.wi.uni-muenster.de/student-affairs/course-offerings/352813).
 
 

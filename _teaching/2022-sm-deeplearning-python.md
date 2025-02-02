@@ -8,6 +8,6 @@ date: 2022-02-01
 location: "Münster, Germany"
 ---
 
-The Deep Learning with Python specialization module offers an in-depth exploration of neural networks, optimization algorithms, using popular Python libraries like TensorFlow and PyTorch. Through hands-on projects, participants gain practical experience in building and evaluating deep learning models for data science applications. [https://www.wi.uni-muenster.de/student-affairs/course-offerings/353827](Official course website).
+The Deep Learning with Python specialization module offers an in-depth exploration of neural networks, optimization algorithms, using popular Python libraries like TensorFlow and PyTorch. Through hands-on projects, participants gain practical experience in building and evaluating deep learning models for data science applications. [Official course website](https://www.wi.uni-muenster.de/student-affairs/course-offerings/353827).
 
 
