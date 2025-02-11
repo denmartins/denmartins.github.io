@@ -13,7 +13,7 @@ O curso de Fundamentos de Programação em Python tem como objetivo capacitar os
 
 # Slides de aula
 
-- [Visão Geral do Curso](https://denmartins.github.io/files/lecture/01-FP-VisaoGeral.pdf)
+- [Visão Geral do Curso](https://denmartins.github.io/files/lectures/01-FP-VisaoGeral.pdf)
 
 # Jupyter Notebooks
 
