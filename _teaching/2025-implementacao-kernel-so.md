@@ -27,3 +27,4 @@ O curso de Implementação de Núcleo de Sistema Operacional permite estudar e c
 # Slides de aula
 
 - [Visão Geral do Curso](https://denmartins.github.io/files/lectures/01-NS0-VisaoGeral.pdf)
+- [Command Line Murders](https://denmartins.github.io/files/lectures/Pratica-CommandLineMurders.pdf)
