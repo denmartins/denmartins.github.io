@@ -32,3 +32,4 @@ O curso de Projetos de Sistemas Operacionais tem como objetivo estudar component
 
 - [Visão Geral do Curso](https://denmartins.github.io/files/lectures/01-OS-VisaoGeral.pdf)
 - [Command Line Murders](https://denmartins.github.io/files/lectures/Pratica-CommandLineMurders.pdf)
+- [OS Intro](https://denmartins.github.io/files/lectures/02-OS-Intro.pdf)
