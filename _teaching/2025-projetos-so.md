@@ -10,17 +10,22 @@ location: "Campinas, Brazil"
 
 O curso de Projetos de Sistemas Operacionais tem como objetivo estudar componentes e técnicas de gerenciamento de sistemas operacionais modernos, incluindo tópicos como processos, threads, escalonamento, entrada/saída e memória virtual.
 
+# 📌 O que vamos estudar?
 
-# Ementa
-**Módulo 1**
-- Introdução a Sistemas Operacionais.
-- Interrupções, Processos e Threads.
-- Escalonamento e Concorrência.
+Nesta disciplina, vamos aprofundar os seguintes tópicos essenciais:
 
-**Módulo 2**
-- Gerenciamento de Memória Virtual.
-- Sistemas de Arquivos.
-- Sistemas Distribuídos.
+- ✅ Conceitos fundamentais de Sistemas Operacionais - Suas funções principais e arquitetura geral.
+- ✅ Processos e Comunicação entre Processos – Como os processos são criados, gerenciados e como interagem.
+- ✅ Threads – Implementação e gerenciamento de múltiplas threads para execução concorrente.
+- ✅ Espaços de Endereçamento e Gerenciamento de Memória – Como a memória é organizada e alocada para processos.
+- ✅ Sistemas de Arquivos – Estrutura, funcionamento e acesso aos dados armazenados.
+- ✅ Sistemas de Entrada e Saída – Interação com dispositivos e eficiência no gerenciamento de recursos.
+
+# 💡 O que esperar do curso?
+- Aulas dinâmicas combinando teoria e prática.
+- Exercícios de programação e uso de comandos de sistema para consolidar o aprendizado.
+- Projetos práticos para simular desafios reais de um sistema operacional.
+- Desenvolvimento de habilidades essenciais para quem deseja atuar com infraestrutura, desenvolvimento de software ou pesquisa na área.
 
 # Bibliografia
  
