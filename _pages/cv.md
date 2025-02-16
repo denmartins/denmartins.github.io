@@ -9,6 +9,9 @@ redirect_from:
 
 {% include base_path %}
 
+**Senior AI and Data Specialist | Professor | Researcher**
+
+
 Education
 ======
 * Ph.D in Computer Science, University of Münster, 2020
@@ -17,16 +20,20 @@ Education
 
 Work experience
 ======
+* 2025-Current: Professor 
+  * Pontifícia Universidade Católica de Campinas (PUCC)
+  * Department of Computer Engineering, Data Science & AI
+
 * 2023-2025: Senior AI Researcher Specialist
   * Samsung R&D Institute Brazil
-  * Duties includes: Machine Learning Engineering, Data Analysis, Software Engineering
+  * Duties included: Machine Learning Engineering, Data Analysis, Software Engineering
 
-* 2021-2023: Post-doc Researcher
+* 2021-2023: Postdoc Researcher
   * University of Münster
   * Duties included: Teaching, Grant Preparation, Data Preparation and Analysis, Experiment Management
   * Supervisor: [Prof. Dr. Fabian Gieseke](https://www.wi.uni-muenster.de/department/mlde/people/fabian-gieseke)
 
-* 2020-2021: Post-doc Researcher
+* 2020-2021: Postdoc Researcher
   * University of Münster
   * Duties included: Teaching, Data Preparation and Analysis, Experiment Management
   * Supervisor: [Prof. Dr. Gottfried Vossen](https://www.wi.uni-muenster.de/department/former-groups/dbis/people/gottfried-vossen)
@@ -64,11 +71,15 @@ Certification and Awards
 * MICROSOFT Certified Professional: .NET Framework 2.0 Web-based Client Dev. 2010
 
 
-<!-- Publications
+Publications
 ======
-  <ul>{% for post in site.publications reversed %}
+  <!-- <ul>{% for post in site.publications reversed %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul> -->
+
+{% if site.author.googlescholar %}
+  <div class="wordwrap">You can find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
+{% endif %}
   
 <!-- Talks
 ======
