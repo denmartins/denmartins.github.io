@@ -9,7 +9,7 @@ redirect_from:
 
 {% include base_path %}
 
-**Senior AI and Data Specialist | Professor | Researcher**
+**Senior AI and Data Specialist, Professor, Researcher**
 
 
 Education
