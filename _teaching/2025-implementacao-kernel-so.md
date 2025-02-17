@@ -31,3 +31,4 @@ Nesta disciplina, vamos aprofundar os seguintes tópicos essenciais:
 
 - [Visão Geral do Curso](https://denmartins.github.io/files/lectures/01-NSO-VisaoGeral.pdf)
 - [Command Line Murders](https://denmartins.github.io/files/lectures/Pratica-CommandLineMurders.pdf)
+- [Revisão OS](https://denmartins.github.io/files/lectures/02-NSO-Revisao-Parte1.pdf)
