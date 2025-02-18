@@ -1,13 +1,16 @@
 ---
 layout: archive
-title: "Supervisions"
+title: "Thesis Supervisions"
 permalink: /supervisions/
 author_profile: true
 redirect_from:
   - /supervisions
 ---
 
-# Thesis Supervisions
+As thesis advisor, I guide students through **bachelor's and master's research projects**, focusing on topics in **machine learning, data science, databases, and intelligent systems**. My goal is to support students in developing **innovative and well-structured research** that contributes to academia and industry.
+
+Below, you will find a list of past and ongoing theses under my supervision.  
+
 
 ## [Master] 2023: Machine Learning for Cardinality Estimation in Relational Databases  
 🔗 [View Official Website](https://www.wi.uni-muenster.de/student-affairs/theses/topics/1468)
