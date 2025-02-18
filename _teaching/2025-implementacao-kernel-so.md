@@ -17,7 +17,7 @@ Nesta disciplina, vamos aprofundar os seguintes tópicos essenciais:
 - ✅ Introdução ao Núcleo de Sistema Operacional – Arquiteturas, estrutura e principais responsabilidades do kernel.
 - ✅ Gerenciamento de Processos e Threads – Como os processos e threads são criados, escalonados e sincronizados.
 - ✅ Espaço de Endereçamento e Gerenciamento de Memória – Técnicas como paginação, segmentação e alocação dinâmica.
-- ✅ Virtualização e Containerização – Como sistemas operacionais gerenciam ambientes isolados e eficientes para execução de aplicações.
+- ✅ Virtualização e Conteinerização – Como sistemas operacionais gerenciam ambientes isolados e eficientes para execução de aplicações.
 - ✅ Projetos Práticos – Implementação de funcionalidades essenciais do kernel.
 
 
