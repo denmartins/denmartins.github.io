@@ -38,4 +38,6 @@ Ao longo do curso, abordaremos os principais conceitos da programação, incluin
 
 # Jupyter Notebooks
 
-- [Introdução ao Jupyter Notebook](https://denmartins.github.io/files/notebooks/01-FP-ConceitosBasicos.ipynb)
+- [Introdução ao Jupyter Notebook](https://denmartins.github.io/files/notebooks/01-FP-ConceitosBasicos.ipynb) [pdf](https://denmartins.github.io/files/notebooks/01-FP-ConceitosBasicos.pdf)
+- [Variáveis e Tipos de Dados](https://denmartins.github.io/files/notebooks/02-FP-Variaveis-Tipos.ipynb) [pdf](https://denmartins.github.io/files/notebooks/02-FP-Variaveis-Tipos.pdf)
+-
