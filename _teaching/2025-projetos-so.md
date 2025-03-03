@@ -38,4 +38,5 @@ Nesta disciplina, vamos aprofundar os seguintes tópicos essenciais:
 - [Visão Geral do Curso](https://denmartins.github.io/files/lectures/01-OS-VisaoGeral.pdf)
 - [Command Line Murders](https://denmartins.github.io/files/lectures/Pratica-CommandLineMurders.pdf)
 - [OS Intro](https://denmartins.github.io/files/lectures/02-OS-Intro.pdf)
-- [Multitarefa](https://denmartins.github.io/files/lectures/03-OS-Multitarefa-Processos.pdf)
+- [Multitarefa: Processos](https://denmartins.github.io/files/lectures/03-OS-Multitarefa-Processos.pdf)
+- [Multitarefa: Threads](https://denmartins.github.io/files/lectures/04-OS-Multitarefa-Threads.pdf)
