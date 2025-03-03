@@ -41,3 +41,5 @@ Ao longo do curso, abordaremos os principais conceitos da programação, incluin
 - [Introdução ao Jupyter Notebook](https://denmartins.github.io/files/notebooks/01-FP-ConceitosBasicos.ipynb). Notebook em [pdf](https://denmartins.github.io/files/notebooks/01-FP-ConceitosBasicos.pdf)
 - [Variáveis e Tipos de Dados](https://denmartins.github.io/files/notebooks/02-FP-Variaveis-Tipos.ipynb). Notebook em [pdf](https://denmartins.github.io/files/notebooks/02-FP-Variaveis-Tipos.pdf)
 - [Estruturas Condicionais e de Repetição](https://denmartins.github.io/files/notebooks/03-FP-Estruturas-de-Controle-e-Loop.ipynb). Notebook em [pdf](https://denmartins.github.io/files/notebooks/03-FP-Estruturas-de-Controle-e-Loop.pdf)
+- [Trabalhando com Strings](https://denmartins.github.io/files/notebooks/04-FP-Strings.ipynb). Notebook em [pdf](https://denmartins.github.io/files/notebooks/04-FP-Strings.pdf)
+- [Manipulação de Arquivos](https://denmartins.github.io/files/notebooks/05-FP-Manipulacao-Arquivos.ipynb). Notebook em [pdf](https://denmartins.github.io/files/notebooks/05-FP-Manipulacao-Arquivos.pdf)
