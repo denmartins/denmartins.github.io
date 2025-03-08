@@ -62,7 +62,7 @@ Awards
 ======
 * Best Regular paper award: 15th ICCCI. 2023. [pdf](https://denmartins.github.io/files/certificates/ICCCI2023-Best-Regular-Paper.pdf)
 * Best Demo paper award: 31st ACM SIGSPATIAL, 2023. [pdf](https://denmartins.github.io/files/certificates/SIGSPATIAL2023-Best-Demo-Paper.pdf)
-* Best Evolutionary/Swarm Computation paper award: 6th IEEE LA-CCI, 2019.[pdf](https://denmartins.github.io/files/certificates/LACCI2019-Best-Paper-Award.pdf) 
+* Best Evolutionary/Swarm Computation paper award: 6th IEEE LA-CCI, 2019. [pdf](https://denmartins.github.io/files/certificates/LACCI2019-Best-Paper-Award.pdf) 
 
 Certification
 ======
