@@ -21,7 +21,7 @@ Education
 Work experience
 ======
 * 2025-Current: Professor 
-  * Pontifícia Universidade Católica de Campinas (PUCC)
+  * Pontifícia Universidade Católica de Campinas (PUC-Campinas)
   * Department of Computer Engineering, Data Science & AI
 
 * 2023-2025: Senior AI Researcher Specialist
