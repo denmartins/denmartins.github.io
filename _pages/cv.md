@@ -51,7 +51,6 @@ Work experience
   * Daccord Music Software
   * Duties included: Software Development, Prototyping
 
-
 Skills
 ======
 * Coding: Soft Skills Languages Python, SQL, PyTorch, Tensorflow, Scikit-Learn, Pandas, C#.NET, C/C++,
