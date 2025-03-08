@@ -59,17 +59,18 @@ PostgreSQL, MySQL, MSSQL, SQLite, MongoDB, HTML, CSS, JavaScript, Django.
 * Languages: Portuguese (Native), English (Fluent), German (Intermediate). 
 * Outro: Prototyping, Communication, Teamwork, Creativity, Academic Writing.
 
-
-Certification and Awards
+Awards
 ======
-* Best Regular paper award: 15th ICCCI. 2023
-* Best Demo paper award: 31st ACM SIGSPATIAL. 2023
-* Best Evolutionary/Swarm Computation paper award: 6th IEEE LA-CCI. 2019
-* STANFORD ONLINE – Machine Learning Course by Prof. Dr. Andrew Ng. 2016
-* MICROSOFT Certified Professional Developer (MCPD): SharePoint Developer. 2011
-* MICROSOFT Certified Technology Specialist (MCTS): SharePoint Application Dev. 2011
-* MICROSOFT Certified Professional: .NET Framework 2.0 Web-based Client Dev. 2010
+* Best Regular paper award: 15th ICCCI. 2023. [pdf](https://denmartins.github.io/files/certificates/ICCCI2023-Best-Regular-Paper.pdf)
+* Best Demo paper award: 31st ACM SIGSPATIAL, 2023. [pdf](https://denmartins.github.io/files/certificates/SIGSPATIAL2023-Best-Demo-Paper.pdf)
+* Best Evolutionary/Swarm Computation paper award: 6th IEEE LA-CCI, 2019.[pdf](https://denmartins.github.io/files/certificates/LACCI2019-Best-Paper-Award.pdf) 
 
+Certification
+======
+* STANFORD ONLINE – Machine Learning Course by Prof. Dr. Andrew Ng, 2016.
+* MICROSOFT Certified Professional Developer (MCPD): SharePoint Developer, 2011.
+* MICROSOFT Certified Technology Specialist (MCTS): SharePoint Application Dev, 2011.
+* MICROSOFT Certified Professional: .NET Framework 2.0 Web-based Client Dev, 2010.
 
 Publications
 ======
