@@ -28,4 +28,3 @@ O curso de Sistemas Computacionais tem como objetivo desenvolver a capacidade de
 # Slides de aula
 
 - [Visão Geral do Curso](https://denmartins.github.io/files/lectures/01-SC-VisaoGeral.pdf)
-- [Command Line Murders](https://denmartins.github.io/files/lectures/Pratica-CommandLineMurders.pdf)
