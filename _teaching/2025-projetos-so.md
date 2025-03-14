@@ -39,4 +39,5 @@ Nesta disciplina, vamos aprofundar os seguintes tópicos essenciais:
 - [Command Line Murders](https://denmartins.github.io/files/lectures/Pratica-CommandLineMurders.pdf)
 - [OS Intro](https://denmartins.github.io/files/lectures/02-OS-Intro.pdf)
 - [Multitarefa: Processos](https://denmartins.github.io/files/lectures/03-OS-Multitarefa-Processos.pdf)
+- [Processos em Linguagem C](https://denmartins.github.io/files/lectures/Processos-Material-Extra.pdf)
 - [Multitarefa: Threads](https://denmartins.github.io/files/lectures/04-OS-Multitarefa-Threads.pdf)
