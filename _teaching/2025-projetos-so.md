@@ -41,6 +41,6 @@ Nesta disciplina, vamos aprofundar os seguintes tópicos essenciais:
 - [Multitarefa: Processos](https://denmartins.github.io/files/lectures/03-OS-Multitarefa-Processos.pdf)
 - [Processos em Linguagem C](https://denmartins.github.io/files/lectures/Processos-Material-Extra.pdf)
 - [Multitarefa: Threads](https://denmartins.github.io/files/lectures/04-OS-Multitarefa-Threads.pdf)
-
+- [Threads em C](https://denmartins.github.io/files/lectures/OS-Threads-in-C.pdf)
 # Listas de Exercício
 - [Lista 1](https://denmartins.github.io/files/lectures/OS-Lista-1.pdf)
