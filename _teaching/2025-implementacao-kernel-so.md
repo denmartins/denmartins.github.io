@@ -33,3 +33,4 @@ Nesta disciplina, vamos aprofundar os seguintes tópicos essenciais:
 - [Command Line Murders](https://denmartins.github.io/files/lectures/Pratica-CommandLineMurders.pdf)
 - [Revisão SO: Parte 1 - Fundamentos e Processos](https://denmartins.github.io/files/lectures/02-NSO-Revisao-Parte1.pdf)
 - [Revisão SO: Parte 2 - Threads e Escalonamento](https://denmartins.github.io/files/lectures/03-NSO-Revisao-Parte2.pdf)
+- [Revisão SO: Parte 3 - Sincronização](https://denmartins.github.io/files/lectures/06-Sincronizacao.pdf)
