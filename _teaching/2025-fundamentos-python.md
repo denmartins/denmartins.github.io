@@ -35,6 +35,7 @@ Ao longo do curso, abordaremos os principais conceitos da programação, incluin
 # Slides de aula
 
 - [Visão Geral do Curso](https://denmartins.github.io/files/lectures/01-FP-VisaoGeral.pdf)
+- [Loops Aninhados - Exemplos](https://denmartins.github.io/files/lectures/FP-Exercicios-Loop-Aninhados.pdf)
 
 # Jupyter Notebooks
 
