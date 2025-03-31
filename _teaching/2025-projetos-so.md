@@ -43,6 +43,7 @@ Nesta disciplina, vamos aprofundar os seguintes tópicos essenciais:
 - [Multitarefa: Threads](https://denmartins.github.io/files/lectures/04-OS-Multitarefa-Threads.pdf)
 - [Threads em C](https://denmartins.github.io/files/lectures/OS-Threads-in-C.pdf)
 - [Escalonamento](https://denmartins.github.io/files/lectures/05-OS-Escalonamento.pdf)
+- [Sincronização](https://denmartins.github.io/files/lectures/SincronizacaoProcessos.pdf)
 
 # Listas de Exercício
 
