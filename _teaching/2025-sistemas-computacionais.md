@@ -29,3 +29,4 @@ O curso de Sistemas Computacionais tem como objetivo desenvolver a capacidade de
 
 - [Visão Geral do Curso](https://denmartins.github.io/files/lectures/01-SC-VisaoGeral.pdf)
 - [Introdução à Linguagem de Montagem](https://denmartins.github.io/files/lectures/SC-Intro-Assembly.pdf)
+- [Introdução aos Sistemas Operacionais](https://denmartins.github.io/files/lectures/03-SC-OS-Intro.pdf)
