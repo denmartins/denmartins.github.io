@@ -44,6 +44,7 @@ Nesta disciplina, vamos aprofundar os seguintes tópicos essenciais:
 - [Threads em C](https://denmartins.github.io/files/lectures/OS-Threads-in-C.pdf)
 - [Escalonamento](https://denmartins.github.io/files/lectures/05-OS-Escalonamento.pdf)
 - [Sincronização](https://denmartins.github.io/files/lectures/SincronizacaoProcessos.pdf)
+- [Comunicação Entre Processos](https://denmartins.github.io/files/lectures/07-OS-IPC.pdf)
 
 # Listas de Exercício
 
