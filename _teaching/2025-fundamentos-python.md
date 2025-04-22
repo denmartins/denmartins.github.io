@@ -41,11 +41,19 @@ Ao longo do curso, abordaremos os principais conceitos da programação, incluin
 
 # Jupyter Notebooks
 
-- [Introdução ao Jupyter Notebook](https://denmartins.github.io/files/notebooks/01-FP-ConceitosBasicos.ipynb). Notebook em [pdf](https://denmartins.github.io/files/notebooks/01-FP-ConceitosBasicos.pdf)
-- [Variáveis e Tipos de Dados](https://denmartins.github.io/files/notebooks/02-FP-Variaveis-Tipos.ipynb). Notebook em [pdf](https://denmartins.github.io/files/notebooks/02-FP-Variaveis-Tipos.pdf)
-- [Estruturas Condicionais e de Repetição](https://denmartins.github.io/files/notebooks/03-FP-Estruturas-de-Controle-e-Loop.ipynb). Notebook em [pdf](https://denmartins.github.io/files/notebooks/03-FP-Estruturas-de-Controle-e-Loop.pdf)
-- [Manipulação com Strings](https://denmartins.github.io/files/notebooks/04-FP-Strings.ipynb). Notebook em [pdf](https://denmartins.github.io/files/notebooks/04-FP-Strings.pdf). Slides em [pdf](https://denmartins.github.io/files/lectures/04-FP-Strings-Slides.pdf)
-- [Manipulação de Arquivos](https://denmartins.github.io/files/notebooks/05-FP-Manipulacao-Arquivos.ipynb). Notebook em [pdf](https://denmartins.github.io/files/notebooks/05-FP-Manipulacao-Arquivos.pdf)
+- [Introdução ao Jupyter Notebook](https://denmartins.github.io/files/notebooks/01-FP-ConceitosBasicos.ipynb)
+    - Notebook em [pdf](https://denmartins.github.io/files/notebooks/01-FP-ConceitosBasicos.pdf)
+- [Variáveis e Tipos de Dados](https://denmartins.github.io/files/notebooks/02-FP-Variaveis-Tipos.ipynb)
+    - Notebook em [pdf](https://denmartins.github.io/files/notebooks/02-FP-Variaveis-Tipos.pdf)
+- [Estruturas Condicionais e de Repetição](https://denmartins.github.io/files/notebooks/03-FP-Estruturas-de-Controle-e-Loop.ipynb)
+    - Notebook em [pdf](https://denmartins.github.io/files/notebooks/03-FP-Estruturas-de-Controle-e-Loop.pdf)
+- [Manipulação com Strings](https://denmartins.github.io/files/notebooks/04-FP-Strings.ipynb)
+    - Notebook em [pdf](https://denmartins.github.io/files/notebooks/04-FP-Strings.pdf) 
+    - Slides em [pdf](https://denmartins.github.io/files/lectures/04-FP-Strings-Slides.pdf)
+- [Listas em Python](https://denmartins.github.io/files/notebooks/07-FP-Listas.ipynb)
+    - Notebook em [pdf](https://denmartins.github.io/files/notebooks/07-FP-Listas.pdf)
+- [Manipulação de Arquivos](https://denmartins.github.io/files/notebooks/05-FP-Manipulacao-Arquivos.ipynb) 
+    - Notebook em [pdf](https://denmartins.github.io/files/notebooks/05-FP-Manipulacao-Arquivos.pdf)
 
 # Listas de Exercícios
 - [Lista 1](https://denmartins.github.io/files/lectures/FP-Lista-1.pdf)
