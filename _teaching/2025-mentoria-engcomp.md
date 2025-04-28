@@ -20,11 +20,11 @@ O que você vai encontrar por aqui?
 - Estratégias para equilibrar tudo isso com saúde mental e qualidade de vida
 - E, claro, um espaço seguro para tirar dúvidas e trocar experiências
 
-Formato: informal, acolhedor e direto ao ponto. Traz suas dúvidas, angústias ou ideias — a mentoria é construída junto com você.
+Formato: informal, acolhedor e direto ao ponto. Traga suas dúvidas, angústias ou ideias — a mentoria é construída junto com você.
 
-Veja também o material de introdução ao programa de mentoria [aqui](https://denmartins.github.io/files/lectures/Mentoria-Intro.pdf)
+Veja também o material de introdução ao programa de mentoria [aqui](https://denmartins.github.io/files/lectures/Mentoria-Intro.pdf).
 
-# Programa
+## Cronograma
 
 | Encontro | Tema                                          | Descrição                                                                                                |
 |----------|-----------------------------------------------|---------------------------------------------------------------------------------------------------------|
