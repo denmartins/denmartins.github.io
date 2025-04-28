@@ -7,7 +7,10 @@ venue: "Pontifícia Universidade Católica de Campinas, Engenharia de Computaç�
 date: 2025-04-01
 location: "Campinas, Brazil"
 ---
-Sejam muito bem-vindos ao nosso programa de Mentoria em Engenharia de Computação.
+
+Bem-vindo ao Programa de Mentoria em Engenharia de Computação
+
+A jornada pela Engenharia de Computação é desafiadora e transformadora. Acreditamos que o sucesso não se mede apenas por notas e habilidades técnicas, mas também pelo desenvolvimento integral do indivíduo. 
 
 Você sente que poderia se organizar melhor, entender mais sobre o mercado ou simplesmente conversar com alguém que já passou por essa fase?
 
