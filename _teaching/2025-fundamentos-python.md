@@ -55,5 +55,7 @@ Ao longo do curso, abordaremos os principais conceitos da programação, incluin
 - [Manipulação de Arquivos](https://denmartins.github.io/files/notebooks/05-FP-Manipulacao-Arquivos.ipynb) 
     - Notebook em [pdf](https://denmartins.github.io/files/notebooks/05-FP-Manipulacao-Arquivos.pdf)
 
+Os notebooks também podem ser acessados em formato [Jupyter Book](https://denmartins.github.io/fundamentos-python-book) (ainda incompleto).
+
 # Listas de Exercícios
 - [Lista 1](https://denmartins.github.io/files/lectures/FP-Lista-1.pdf)
