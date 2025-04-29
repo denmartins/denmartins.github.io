@@ -52,10 +52,12 @@ Ao longo do curso, abordaremos os principais conceitos da programação, incluin
     - Slides em [pdf](https://denmartins.github.io/files/lectures/04-FP-Strings-Slides.pdf)
 - [Listas em Python](https://denmartins.github.io/files/notebooks/07-FP-Listas.ipynb)
     - Notebook em [pdf](https://denmartins.github.io/files/notebooks/07-FP-Listas.pdf)
+- [Dicionários em Python](https://denmartins.github.io/files/notebooks/08-FP-Dicionarios.ipynb) 
+    - Notebook em [pdf](https://denmartins.github.io/files/notebooks/08-FP-Dicionarios.pdf)
 - [Manipulação de Arquivos](https://denmartins.github.io/files/notebooks/05-FP-Manipulacao-Arquivos.ipynb) 
     - Notebook em [pdf](https://denmartins.github.io/files/notebooks/05-FP-Manipulacao-Arquivos.pdf)
-
-Os notebooks também podem ser acessados em formato [Jupyter Book](https://denmartins.github.io/fundamentos-python-book) (ainda incompleto).
+    
+Os notebooks também podem ser acessados em formato [Jupyter Book](https://denmartins.github.io/fundamentos-python-book) (ainda em fase de construção).
 
 # Listas de Exercícios
 - [Lista 1](https://denmartins.github.io/files/lectures/FP-Lista-1.pdf)
