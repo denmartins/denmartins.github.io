@@ -46,7 +46,7 @@ Nesta disciplina, vamos aprofundar os seguintes tópicos essenciais:
 - [Sincronização](https://denmartins.github.io/files/lectures/SincronizacaoProcessos.pdf)
 - [Comunicação Entre Processos](https://denmartins.github.io/files/lectures/07-OS-IPC.pdf)
 - [Gerenciamento de I/O - Parte 1](https://denmartins.github.io/files/lectures/08-OS-IO-Parte-1.pdf)
-    - [Dinâmicas para exemplicar conceitos](https://denmartins.github.io/files/lectures/08-OS-Dinamicas.md)
+    - [Dinâmicas para exemplificar mecanismos de I/O](https://denmartins.github.io/files/lectures/08-OS-Dinamicas.md)
 
 # Listas de Exercício
 
