@@ -36,6 +36,7 @@ Nesta disciplina, vamos aprofundar os seguintes tópicos essenciais:
 - [Revisão SO: Parte 3 - Sincronização](https://denmartins.github.io/files/lectures/SincronizacaoProcessos.pdf)
 - [Comunicação Entre Processos](https://denmartins.github.io/files/lectures/04-NSO-IPC.pdf)
 - [Gerenciamento de Memória e Arquivos](https://denmartins.github.io/files/lectures/05-NSO-Memoria-Arquivos.pdf) - Versão em [html](https://denmartins.github.io/files/lectures/05-NSO-Memoria-Arquivos.html)
+
 # Lista de Exercícios
 
 - [Lista 1](https://denmartins.github.io/files/lectures/NSO-Lista-1.pdf)
