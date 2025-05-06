@@ -45,7 +45,7 @@ Nesta disciplina, vamos aprofundar os seguintes tópicos essenciais:
 - [Escalonamento](https://denmartins.github.io/files/lectures/05-OS-Escalonamento.pdf)
 - [Sincronização](https://denmartins.github.io/files/lectures/SincronizacaoProcessos.pdf)
 - [Comunicação Entre Processos](https://denmartins.github.io/files/lectures/07-OS-IPC.pdf)
-- [Gerenciamento de I/O - Parte 1](https://denmartins.github.io/files/lectures/08-OS-IO-Parte-1.pdf)
+- [Gerenciamento de I/O - Parte 1](https://denmartins.github.io/files/lectures/08-OS-IO-Parte-1.pdf) - Versão em [html](https://denmartins.github.io/files/lectures/08-OS-IO-Parte-1.html)
     - [Dinâmicas para exemplificar mecanismos de I/O](https://denmartins.github.io/files/lectures/08-OS-Dinamicas.md)
 
 # Listas de Exercício
