@@ -40,3 +40,9 @@ Nesta disciplina, vamos aprofundar os seguintes tópicos essenciais:
 # Lista de Exercícios
 
 - [Lista 1](https://denmartins.github.io/files/lectures/NSO-Lista-1.pdf)
+
+# Projeto Final
+
+- [Descrição do Projeto](https://denmartins.github.io/files/lectures/NSO-Projeto-Modulo-Kernel.pdf)
+- [Slides](https://denmartins.github.io/files/lectures/NSO-Slides-Projeto.pdf)
+- [Avaliação de Pares](https://denmartins.github.io/files/lectures/NSO-Modelo-Avaliacao-Pares.pdf)
