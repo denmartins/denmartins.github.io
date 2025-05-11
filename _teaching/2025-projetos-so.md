@@ -47,6 +47,7 @@ Nesta disciplina, vamos aprofundar os seguintes tópicos essenciais:
 - [Comunicação Entre Processos](https://denmartins.github.io/files/lectures/07-OS-IPC.pdf)
 - [Gerenciamento de I/O - Parte 1](https://denmartins.github.io/files/lectures/08-OS-IO-Parte-1.pdf) - Versão em [html](https://denmartins.github.io/files/lectures/08-OS-IO-Parte-1.html)
     - [Dinâmicas para exemplificar mecanismos de I/O](https://denmartins.github.io/files/lectures/08-OS-Dinamicas.md)
+- [Gerenciamento de I/O - Parte 1](https://denmartins.github.io/files/lectures/08-OS-IO-Parte-2.pdf) - Versão em [html](https://denmartins.github.io/files/lectures/08-OS-IO-Parte-2.html)
 
 # Listas de Exercício
 
