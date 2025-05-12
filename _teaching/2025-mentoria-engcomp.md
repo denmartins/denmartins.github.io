@@ -43,3 +43,8 @@ Veja também o material de introdução ao programa de mentoria [aqui](https://d
 | 10       | Projetos pessoais e portfólio técnico         | A importância de construir projetos, contribuir em comunidades e organizar um GitHub relevante.           |
 | 11       | Planejamento de carreira a médio e longo prazo | Como pensar a carreira com visão estratégica e adaptabilidade.                                         |
 | 12       | Encerramento: Revisão, conquistas e próximos passos | Balanço final da mentoria, celebração de avanços e definição de planos futuros.                            |
+
+
+# Slides
+
+- [Principles of Effective Learning by Sven Ligensa](https://denmartins.github.io/files/lectures/Mentoria-Tecnicas-Estudo.pdf)
