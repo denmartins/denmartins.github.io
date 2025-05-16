@@ -10,18 +10,18 @@ location: "Campinas, Brazil"
 
 O curso de Projetos de Sistemas Operacionais tem como objetivo estudar componentes e técnicas de gerenciamento de sistemas operacionais modernos, incluindo tópicos como processos, threads, escalonamento, entrada/saída e memória virtual.
 
-# 📌 O que vamos estudar?
+# O que vamos estudar?
 
 Nesta disciplina, vamos aprofundar os seguintes tópicos essenciais:
 
-- ✅ Conceitos fundamentais de Sistemas Operacionais - Suas funções principais e arquitetura geral.
-- ✅ Processos e Comunicação entre Processos – Como os processos são criados, gerenciados e como interagem.
-- ✅ Threads – Implementação e gerenciamento de múltiplas threads para execução concorrente.
-- ✅ Espaços de Endereçamento e Gerenciamento de Memória – Como a memória é organizada e alocada para processos.
-- ✅ Sistemas de Arquivos – Estrutura, funcionamento e acesso aos dados armazenados.
-- ✅ Sistemas de Entrada e Saída – Interação com dispositivos e eficiência no gerenciamento de recursos.
+- Conceitos fundamentais de Sistemas Operacionais - Suas funções principais e arquitetura geral.
+- Processos e Comunicação entre Processos – Como os processos são criados, gerenciados e como interagem.
+- Threads – Implementação e gerenciamento de múltiplas threads para execução concorrente.
+- Espaços de Endereçamento e Gerenciamento de Memória – Como a memória é organizada e alocada para processos.
+- Sistemas de Arquivos – Estrutura, funcionamento e acesso aos dados armazenados.
+- Sistemas de Entrada e Saída – Interação com dispositivos e eficiência no gerenciamento de recursos.
 
-# 💡 O que esperar do curso?
+# O que esperar do curso?
 - Aulas dinâmicas combinando teoria e prática.
 - Exercícios de programação e uso de comandos de sistema para consolidar o aprendizado.
 - Projetos práticos para simular desafios reais de um sistema operacional.
@@ -48,7 +48,14 @@ Nesta disciplina, vamos aprofundar os seguintes tópicos essenciais:
 - [Gerenciamento de I/O - Parte 1](https://denmartins.github.io/files/lectures/08-OS-IO-Parte-1.pdf) - Versão em [html](https://denmartins.github.io/files/lectures/08-OS-IO-Parte-1.html)
     - [Dinâmicas para exemplificar mecanismos de I/O](https://denmartins.github.io/files/lectures/08-OS-Dinamicas.md)
 - [Gerenciamento de I/O - Parte 2](https://denmartins.github.io/files/lectures/09-OS-IO-Parte-2.pdf) - Versão em [html](https://denmartins.github.io/files/lectures/09-OS-IO-Parte-2.html)
+- [Aspectos Gerais de Dados](https://denmartins.github.io/files/lectures/10-OS-AspectosDados.pdf)
 
 # Listas de Exercício
 
 - [Lista 1](https://denmartins.github.io/files/lectures/OS-Lista-1.pdf)
+
+# Tarefas
+
+- [Consoles de Videogames](https://denmartins.github.io/files/assignments/OS-Videogame.pdf)
+
+
