@@ -49,6 +49,7 @@ Nesta disciplina, vamos aprofundar os seguintes tópicos essenciais:
     - [Dinâmicas para exemplificar mecanismos de I/O](https://denmartins.github.io/files/lectures/08-OS-Dinamicas.md)
 - [Gerenciamento de I/O - Parte 2](https://denmartins.github.io/files/lectures/09-OS-IO-Parte-2.pdf) - Versão em [html](https://denmartins.github.io/files/lectures/09-OS-IO-Parte-2.html)
 - [Aspectos Gerais de Dados](https://denmartins.github.io/files/lectures/10-OS-AspectosDados.pdf)
+- [Gerenciamento de Disco](https://denmartins.github.io/files/lectures/11-OS-Gerenciamento-Disco-W.pdf)
 
 # Listas de Exercício
 
