@@ -31,3 +31,4 @@ O curso de Sistemas Computacionais tem como objetivo desenvolver a capacidade de
 - [Introdução à Linguagem de Montagem](https://denmartins.github.io/files/lectures/SC-Intro-Assembly.pdf)
 - [Introdução aos Sistemas Operacionais](https://denmartins.github.io/files/lectures/03-SC-OS-Intro.pdf)
 - [Multitarefa: Processos e Threads](https://denmartins.github.io/files/lectures/04-SC-OS-Multitarefa.pdf). Versão em [html](https://denmartins.github.io/files/lectures/04-SC-OS-Multitarefa.html)
+- [Sincronização de Processos e Threads](https://denmartins.github.io/files/lectures/SC-OS-Sincronizacao.pdf)
