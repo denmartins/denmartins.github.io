@@ -47,4 +47,4 @@ Formato: informal, acolhedor e direto ao ponto. Traga suas dúvidas, angústias 
 
 - [Introdução ao programa de mentoria](https://denmartins.github.io/files/lectures/Mentoria-Intro.pdf).
 - [Principles of Effective Studying by Sven Ligensa](https://denmartins.github.io/files/lectures/Mentoria-Tecnicas-Estudo.pdf)
-- [Questionário VARK](https://vark-learn.com/questionario/) ou [QR Code](https://denmartins.github.io/files/lectures/files/lectures/VARK.png)
+- [Questionário VARK](https://vark-learn.com/questionario/)
