@@ -25,8 +25,6 @@ O que você vai encontrar por aqui?
 
 Formato: informal, acolhedor e direto ao ponto. Traga suas dúvidas, angústias ou ideias — a mentoria é construída junto com você.
 
-Veja também o material de introdução ao programa de mentoria [aqui](https://denmartins.github.io/files/lectures/Mentoria-Intro.pdf).
-
 ## Cronograma
 
 | Encontro | Tema                                          | Descrição                                                                                                |
@@ -45,6 +43,8 @@ Veja também o material de introdução ao programa de mentoria [aqui](https://d
 | 12       | Encerramento: Revisão, conquistas e próximos passos | Balanço final da mentoria, celebração de avanços e definição de planos futuros.                            |
 
 
-# Slides
+# Material
 
-- [Principles of Effective Learning by Sven Ligensa](https://denmartins.github.io/files/lectures/Mentoria-Tecnicas-Estudo.pdf)
+- [Introdução ao programa de mentoria](https://denmartins.github.io/files/lectures/Mentoria-Intro.pdf).
+- [Principles of Effective Studying by Sven Ligensa](https://denmartins.github.io/files/lectures/Mentoria-Tecnicas-Estudo.pdf)
+- [Questionário VARK](https://vark-learn.com/questionario/) ou [QR Code](https://denmartins.github.io/files/lectures/files/lectures/VARK.png)
