@@ -35,7 +35,7 @@ Nosso objetivo? Capacitar vocês para desenvolverem soluções computacionais ef
 # Material de aula
 
 - [Visão Geral do Curso](https://denmartins.github.io/files/lectures/01-FP-VisaoGeral.pdf)
-- [Jupyter Book](https://denmartins.github.io/fundamentos-python-book)
+- [Jupyter Notebooks](https://denmartins.github.io/fundamentos-python-book)
 - [Loops Aninhados - Exemplos](https://denmartins.github.io/files/lectures/FP-Exercicios-Loop-Aninhados.pdf)
 - [Funções](https://denmartins.github.io/files/lectures/05-FP-Funcoes.pdf)
 - [Call Stack e Recursão](https://denmartins.github.io/files/lectures/06-FP-CallStack-Recursao.pdf)

@@ -33,3 +33,58 @@ O curso de Sistemas Computacionais tem como objetivo desenvolver a capacidade de
 - [Multitarefa: Processos e Threads](https://denmartins.github.io/files/lectures/04-SC-OS-Multitarefa.pdf). Versão em [html](https://denmartins.github.io/files/lectures/04-SC-OS-Multitarefa.html)
 - [Sincronização de Processos e Threads](https://denmartins.github.io/files/lectures/05-SC-OS-Sincronizacao.pdf)
 - [Hierarquia de Memória](https://denmartins.github.io/files/lectures/06-SC-OS-Hierarquia-Memoria.pdf)
+
+
+# Projeto Minishell
+
+Uma aplicação shell é um interpretador de linguagem de comando que fornece uma interface de usuário baseada em texto para sistemas operacionais.
+
+Para esta tarefa, você construirá uma aplicação shell semelhante a Bash com funcionalidades mínimas, como percorrer o sistema de arquivos e executar aplicações.
+
+**Conceitos envolvidos**
+
+* Programação em Python
+* Chamadas de Sistema
+* Criação e gerenciamento de processos
+
+**Funcionalidades**
+
+* Receber comandos, em um laço infinito.
+* Interpretar e executar cada comando em um processo filho.
+* Redirecionamento de saída: A saída dos comandos poderá ser redirecionada para um arquivo: `cat arquivo.txt > arquivo-saída`
+* Comandos em paralelo: Vários comandos separados por um `&` deverão ser executados de forma concorrente, em processos separados: `cmd1 & cmd2 arg1 arg2 & cmd3 arg`
+* Comandos em sequência: Vários comandos separados pelo operador `;` deverão ser executados em sequência, um após o outro. Exemplo: `cmd1; cmd2` deve garantir que o comando `cmd2` só será executado quando `cmd1` finalizar sua execução.
+
+**Comandos internos**
+
+* `exit` : Finaliza o Shell.
+* `pwd` : Exibir o caminho do diretório atual.
+* `cd <caminho>` : Muda o diretório de trabalho.
+    > **AVISO:** Usar o comando `cd` sem argumentos ou com mais de um argumento não afeta o caminho do diretório atual. Certifique-se de tratar este caso limite de forma que evite travamentos (crashes).
+* `cat <arquivo>` Lê o conteúdo do arquivo no argumento e o escreve na saída padrão.
+* `ls`: Lista o conteúdo do diretório atual.
+* `echo <texto>`: Imprime um texto na tela.
+
+Exemplo: 
+
+```bash
+> pwd
+/home/student
+> cd operating-systems/assignments/
+> pwd
+/home/student/operating-systems/assignments/
+> cd inexitent
+no such file or directory
+> cd /usr/lib
+> pwd
+/usr/lib
+> echo "Hello"
+Hello
+> exit
+```
+
+**Tratamento de erro**: A aplicação deve tratar condições de erro e imprimir na tela mensagens amigáveis para elas.
+
+**Argumentos**: Você pode assumir que argumentos de comandos são separados por espaços (um ou mais). Não é preciso se preocupar com caracteres de escape ou argumentos com espaços entre aspas.
+
+**Entrega**: Código completo (.py) e instruções de uso (README).
