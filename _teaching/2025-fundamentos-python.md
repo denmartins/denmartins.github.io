@@ -39,4 +39,5 @@ Nosso objetivo? Capacitar vocês para desenvolverem soluções computacionais ef
 - [Loops Aninhados - Exemplos](https://denmartins.github.io/files/lectures/FP-Exercicios-Loop-Aninhados.pdf)
 - [Funções](https://denmartins.github.io/files/lectures/05-FP-Funcoes.pdf)
 - [Call Stack e Recursão](https://denmartins.github.io/files/lectures/06-FP-CallStack-Recursao.pdf)
+- [Arquivos](https://denmartins.github.io/files/lectures/FP-AspectosDados.pdf)
 - [Lista de Exercícios 1](https://denmartins.github.io/files/lectures/FP-Lista-1.pdf)
