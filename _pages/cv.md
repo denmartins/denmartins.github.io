@@ -22,6 +22,7 @@ Work experience
 ======
 * 2025-Current: Professor 
   * Pontifícia Universidade Católica de Campinas (PUC-Campinas)
+  * Lead Program Coordinator - Specialization Course on Data Science for Business
   * Department of Computer Engineering, Data Science & AI
 
 * 2023-2025: Senior AI Researcher Specialist
