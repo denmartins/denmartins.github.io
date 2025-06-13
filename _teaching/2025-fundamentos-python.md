@@ -40,4 +40,5 @@ Nosso objetivo? Capacitar vocês para desenvolverem soluções computacionais ef
 - [Funções](https://denmartins.github.io/files/lectures/05-FP-Funcoes.pdf)
 - [Call Stack e Recursão](https://denmartins.github.io/files/lectures/06-FP-CallStack-Recursao.pdf)
 - [Arquivos](https://denmartins.github.io/files/lectures/FP-AspectosDados.pdf)
+- [Tratamento de Erro](https://denmartins.github.io/files/lectures/FP-Tratamento-Erro.pdf)
 - [Lista de Exercícios 1](https://denmartins.github.io/files/lectures/FP-Lista-1.pdf)
