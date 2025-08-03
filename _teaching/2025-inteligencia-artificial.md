@@ -33,7 +33,5 @@ Nesta disciplina, vamos aprofundar os seguintes tópicos:
 
 # Material de aula
 
-- [Visão Geral do Curso](https://denmartins.github.io/files/lectures/2025/AI/01-IA-Intro.pdf)
-
-
-
+- Visão Geral do Curso: [PDF](https://denmartins.github.io/files/lectures/2025/AI/00-IA-Organizacao-small.pdf) - [HTML](https://denmartins.github.io/files/lectures/2025/AI/00-IA-Organizacao.html)
+- Conceitos Fundamentais: [PDF](https://denmartins.github.io/files/lectures/2025/AI/01-IA-Inteligencia-small.pdf) - [HTML](https://denmartins.github.io/files/lectures/2025/AI/01-IA-Inteligencia.html)
