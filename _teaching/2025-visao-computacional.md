@@ -33,7 +33,7 @@ Nesta disciplina, vamos aprofundar os seguintes tópicos:
 
 # Material de aula
 
-- Visão Geral do Curso:[PDF](https://denmartins.github.io/files/lectures/2025/VC/00-VC-Organizacao-small.pdf) - [HTML](https://denmartins.github.io/files/lectures/2025/VC/00-VC-Organizacao.html)
+- Visão Geral do Curso: [PDF](https://denmartins.github.io/files/lectures/2025/VC/00-VC-Organizacao-small.pdf) - [HTML](https://denmartins.github.io/files/lectures/2025/VC/00-VC-Organizacao.html)
 
 
 
