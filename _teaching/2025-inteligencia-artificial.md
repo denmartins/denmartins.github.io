@@ -8,6 +8,8 @@ date: 2025-10-02
 location: "Campinas, Brazil"
 ---
 
+Avançar na fronteira do futuro exige uma compreensão profunda das tecnologias que estão redefinindo o mundo ao nosso redor. Esta disciplina de Introdução à Inteligência Artificial oferece um mergulho fundamental nos conceitos, princípios e aplicações dessa área transformadora.
+
 # O que vamos estudar?
 
 Nesta disciplina, vamos aprofundar os seguintes tópicos:

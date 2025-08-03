@@ -8,6 +8,8 @@ date: 2025-10-02
 location: "Campinas, Brazil"
 ---
 
+A disciplina de Visão Computacional oferece uma imersão nos fundamentos teóricos e práticos do reconhecimento de padrões em imagens utilizando técnicas de deep learning. A ênfase na aplicação prática, combinada com uma base sólida em aprendizado de máquina, prepara os futuros profissionais para atuarem no crescente mercado de sistemas inteligentes e visão computacional. 
+
 # O que vamos estudar?
 
 Nesta disciplina, vamos aprofundar os seguintes tópicos:
