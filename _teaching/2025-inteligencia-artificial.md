@@ -4,7 +4,7 @@ collection: teaching
 type: "Undergraduate Program"
 permalink: /teaching/2025-inteligencia-artificial
 venue: "Pontifícia Universidade Católica de Campinas, Engenharia de Computação"
-date: 2025-10-02
+date: 2025-11-01
 location: "Campinas, Brazil"
 ---
 
