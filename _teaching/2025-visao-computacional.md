@@ -28,12 +28,12 @@ Nesta disciplina, vamos aprofundar os seguintes tópicos:
  
 - Gonzalez, Rafael C., and Richard C. Woods. Processamento digital de imagens. 3.ed. São Paulo, SP: Pearson, 2010.
 - Goodfellow, Ian, et al. Deep learning. Vol. 1. No. 2. Cambridge: MIT press, 2016: https://www.deeplearningbook.org/
-- RUSSEL, S. J., NORVIG, P. Inteligência Artificial: Uma Abordagem Moderna. GEN LTC. 4a. Edição, 2022.
+- Russel, S. J., Norvig, P. Inteligência Artificial: Uma Abordagem Moderna. GEN LTC. 4a. Edição, 2022.
 - The Little Book of Deep Learning: https://fleuret.org/francois/lbdl.html
 
 # Material de aula
 
-- [Visão Geral do Curso](https://denmartins.github.io/files/lectures/2025/VC/01-VC-VisaoGeral-Intro.pdf)
+- Visão Geral do Curso:[PDF](https://denmartins.github.io/files/lectures/2025/VC/00-VC-Organizacao-small.pdf) - [HTML](https://denmartins.github.io/files/lectures/2025/VC/00-VC-Organizacao.html)
 
 
 
