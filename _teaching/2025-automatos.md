@@ -35,4 +35,6 @@ MENEZES, P. B. Linguagens Formais e Autômatos. Série Livros Didáticos, Númer
 * HOPCROFT, J. E.; ULLMAN, J. D.; MOTWANI, Rajeev. Introdução à Teoria de Autômatos, Linguagens e Computação. Tradução da Segunda Edição Americana. Editora Campus, 2003.
 * VOSSEN, Gottfried; WITT, Kurt-Ulrich. Grundkurs Theoretische Informatik. Springer Fachmedien Wiesbaden, 2016.
 
-# Links importantes
+# Material de Aula
+
+* Organização e Visão Geral: [PDF](https://denmartins.github.io/files/lectures/2025/Automatos/00-ALC-Organizacao-small.pdf) - [HTML](https://denmartins.github.io/files/lectures/2025/Automatos/00-ALC-Organizacao.html)
