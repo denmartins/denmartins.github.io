@@ -3,7 +3,7 @@ title: "Tópicos em Ciência de Dados"
 collection: teaching
 type: "Undergraduate Program"
 permalink: /teaching/2025-topicos-cd
-venue: "Pontifícia Universidade Católica de Campinas, Ciência de Dados"
+venue: "Pontifícia Universidade Católica de Campinas, Ciência de Dados e Inteligência Artificial"
 date: 2025-11-01
 location: "Campinas, Brazil"
 ---
@@ -12,7 +12,7 @@ Esta disciplina oferece uma oportunidade de estudos nos temas mais atuais nos ca
 
 # O que vamos estudar?
 
-Este ano, vamos focar em  Grandes Modelos de Linguagem (LLMs) e temas relacionados, como: RAG, modelos pré-treinados, fine-tuning, entre outros.
+Este ano, vamos focar em Grandes Modelos de Linguagem (LLMs) e temas relacionados, como: RAG, modelos pré-treinados, fine-tuning, entre outros.
 
 # O que esperar do curso?
 
