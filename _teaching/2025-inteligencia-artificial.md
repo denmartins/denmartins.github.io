@@ -3,7 +3,7 @@ title: "Inteligência Artificial"
 collection: teaching
 type: "Undergraduate Program"
 permalink: /teaching/2025-inteligencia-artificial
-venue: "Pontifícia Universidade Católica de Campinas, Engenharia de Computação"
+venue: "Pontifícia Universidade Católica de Campinas, Ciência de Dados e Inteligência Artificial"
 date: 2025-11-01
 location: "Campinas, Brazil"
 ---
