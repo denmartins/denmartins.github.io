@@ -38,4 +38,4 @@ MENEZES, P. B. Linguagens Formais e Autômatos. Série Livros Didáticos, Númer
 # Material de Aula
 
 * Organização e Visão Geral: [PDF](https://denmartins.github.io/files/lectures/2025/Automatos/00-ALC-Organizacao-small.pdf) - [HTML](https://denmartins.github.io/files/lectures/2025/Automatos/00-ALC-Organizacao.html)
-* Introdução à Teoria da Computação: [PDF](https://denmartins.github.io/files/lectures/2025/Automatos/files/lectures/2025/Automatos/01-ALC-IntroducaoTeoriaComputacao.pdf) - [HTML](https://denmartins.github.io/files/lectures/2025/Automatos/files/lectures/2025/Automatos/01-ALC-IntroducaoTeoriaComputacao.html)
+* Introdução à Teoria da Computação: [PDF](https://denmartins.github.io/files/lectures/2025/Automatos/01-ALC-IntroducaoTeoriaComputacao.pdf) - [HTML](https://denmartins.github.io/files/lectures/2025/Automatos/01-ALC-IntroducaoTeoriaComputacao.html)
