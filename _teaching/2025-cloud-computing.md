@@ -31,3 +31,4 @@ Partindo dos princípios teóricos de sistemas distribuídos, a disciplina inves
 # Material de aula
 
 - Visão Geral do Curso: [PDF](https://denmartins.github.io/files/lectures/2025/cloud/00-Cloud-Organizacao.pdf) - [HTML](https://denmartins.github.io/files/lectures/2025/cloud/00-Cloud-Organizacao.html)
+- Introdução à Computação em Nuvem: [PDF](https://denmartins.github.io/files/lectures/2025/cloud/01-Cloud-Introducao.pdf) - [HTML](https://denmartins.github.io/files/lectures/2025/cloud/01-Cloud-Introducao.html)
