@@ -33,4 +33,7 @@ Nesta disciplina, vamos aprofundar os seguintes tópicos:
 
 # Material de aula
 
-- Visão Geral do Curso: [PDF](https://denmartins.github.io/files/lectures/2025/VC/00-VC-Organizacao-small.pdf) - [HTML](https://denmartins.github.io/files/lectures/2025/VC/00-VC-Organizacao.html)
+| Aula| Conteúdo  | Slides (PDF)  | Slides (HTML) |
+|:---------|:-------|:--------|:--------|
+| 1 | Visão Geral do Curso| [PDF](https://denmartins.github.io/files/lectures/2025/VC/00-VC-Organizacao-small.pdf)| [HTML](https://denmartins.github.io/files/lectures/2025/VC/00-VC-Organizacao.html)| 
+| 2 |Fundamentos de Imagens Digitais| [PDF](https://denmartins.github.io/files/lectures/2025/VC/01-VC-Fundamentos-Imagens-Digitais.pdf) | [HTML](https://denmartins.github.io/files/lectures/2025/VC/01-VC-Fundamentos-Imagens-Digitais.html)|
