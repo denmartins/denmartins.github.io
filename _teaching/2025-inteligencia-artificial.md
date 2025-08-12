@@ -39,3 +39,4 @@ Nesta disciplina, vamos aprofundar os seguintes tópicos:
 | 1 | Visão Geral do Curso| [PDF](https://denmartins.github.io/files/lectures/2025/AI/00-IA-Organizacao-small.pdf)| [HTML](https://denmartins.github.io/files/lectures/2025/AI/00-IA-Organizacao.html)| 
 | 2 |Conceitos Fundamentais | [PDF](https://denmartins.github.io/files/lectures/2025/AI/01-IA-Inteligencia-small.pdf) | [HTML](https://denmartins.github.io/files/lectures/2025/AI/01-IA-Inteligencia.html) |
 | 3 | Agentes Inteligentes | [PDF](https://denmartins.github.io/files/lectures/2025/AI/02-IA-Agentes-Inteligentes.pdf) | [HTML](https://denmartins.github.io/files/lectures/2025/AI/02-IA-Agentes-Inteligentes.html) |
+| 4 | Busca Não-Informada | [PDF](https://denmartins.github.io/files/lectures/2025/AI/03-IA-Busca-Nao-Informada.pdf) | [HTML](https://denmartins.github.io/files/lectures/2025/AI/03-IA-Busca-Nao-Informada.html) |
