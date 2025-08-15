@@ -34,5 +34,5 @@ Partindo dos princípios teóricos de sistemas distribuídos, a disciplina inves
 | Aula| Conteúdo  | Slides (PDF)  | Slides (HTML) |
 |:---------|:-------|:--------|:--------|
 | 1 | Visão Geral do Curso| [PDF](https://denmartins.github.io/files/lectures/2025/cloud/00-Cloud-Organizacao.pdf) | [HTML](https://denmartins.github.io/files/lectures/2025/cloud/00-Cloud-Organizacao.html)| 
-| 2 | Introdução à Computação em Nuvem| [PDF](https://denmartins.github.io/files/lectures/2025/cloud/01-Cloud-Introducao.pdf) | [HTML](https://denmartins.github.io/files/lectures/2025/cloud/00-Cloud-Organizacao.html) |
+| 2 | Introdução à Computação em Nuvem| [PDF](https://denmartins.github.io/files/lectures/2025/cloud/01-Cloud-Introducao.pdf) | [HTML](https://denmartins.github.io/files/lectures/2025/cloud/01-Cloud-Introducao.html) |
 | 3 | Stakeholders e Modelos de Implantação| [PDF](https://denmartins.github.io/files/lectures/2025/cloud/02-Cloud-Modelos-Servico.pdf) | [HTML](https://denmartins.github.io/files/lectures/2025/cloud/02-Cloud-Modelos-Servico.html) |
