@@ -1,0 +1,145 @@
+<h1 id="objetivo">Objetivo</h1>
+<p>Desenvolver, por grupos de até três alunos, um projeto
+interdisciplinar que integre os seguintes elementos:</p>
+<ul>
+<li>Pipeline de dados da ingestão (open‑source ou via APIs) à
+entrega/visualização.</li>
+<li>Análise exploratória e visualização avançada.</li>
+<li>Transformação e preparação para modelagem.</li>
+<li>Aplicação prática de Modelos de Linguagem Grande (LLM) em um cenário
+realístico escolhido pelos alunos em conjunto com o professor.</li>
+<li>Discussão sobre implicações éticas e de viabilidade tecnológica do
+uso de LLMs.</li>
+</ul>
+<h1 id="estrutura-do-projeto">Estrutura do Projeto</h1>
+<table>
+<colgroup>
+<col style="width: 31%" />
+<col style="width: 68%" />
+</colgroup>
+<thead>
+<tr>
+<th><strong>Etapa</strong></th>
+<th><strong>Descrição resumida</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Definição do Tema</td>
+<td>Escolha temática (ex.: análise de sentimento em redes sociais,
+previsão de churn corporativo, detecção de fake news) e escopo de
+aplicação LLM.</td>
+</tr>
+<tr>
+<td>Coleta de Dados</td>
+<td>Aquisição via APIs REST, web‑scraping, repositórios públicos
+(Kaggle, UCI ML Repository).</td>
+</tr>
+<tr>
+<td>Exploração e Visualização</td>
+<td>Estatísticas descritivas, histogramas, boxplots, heatmaps,
+dashboards interativos (Plotly Dash / Streamlit).</td>
+</tr>
+<tr>
+<td>Transformaçãode Dados</td>
+<td>Limpeza, imputação, codificação de variáveis categóricas,
+normalização/estandardização, geração de embeddings.</td>
+</tr>
+<tr>
+<td>Modelagem</td>
+<td>Classificadores/regressões clássicos (Random Forest, XGBoost) e
+comparação com LLM.</td>
+</tr>
+<tr>
+<td>Integração LLM</td>
+<td>Fine‑tuning ou prompt‑engineering para tarefa específica; avaliação
+qualitativa/quantitativa.</td>
+</tr>
+<tr>
+<td>Avaliação &amp; Métricas</td>
+<td>Accuracy, F1‑score, ROC‑AUC, BLEU (para geração), Human‑in‑the‑Loop
+feedback.</td>
+</tr>
+<tr>
+<td>Documentação &amp; Apresentação</td>
+<td>Relatório técnico (10 páginas) + Slides de apresentação + Código
+aberto no GitHub.</td>
+</tr>
+</tbody>
+</table>
+<h1 id="entregáveis">Entregáveis</h1>
+<table>
+<colgroup>
+<col style="width: 55%" />
+<col style="width: 44%" />
+</colgroup>
+<thead>
+<tr>
+<th><strong>Entregável</strong></th>
+<th><strong>Formato</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Relatório Técnico</td>
+<td>PDF (cerca de 10 páginas) com metodologia, resultados e discussões
+éticas</td>
+</tr>
+<tr>
+<td>Apresentação Oral</td>
+<td>Slides (Beamer/PowerPoint), 15 minutos + Q&amp;A</td>
+</tr>
+<tr>
+<td>Código Fonte</td>
+<td>Repositório GitHub/Bitbucket com README detalhado</td>
+</tr>
+<tr>
+<td>Dataset Processado</td>
+<td>Arquivo CSV/Parquet/etc. e script de ingestão</td>
+</tr>
+<tr>
+<td>Dashboard Interativo</td>
+<td>App Streamlit/Dash</td>
+</tr>
+</tbody>
+</table>
+<h1 id="critérios-de-avaliação">Critérios de avaliação</h1>
+<ul>
+<li>Desempenho do Projeto: Qualidade do Pipeline de Dados, da Modelagem,
+da aplicação de LLM, etc.</li>
+<li>Discussão Ética e Viabilidade: Reflexão crítica sobre viés,
+privacidade, custos computacionais e impactos sociais.</li>
+<li>Entregáveis e Apresentação: Clareza, estrutura acadêmica, qualidade
+visual, domínio da linguagem científica, coerência entre relatório e
+slides.</li>
+</ul>
+<h1 id="diretrizes-técnicas">Diretrizes Técnicas</h1>
+<ol type="1">
+<li><strong>Reprodutibilidade</strong>
+<ul>
+<li>Utilizar <em>requirements.txt</em> / <em>environment.yml</em>.</li>
+<li>Versionar scripts de coleta e transformação no repositório.</li>
+<li>Registrar versões de bibliotecas (p.ex.,
+<code>pip freeze &gt; requirements.txt</code>).</li>
+</ul></li>
+<li><strong>Ética e Conformidade</strong>
+<ul>
+<li>Garantir que dados coletados estejam em conformidade com GDPR/Lei
+Geral de Proteção de Dados (LGPD).</li>
+<li>Anonimizar identificadores pessoais antes do uso em LLMs.</li>
+<li>Documentar possíveis fontes de viés e estratégias mitigadoras.</li>
+</ul></li>
+<li><strong>Documentação</strong>
+<ul>
+<li>Seguir estrutura acadêmica: Resumo, Introdução, Metodologia,
+Resultados, Discussão, Conclusões, Referências.</li>
+<li>Incluir código em <em>notebooks</em> (Jupyter) ou scripts
+executáveis; os notebooks devem conter comentários explicativos.</li>
+</ul></li>
+<li><strong>Apresentação</strong>
+<ul>
+<li>Usar diagramas de fluxo e gráficos claros que sintetizem o pipeline
+completo.</li>
+<li>Incluir demonstração curta do sistema em ação.</li>
+</ul></li>
+</ol>

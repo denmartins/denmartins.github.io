@@ -35,4 +35,5 @@ Este ano, vamos focar em Grandes Modelos de Linguagem (LLMs) e temas relacionado
 - Visão Geral do Curso: [PDF](https://denmartins.github.io/files/lectures/2025/TopicosCD/00-TCD-Organizacao.pdf) - [HTML](https://denmartins.github.io/files/lectures/2025/TopicosCD/00-TCD-Organizacao.html)
 - Revisão de Deep Learning e Introdução aos LLMs: [PDF](https://denmartins.github.io/files/lectures/2025/TopicosCD/01-TCD-Introducao-LLMs.pdf) - [HTML](https://denmartins.github.io/files/lectures/2025/TopicosCD/01-TCD-Introducao-LLMs.html)
 - Tokenizer: [PDF](https://denmartins.github.io/files/lectures/2025/TopicosCD/code/02-TCD-tokenizer.pdf) - [Jupyter Notebook](https://denmartins.github.io/files/lectures/2025/TopicosCD/code/02-TCD-tokenizer.ipynb) 
+- Roteiro do Projeto Prático: [HTML](https://denmartins.github.io/files/lectures/2025/TopicosCD/TCD-Projetos.html)
 
