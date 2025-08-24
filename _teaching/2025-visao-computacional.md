@@ -38,3 +38,4 @@ Nesta disciplina, vamos aprofundar os seguintes tópicos:
 | 0 | Visão Geral do Curso| [PDF](https://denmartins.github.io/files/lectures/2025/VC/00-VC-Organizacao-small.pdf)| [HTML](https://denmartins.github.io/files/lectures/2025/VC/00-VC-Organizacao.html)| 
 | 1 |Fundamentos de Imagens Digitais| [PDF](https://denmartins.github.io/files/lectures/2025/VC/01-VC-Fundamentos-Imagens-Digitais.pdf) | [HTML](https://denmartins.github.io/files/lectures/2025/VC/01-VC-Fundamentos-Imagens-Digitais.html)|
 | 2 | Transformações de Intensidade Ponto-a-Ponto | [PDF](https://denmartins.github.io/files/lectures/2025/VC/02-VC-Transformacoes-Ponto-a-Ponto.pdf) | [HTML](https://denmartins.github.io/files/lectures/2025/VC/02-VC-Transformacoes-Ponto-a-Ponto.html)|
+| 3 | Filtragem Espacial | [PDF](https://denmartins.github.io/files/lectures/2025/VC/03-VC-Filtragem-Espacial.pdf) | [HTML](https://denmartins.github.io/files/lectures/2025/VC/03-VC-Filtragem-Espacial.html) | 
