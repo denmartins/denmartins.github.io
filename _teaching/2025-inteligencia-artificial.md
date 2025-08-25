@@ -36,7 +36,8 @@ Nesta disciplina, vamos aprofundar os seguintes tópicos:
 
 | Aula| Conteúdo  | Slides (PDF)  | Slides (HTML) |
 |:---------|:-------|:--------|:--------|
-| 1 | Visão Geral do Curso| [PDF](https://denmartins.github.io/files/lectures/2025/AI/00-IA-Organizacao-small.pdf)| [HTML](https://denmartins.github.io/files/lectures/2025/AI/00-IA-Organizacao.html)| 
-| 2 |Conceitos Fundamentais | [PDF](https://denmartins.github.io/files/lectures/2025/AI/01-IA-Inteligencia-small.pdf) | [HTML](https://denmartins.github.io/files/lectures/2025/AI/01-IA-Inteligencia.html) |
-| 3 | Agentes Inteligentes | [PDF](https://denmartins.github.io/files/lectures/2025/AI/02-IA-Agentes-Inteligentes.pdf) | [HTML](https://denmartins.github.io/files/lectures/2025/AI/02-IA-Agentes-Inteligentes.html) |
-| 4 | Busca Não-Informada | [PDF](https://denmartins.github.io/files/lectures/2025/AI/03-IA-Busca-Nao-Informada.pdf) | [HTML](https://denmartins.github.io/files/lectures/2025/AI/03-IA-Busca-Nao-Informada.html) |
+| 0 | Visão Geral do Curso| [PDF](https://denmartins.github.io/files/lectures/2025/AI/00-IA-Organizacao-small.pdf)| [HTML](https://denmartins.github.io/files/lectures/2025/AI/00-IA-Organizacao.html)| 
+| 1 |Conceitos Fundamentais | [PDF](https://denmartins.github.io/files/lectures/2025/AI/01-IA-Inteligencia-small.pdf) | [HTML](https://denmartins.github.io/files/lectures/2025/AI/01-IA-Inteligencia.html) |
+| 2 | Agentes Inteligentes | [PDF](https://denmartins.github.io/files/lectures/2025/AI/02-IA-Agentes-Inteligentes.pdf) | [HTML](https://denmartins.github.io/files/lectures/2025/AI/02-IA-Agentes-Inteligentes.html) |
+| 3 | Busca Não-Informada | [PDF](https://denmartins.github.io/files/lectures/2025/AI/03-IA-Busca-Nao-Informada.pdf) | [HTML](https://denmartins.github.io/files/lectures/2025/AI/03-IA-Busca-Nao-Informada.html) |
+| 4 | Busca Informada (em construção) | [PDF](https://denmartins.github.io/files/lectures/2025/AI/04-Busca-Informada.pdf) | [HTML](https://denmartins.github.io/files/lectures/2025/AI/04-Busca-Informada.html) |
