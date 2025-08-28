@@ -40,4 +40,7 @@ Este ano, vamos focar em Grandes Modelos de Linguagem (LLMs) e temas relacionado
 | Tokenizer: Implementação | [PDF](https://denmartins.github.io/files/lectures/2025/TopicosCD/code/02-TCD-tokenizer.pdf) | [Jupyter Notebook](https://denmartins.github.io/files/lectures/2025/TopicosCD/code/02-TCD-tokenizer.ipynb) |
 | Self‑Attention | [PDF](https://denmartins.github.io/files/lectures/2025/TopicosCD/02-TCD-Self-Attention.pdf) | [HTML](https://denmartins.github.io/files/lectures/2025/TopicosCD/02-TCD-Self-Attention.html) |
 | Multi‑Head Attention | [PDF](https://denmartins.github.io/files/lectures/2025/TopicosCD/03-TCD-MultiHead-Attention.pdf) | [HTML](https://denmartins.github.io/files/lectures/2025/TopicosCD/03-TCD-MultiHead-Attention.html) |
+| Implementação de Multi‑Head Attention | [HTML](https://denmartins.github.io/files/lectures/2025/TopicosCD/code/03-TCD-Attention-Mechanisms.html) | [Jupyter Notebook](https://denmartins.github.io/files/lectures/2025/TopicosCD/code/03-TCD-Attention-Mechanisms.ipynb) |
+
+
 
