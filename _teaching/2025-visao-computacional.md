@@ -40,4 +40,4 @@ Nesta disciplina, vamos aprofundar os seguintes tópicos:
 | 2 | Transformações de Intensidade Ponto-a-Ponto | [PDF](https://denmartins.github.io/files/lectures/2025/VC/02-VC-Transformacoes-Ponto-a-Ponto.pdf) | [HTML](https://denmartins.github.io/files/lectures/2025/VC/02-VC-Transformacoes-Ponto-a-Ponto.html)|
 | 3 | Filtragem Espacial | [PDF](https://denmartins.github.io/files/lectures/2025/VC/03-VC-Filtragem-Espacial.pdf) | [HTML](https://denmartins.github.io/files/lectures/2025/VC/03-VC-Filtragem-Espacial.html) | 
 | 4 | Filtragem Espacial (Demonstração) | - | [HTML](https://denmartins.github.io/files/lectures/2025/VC/VC-Filtragem-Espacial.slides.html) |
-| 5 | Processamento de Imagens Coloridas | TBD | TBD | 
+| 5 | Processamento de Imagens Coloridas | - | [HTML](https://denmartins.github.io/files/lectures/2025/VC/VC-Processamento-Imagens-Coloridas.slides.html) | 
