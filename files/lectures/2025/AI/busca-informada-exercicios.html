@@ -1,0 +1,171 @@
+<h2 id="instruções">Instruções</h2>
+<ol type="1">
+<li>Forme grupos de <strong>3 alunos</strong>.<br />
+</li>
+<li>Trabalhem apenas com papel e caneta.</li>
+</ol>
+<h1 id="relembrando">Relembrando</h1>
+<table>
+<colgroup>
+<col style="width: 29%" />
+<col style="width: 41%" />
+<col style="width: 29%" />
+</colgroup>
+<thead>
+<tr>
+<th>Elemento</th>
+<th>Busca Gulosa</th>
+<th>Busca A*</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Função de Avaliação</td>
+<td><span
+class="math inline"><em>f</em>(<em>n</em>) = <em>h</em>(<em>n</em>)</span></td>
+<td><span
+class="math inline"><em>f</em>(<em>n</em>) = <em>g</em>(<em>n</em>) + <em>h</em>(<em>n</em>)</span></td>
+</tr>
+<tr>
+<td>Custo acumulado <span
+class="math inline"><em>g</em>(<em>n</em>)</span></td>
+<td>Não considerado na escolha do próximo nó</td>
+<td>Fundamental para garantir optimalidade</td>
+</tr>
+<tr>
+<td>Heurística admissível</td>
+<td>Simples: distância em linha reta (ou 0).</td>
+<td>Deve ser <strong>admissível</strong> e preferencialmente
+<strong>consistente</strong>.</td>
+</tr>
+</tbody>
+</table>
+<h2
+id="exercício-consistência-de-heurística-em-grade-bidimensional">Exercício
+– Consistência de heurística em grade bidimensional</h2>
+<p>Um robô deve se mover em uma grade <span
+class="math inline">5 × 5</span> (células numeradas de (1,1) até (5,5)).
+O objetivo está na célula (5,5). Existem obstáculos nas células: (2,3),
+(3,3), e (4,3). O robô pode se mover apenas em quatro direções (Norte,
+Sul, Leste, Oeste). Cada movimento tem custo 1.</p>
+<p>Defina a heurística <span
+class="math inline"><em>h</em>(<em>n</em>)</span> como a distância
+Manhattan do nó atual ao objetivo: <span
+class="math inline"><em>h</em>((<em>x</em>, <em>y</em>)) = |5 − <em>x</em>| + |5 − <em>y</em>|</span>.</p>
+<ol type="a">
+<li>Verificar se essa heurística é <strong>admissível</strong> (não
+sobreestima o custo real). Justifique.<br />
+</li>
+<li>Checar se a heurística é <strong>consistente</strong>, ou seja, para
+quaisquer nós adjacentes <span class="math inline"><em>n</em></span> e
+<span class="math inline"><em>m</em></span>, verifica-se <span
+class="math inline"><em>h</em>(<em>n</em>) ≤ <em>c</em>(<em>n</em>, <em>m</em>) + <em>h</em>(<em>m</em>)</span>.
+Faça essa verificação apenas para os quatro pares de nós que envolvem o
+obstáculo na coluna 3 (ex.: (2,2)-(2,4), (1,3)-(2,3), etc.).<br />
+</li>
+<li>Usando A*, determinar manualmente o caminho ótimo do robô a partir
+da célula inicial (1,1) até (5,5). Anotar os valores <span
+class="math inline"><em>g</em>(<em>n</em>)</span>, <span
+class="math inline"><em>h</em>(<em>n</em>)</span> e <span
+class="math inline"><em>f</em>(<em>n</em>) = <em>g</em>(<em>n</em>) + <em>h</em>(<em>n</em>)</span>
+para cada nó expandido.<br />
+</li>
+<li>Se você alterasse a heurística para a distância Euclidiana
+(arredondada para cima), discutir se ela seria admissível e consistente,
+e como isso afetaria o caminho resultante de A*.</li>
+</ol>
+<pre><code>                                    +---+---+---+---+---+
+                                    | S |   |   |   |   |
+                                    +---+---+---+---+---+
+                                    |   |   | X |   |   |
+                                    +---+---+---+---+---+
+                                    |   |   | X |   |   |
+                                    +---+---+---+---+---+
+                                    |   |   | X |   |   |
+                                    +---+---+---+---+---+
+                                    |   |   |   |   | G |
+                                    +---+---+---+---+---+</code></pre>
+<h2
+id="exercício-extra-comparação-entre-gbfs-e-a-em-um-grafo-ponderado">Exercício
+Extra – Comparação entre GBFS e A* em um grafo ponderado</h2>
+<p><strong>Enunciado</strong></p>
+<p>Considere o grafo abaixo (arestas pesadas). O nó inicial é
+<strong>S</strong> e o objetivo é <strong>T</strong>. A heurística <span
+class="math inline"><em>h</em>(<em>n</em>)</span> para cada nó está
+indicada.</p>
+<table>
+<thead>
+<tr>
+<th>Nó</th>
+<th><span class="math inline"><em>h</em>(<em>n</em>)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>S</td>
+<td>12</td>
+</tr>
+<tr>
+<td>A</td>
+<td>10</td>
+</tr>
+<tr>
+<td>B</td>
+<td>8</td>
+</tr>
+<tr>
+<td>C</td>
+<td>6</td>
+</tr>
+<tr>
+<td>D</td>
+<td>4</td>
+</tr>
+<tr>
+<td>E</td>
+<td>2</td>
+</tr>
+<tr>
+<td>T</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p>As arestas e pesos são:</p>
+<ul>
+<li><span class="math inline"><em>S</em> ↔︎ <em>A</em></span> (7)</li>
+<li><span class="math inline"><em>S</em> ↔︎ <em>B</em></span> (5)</li>
+<li><span class="math inline"><em>A</em> ↔︎ <em>C</em></span> (4)</li>
+<li><span class="math inline"><em>B</em> ↔︎ <em>C</em></span> (3)</li>
+<li><span class="math inline"><em>C</em> ↔︎ <em>D</em></span> (2)</li>
+<li><span class="math inline"><em>D</em> ↔︎ <em>E</em></span> (1)</li>
+<li><span class="math inline"><em>E</em> ↔︎ <em>T</em></span> (2)</li>
+</ul>
+<p><strong>Tarefas</strong></p>
+<ol type="a">
+<li>Executar <strong>Busca Gulosa</strong> a partir de S, registrando a
+ordem dos nós expandidos e o caminho final que chega em T.<br />
+</li>
+<li>Executar <strong>A</strong>* a partir de S, calculando <span
+class="math inline"><em>f</em>(<em>n</em>) = <em>g</em>(<em>n</em>) + <em>h</em>(<em>n</em>)</span>
+para cada nó expandido, onde <span
+class="math inline"><em>g</em>(<em>n</em>)</span> é o custo acumulado do
+caminho inicial ao nó n. Registrar a ordem de expansão e o caminho final
+encontrado.<br />
+</li>
+<li>Comparar os caminhos obtidos: qual deles tem menor custo total?
+Justificar por que um algoritmo pode ter superado ou não o outro neste
+caso.<br />
+</li>
+<li>Identificar se a heurística <span
+class="math inline"><em>h</em>(<em>n</em>)</span> é admissível (não
+sobreestima o custo real ao objetivo). Se for, qual algoritmo garante
+optimalidade?<br />
+</li>
+<li>Propor uma pequena modificação na estrutura do grafo (alterar pesos
+de arestas) que faça com que GBFS encontre um caminho diferente daquele
+obtido por A*. Descrever a nova configuração e prever qual caminho cada
+algoritmo encontrará.</li>
+</ol>
+<hr />
+<p>Boa sorte!</p>
