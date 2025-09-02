@@ -41,7 +41,7 @@ Este ano, vamos focar em Grandes Modelos de Linguagem (LLMs) e temas relacionado
 | Self‑Attention | [PDF](https://denmartins.github.io/files/lectures/2025/TopicosCD/02-TCD-Self-Attention.pdf) | [HTML](https://denmartins.github.io/files/lectures/2025/TopicosCD/02-TCD-Self-Attention.html) |
 | Multi‑Head Attention | [PDF](https://denmartins.github.io/files/lectures/2025/TopicosCD/03-TCD-MultiHead-Attention.pdf) | [HTML](https://denmartins.github.io/files/lectures/2025/TopicosCD/03-TCD-MultiHead-Attention.html) |
 | Implementação de Multi‑Head Attention | [HTML](https://denmartins.github.io/files/lectures/2025/TopicosCD/code/03-TCD-Attention-Mechanisms.html) | [Jupyter Notebook](https://denmartins.github.io/files/lectures/2025/TopicosCD/code/03-TCD-Attention-Mechanisms.ipynb) |
-| Modelo GPT - Parte 1| [HTML](https:/files/lectures/2025/TopicosCD/code/TCD-Modelo-GPT-Parte-1.ipynb/denmartins.github.io/files/lectures/2025/TopicosCD/TCD-Modelo-GPT-Parte-1.slides.html) | [Jupyter Notebook](https://denmartins.github.io/files/lectures/2025/TopicosCD/code/TCD-Modelo-GPT-Parte-1.ipynb) |
+| Modelo GPT - Parte 1| [HTML](https://denmartins.github.io/files/lectures/2025/TopicosCD/TCD-Modelo-GPT-Parte-1.slides.html) | [Jupyter Notebook](https://denmartins.github.io/files/lectures/2025/TopicosCD/code/TCD-Modelo-GPT-Parte-1.ipynb) |
 
 
 
