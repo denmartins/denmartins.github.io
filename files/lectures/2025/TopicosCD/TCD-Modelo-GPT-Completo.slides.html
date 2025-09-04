@@ -5,7 +5,7 @@
 <meta content="chrome=1" http-equiv="X-UA-Compatible"/>
 <meta content="yes" name="apple-mobile-web-app-capable"/>
 <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"/>
-<title>TCD-Modelo-GPT-Parte-1 slides</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script><script type="module">
+<title>TCD-Modelo-GPT-Completo slides</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script><script type="module">
   import mermaid from 'https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.7.0/mermaid.esm.min.mjs';
   mermaid.initialize({ startOnLoad: true });
 </script>
@@ -7455,9 +7455,9 @@ main {
 <h1 id="Objetivos-de-Aprendizagem">Objetivos de Aprendizagem<a class="anchor-link" href="#Objetivos-de-Aprendizagem">¶</a></h1><ul>
 <li>Implementar um modelo de LLM semelhante ao GPT que pode ser treinado para gerar texto.</li>
 <li>Compreender o conceito de normalização de camadas e sua importância no treinamento de redes neurais.</li>
+<li>Entender como conexões de atalho (skipping connections) em redes neurais profundas ajudam no treinamento.</li>
+<li>Implementar blocos Transformer para criar modelos GPT de diferentes tamanhos</li>
 </ul>
-<!-- - Entender como conexões de atalho (skipping connections) em redes neurais profundas ajudam no treinamento.
-- Implementar blocos Transformer para criar modelos GPT de diferentes tamanhos -->
 </div>
 </div>
 </div>
@@ -7484,18 +7484,7 @@ Baseado no Livro <a href="http://mng.bz/orYv">Build a Large Language Model From 
 </div>
 </div>
 </div>
-</div></section></section><section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=01b24995">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Implementando-um-Modelo-GPT-(Parte-1)">Implementando um Modelo GPT (Parte 1)<a class="anchor-link" href="#Implementando-um-Modelo-GPT-(Parte-1)">¶</a></h2><p>Com o mecanismo de atenção disponível, agora iremos programar os outros blocos de construção de um LLM e montá-los em um modelo do tipo GPT que pode ser treinado para gerar texto convincente.</p>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=7f2f8142">
+</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=7f2f8142">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7568,7 +7557,7 @@ tiktoken version: 0.11.0
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="1.-Codificando-uma-Arquitetura-de-LLM">1. Codificando uma Arquitetura de LLM<a class="anchor-link" href="#1.-Codificando-uma-Arquitetura-de-LLM">¶</a></h2><ul>
+<h1 id="1.-Codificando-uma-Arquitetura-de-LLM">1. Codificando uma Arquitetura de LLM<a class="anchor-link" href="#1.-Codificando-uma-Arquitetura-de-LLM">¶</a></h1><ul>
 <li>Modelos de linguagem de larga escala (LLMs), como o GPT, são arquiteturas de redes neurais profundas projetadas para gerar novo texto palavra (ou token) por palavra. Apesar do tamanho, a arquitetura do modelo é menos complicada do que se imagina, já que muitos de seus componentes são repetidos.</li>
 <li>A arquitetura de um GPT contém, ao lado das camadas de embedding, blocos <em>transformer</em> que incluem o módulo de atenção multi-cabeças mascarada implementado anteriormente.</li>
 </ul>
@@ -7585,7 +7574,7 @@ tiktoken version: 0.11.0
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">GPT_CONFIG_124M</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s2">"vocab_size"</span><span class="p">:</span> <span class="mi">50257</span><span class="p">,</span>    <span class="c1"># Vocabulary size</span>
-    <span class="s2">"context_length"</span><span class="p">:</span> <span class="mi">1024</span><span class="p">,</span> <span class="c1"># Context length, which might be much larger in other models</span>
+    <span class="s2">"context_length"</span><span class="p">:</span> <span class="mi">1024</span><span class="p">,</span> <span class="c1"># Context length</span>
     <span class="s2">"emb_dim"</span><span class="p">:</span> <span class="mi">768</span><span class="p">,</span>         <span class="c1"># Embedding dimension</span>
     <span class="s2">"n_heads"</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span>          <span class="c1"># Number of attention heads</span>
     <span class="s2">"n_layers"</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span>         <span class="c1"># Number of layers/transformer blocks</span>
@@ -7597,7 +7586,7 @@ tiktoken version: 0.11.0
 </div>
 </div>
 </div>
-</div>
+</div></section></section><section><section>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=3de8f265">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -7632,7 +7621,7 @@ tiktoken version: 0.11.0
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">torch</span>
@@ -7642,20 +7631,20 @@ tiktoken version: 0.11.0
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cfg</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">tok_emb</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Embedding</span><span class="p">(</span><span class="n">cfg</span><span class="p">[</span><span class="s2">"vocab_size"</span><span class="p">],</span> <span class="n">cfg</span><span class="p">[</span><span class="s2">"emb_dim"</span><span class="p">])</span>
-        <span class="c1"># a camada de entrada mapeia do tamanho do vocabulário para o espaço de embedding</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">pos_emb</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Embedding</span><span class="p">(</span><span class="n">cfg</span><span class="p">[</span><span class="s2">"context_length"</span><span class="p">],</span> <span class="n">cfg</span><span class="p">[</span><span class="s2">"emb_dim"</span><span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pos_emb</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Embedding</span><span class="p">(</span>
+            <span class="n">cfg</span><span class="p">[</span><span class="s2">"context_length"</span><span class="p">],</span> <span class="n">cfg</span><span class="p">[</span><span class="s2">"emb_dim"</span><span class="p">])</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">drop_emb</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Dropout</span><span class="p">(</span><span class="n">cfg</span><span class="p">[</span><span class="s2">"drop_rate"</span><span class="p">])</span>
-        <span class="c1"># Use um placeholder para TransformerBlock</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">trf_blocks</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Sequential</span><span class="p">(</span><span class="o">*</span><span class="p">[</span><span class="n">SimpleTransformerBlock</span><span class="p">(</span><span class="n">cfg</span><span class="p">)</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">cfg</span><span class="p">[</span><span class="s2">"n_layers"</span><span class="p">])])</span>
-        <span class="c1"># Use um placeholder para LayerNorm</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">trf_blocks</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Sequential</span><span class="p">(</span>
+            <span class="o">*</span><span class="p">[</span><span class="n">SimpleTransformerBlock</span><span class="p">(</span><span class="n">cfg</span><span class="p">)</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">cfg</span><span class="p">[</span><span class="s2">"n_layers"</span><span class="p">])])</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">final_norm</span> <span class="o">=</span> <span class="n">SimpleLayerNorm</span><span class="p">(</span><span class="n">cfg</span><span class="p">[</span><span class="s2">"emb_dim"</span><span class="p">])</span>
-        <span class="c1"># camada de saída, mapeia do espaço de embedding de volta ao tamanho do vocabulário</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">out_head</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">cfg</span><span class="p">[</span><span class="s2">"emb_dim"</span><span class="p">],</span> <span class="n">cfg</span><span class="p">[</span><span class="s2">"vocab_size"</span><span class="p">],</span> <span class="n">bias</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">out_head</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span>
+            <span class="n">cfg</span><span class="p">[</span><span class="s2">"emb_dim"</span><span class="p">],</span> <span class="n">cfg</span><span class="p">[</span><span class="s2">"vocab_size"</span><span class="p">],</span> <span class="n">bias</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
     
     <span class="k">def</span><span class="w"> </span><span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">in_idx</span><span class="p">):</span>
         <span class="n">batch_size</span><span class="p">,</span> <span class="n">seq_len</span> <span class="o">=</span> <span class="n">in_idx</span><span class="o">.</span><span class="n">shape</span>
         <span class="n">tok_embeds</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">tok_emb</span><span class="p">(</span><span class="n">in_idx</span><span class="p">)</span>
-        <span class="n">pos_embeds</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pos_emb</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">seq_len</span><span class="p">,</span> <span class="n">device</span><span class="o">=</span><span class="n">in_idx</span><span class="o">.</span><span class="n">device</span><span class="p">))</span>
+        <span class="n">pos_embeds</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pos_emb</span><span class="p">(</span>
+            <span class="n">torch</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">seq_len</span><span class="p">,</span> <span class="n">device</span><span class="o">=</span><span class="n">in_idx</span><span class="o">.</span><span class="n">device</span><span class="p">))</span>
         <span class="n">x</span> <span class="o">=</span> <span class="n">tok_embeds</span> <span class="o">+</span> <span class="n">pos_embeds</span>
         <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">drop_emb</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
         <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">trf_blocks</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
@@ -7698,7 +7687,8 @@ tiktoken version: 0.11.0
 <span class="k">class</span><span class="w"> </span><span class="nc">SimpleLayerNorm</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">normalized_shape</span><span class="p">,</span> <span class="n">eps</span><span class="o">=</span><span class="mf">1e-5</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
-        <span class="c1"># Os parâmetros aqui são apenas para imitar a interface do LayerNorm.</span>
+        <span class="c1"># Os parâmetros aqui são apenas para imitar </span>
+        <span class="c1"># a interface do LayerNorm.</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
         <span class="c1"># Esta camada não faz nada e apenas retorna sua entrada.</span>
@@ -7715,18 +7705,11 @@ tiktoken version: 0.11.0
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Vis%C3%A3o-Geral">Visão Geral<a class="anchor-link" href="#Vis%C3%A3o-Geral">¶</a></h2>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=fead1bfb">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p><img alt="No description has been provided for this image" src="https://camo.githubusercontent.com/e065aaca707d5039aea24d8752be69ab78a7b19028724cfacf0902d8b46ae9ed/68747470733a2f2f73656261737469616e72617363686b612e636f6d2f696d616765732f4c4c4d732d66726f6d2d736372617463682d696d616765732f636830345f636f6d707265737365642f30342e776562703f313233" width="500"/></p>
+<h2 id="Vis%C3%A3o-Geral">Visão Geral<a class="anchor-link" href="#Vis%C3%A3o-Geral">¶</a></h2><div style="align: left; text-align:center;">
+<img alt="Visão Geral da Arquitetura GPT" src="https://camo.githubusercontent.com/e065aaca707d5039aea24d8752be69ab78a7b19028724cfacf0902d8b46ae9ed/68747470733a2f2f73656261737469616e72617363686b612e636f6d2f696d616765732f4c4c4d732d66726f6d2d736372617463682d696d616765732f636830345f636f6d707265737365642f30342e776562703f313233" style="width:500px;">
+<span style="display:block;"> Visão Geral da Arquitetura GPT. Fonte: <a href="https://magazine.sebastianraschka.com" target="_blank">Ahead of AI</a>.</span>
+<br>
+</br></img></div>
 </div>
 </div>
 </div>
@@ -7833,7 +7816,7 @@ tensor([[[-1.2034,  0.3201, -0.7130,  ..., -1.5548, -0.2390, -0.4667],
 </div>
 </div>
 </div>
-</div></section></section><section><section>
+</div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=37711e07">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -7868,7 +7851,11 @@ tensor([[[-1.2034,  0.3201, -0.7130,  ..., -1.5548, -0.2390, -0.4667],
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p><img alt="" src="https://camo.githubusercontent.com/1bb0018e68d16529b969ccc6b0bca371ed5a7b9a514d1bd3f345c4941c0f463d/68747470733a2f2f73656261737469616e72617363686b612e636f6d2f696d616765732f4c4c4d732d66726f6d2d736372617463682d696d616765732f636830345f636f6d707265737365642f30352e77656270"/></p>
+<div style="align: left; text-align:center;">
+<img alt="Layer Normalization" src="https://camo.githubusercontent.com/1bb0018e68d16529b969ccc6b0bca371ed5a7b9a514d1bd3f345c4941c0f463d/68747470733a2f2f73656261737469616e72617363686b612e636f6d2f696d616765732f4c4c4d732d66726f6d2d736372617463682d696d616765732f636830345f636f6d707265737365642f30352e77656270" style="width:600px;"/>
+<span style="display:block;"> Layer Normalization. Fonte: <a href="https://magazine.sebastianraschka.com" target="_blank">Ahead of AI</a>.</span>
+<br>
+</br></div>
 <p>Vamos observar como funciona a normalização de camada passando uma pequena amostra de entrada por uma camada neural simples; especificamente, recriamos o exemplo ilustrado na figura acima através do código seguinte, no qual implementamos uma camada neural com 5 entradas e 6 saídas que aplicaremos a dois exemplos de entrada.</p>
 </div>
 </div>
@@ -7979,18 +7966,11 @@ Variance:
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Ilustrando-o-c%C3%A1lculo">Ilustrando o cálculo<a class="anchor-link" href="#Ilustrando-o-c%C3%A1lculo">¶</a></h3>
+<h3 id="Ilustrando-o-c%C3%A1lculo">Ilustrando o cálculo<a class="anchor-link" href="#Ilustrando-o-c%C3%A1lculo">¶</a></h3><div style="align: left; text-align:center;">
+<img alt="dim=-1 em Layer Normalization" src="https://camo.githubusercontent.com/1d353a009cf6ec3a2ea918b62bfedc10b565e0d17836366fc0e5dffca6156715/68747470733a2f2f73656261737469616e72617363686b612e636f6d2f696d616765732f4c4c4d732d66726f6d2d736372617463682d696d616765732f636830345f636f6d707265737365642f30362e77656270" style="width:600px;"/>
+<span style="display:block;">dim=-1 em Layer Normalization. Fonte: <a href="https://magazine.sebastianraschka.com" target="_blank">Ahead of AI</a>.</span>
+<br/>
 </div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=25c49af9">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p><img alt="" src="https://camo.githubusercontent.com/1d353a009cf6ec3a2ea918b62bfedc10b565e0d17836366fc0e5dffca6156715/68747470733a2f2f73656261737469616e72617363686b612e636f6d2f696d616765732f4c4c4d732d66726f6d2d736372617463682d696d616765732f636830345f636f6d707265737365642f30362e77656270"/></p>
 </div>
 </div>
 </div>
@@ -8003,7 +7983,7 @@ Variance:
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Aplica a normalização de camada aos resultados da camada anterior</span>
-<span class="c1"># A operação consiste em subtrair a média e dividir pelo desvio padrão.</span>
+<span class="c1"># Consiste em subtrair a média e dividir pelo desvio padrão.</span>
 <span class="n">out_norm</span> <span class="o">=</span> <span class="p">(</span><span class="n">out</span> <span class="o">-</span> <span class="n">mean</span><span class="p">)</span> <span class="o">/</span> <span class="n">torch</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">var</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">"Normalized layer outputs:</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> <span class="n">out_norm</span><span class="p">)</span>
 
@@ -8074,8 +8054,10 @@ Variance:
         <span class="n">norm_x</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">mean</span><span class="p">)</span> <span class="o">/</span> <span class="n">torch</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">var</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">eps</span><span class="p">)</span>  <span class="c1"># eps evita divisão por zero</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">scale</span> <span class="o">*</span> <span class="n">norm_x</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">shift</span>
 
-        <span class="c1"># shift não tem efeito aqui pois adiciona apenas zero; será relevante mais tarde durante o treinamento,</span>
-        <span class="c1"># permitindo que a rede desfaça essa normalização; similarmente para scale</span>
+        <span class="c1"># shift não tem efeito aqui pois adiciona apenas zero; </span>
+        <span class="c1"># será relevante mais tarde durante o treinamento,</span>
+        <span class="c1"># permitindo que a rede desfaça essa normalização; </span>
+        <span class="c1"># similarmente para scale</span>
 </pre></div>
 </div>
 </div>
@@ -8121,19 +8103,393 @@ Variance:
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=bfcadba6">
+</div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=923428b4-f961-45bd-95c2-8a436ecdf63f">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="Modelo-GPT---Parte-2">Modelo GPT - Parte 2<a class="anchor-link" href="#Modelo-GPT---Parte-2">¶</a></h1><h2 id="T%C3%B3picos-em-Ci%C3%AAncia-de-Dados"><a href="https://denmartins.github.io/teaching/2025-topicos-cd">Tópicos em Ciência de Dados</a><a class="anchor-link" href="#T%C3%B3picos-em-Ci%C3%AAncia-de-Dados">¶</a></h2><h3 id="Prof.-Dr.-Denis-Mayr-Lima-Martins"><a href="https://denmartins.github.io/">Prof. Dr. Denis Mayr Lima Martins</a><a class="anchor-link" href="#Prof.-Dr.-Denis-Mayr-Lima-Martins">¶</a></h3><h3 id="Pontif%C3%ADcia-Universidade-Cat%C3%B3lica-de-Campinas"><a href="https://www.puc-campinas.edu.br/">Pontifícia Universidade Católica de Campinas</a><a class="anchor-link" href="#Pontif%C3%ADcia-Universidade-Cat%C3%B3lica-de-Campinas">¶</a></h3><p><img alt="No description has been provided for this image" src="https://www.puc-campinas.edu.br/wp-content/uploads/2022/06/logo-puc.png" width="100px"/></p>
+</div>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=7f94e68d-71c3-4d35-8984-8fcecf86e93b">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<center>
+<table style="width:100%">
+<tr>
+<td style="vertical-align:middle; text-align:left;">
+Baseado no Livro <a href="http://mng.bz/orYv">Build a Large Language Model From Scratch</a> de <a href="https://sebastianraschka.com">Sebastian Raschka</a><br/>
+<br/>Code repository: <a href="https://github.com/rasbt/LLMs-from-scratch">https://github.com/rasbt/LLMs-from-scratch</a>
+</td>
+<td style="vertical-align:middle; text-align:left;">
+<a href="http://mng.bz/orYv"><img alt="No description has been provided for this image" src="https://sebastianraschka.com/images/LLMs-from-scratch-images/cover-small.webp" width="200px"/></a>
+</td>
+</tr>
+</table>
+</center>
+</div>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=37dd8c8d-bc55-448e-857b-fc89171dc1c2">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Recapitulando-a-aula-passada">Recapitulando a aula passada<a class="anchor-link" href="#Recapitulando-a-aula-passada">¶</a></h2><div style="align: left; text-align:center;">
+<img alt="Transformer" src="https://lilianweng.github.io/lil-log/assets/images/OpenAI-GPT-transformer-decoder.png" style="height:400px;">
+<span style="display:block;">Arquitetura Transformer. Fonte: <a href="https://lilianweng.github.io" target="_blank">https://lilianweng.github.io</a>.</span>
+<br>
+</br></img></div>
+</div>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=31fab41e-9ff2-4a34-9b1e-ee0705287362">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<div style="align: left; text-align:center;">
+<img alt="Post-LN versus Pre-LN" src="https://substackcdn.com/image/fetch/$s_!JOyz!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5a0a1e39-de22-4a95-8a42-b4040cf33b54_2040x956.png" style="width:100%; height:100%;"/>
+<span style="display:block;">Post-LN versus Pre-LN. Fonte: <a href="https://magazine.sebastianraschka.com/p/understanding-large-language-models" target="_blank">Ahead of AI</a>.</span>
+<br>
+</br></div>
+</div>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=8adcc115-a369-4bab-a3fb-35682a7b2d50">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Aspectos-Gerais-de-Arquitetura-de-LLMs">Aspectos Gerais de Arquitetura de LLMs<a class="anchor-link" href="#Aspectos-Gerais-de-Arquitetura-de-LLMs">¶</a></h2><div style="align: left; text-align:center;">
+<img alt="Aspectos Gerais de Arquitetura de LLMs" src="https://substackcdn.com/image/fetch/$s_!L-Fu!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fcf0be27f-4d1b-4761-9019-b04735c3bd25_1854x648.jpeg" style="width:700px;"/>
+<span style="display:block;"> Pythia: A Suite for Analyzing Large Language Models Across Training and Scaling (2023). Fonte: <a href="https://magazine.sebastianraschka.com/p/understanding-large-language-models" target="_blank">Ahead of AI</a>.</span>
+<br/>
+</div>
+</div>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=63249967">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Feed-Forward-com-Ativa%C3%A7%C3%A3o-GELU">Feed-Forward com Ativação GELU<a class="anchor-link" href="#Feed-Forward-com-Ativa%C3%A7%C3%A3o-GELU">¶</a></h2><hr/>
+<p>Vamos implementar uma camada composta de uma pequena rede neural que será usada como parte do bloco Transfomer nos LLMs.</p>
+<p>Iniciaremos com a função de ativação.</p>
+<center>
+<h3> Por que precisamos de funções de ativação não-lineares em Redes Neurais?</h3>
+</center>
+</div>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=9033cad3">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<div style="align: left; text-align:center;">
+<img alt="Activation Function" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi_62ZJVAenaC_Zlir7nlXQTj9F3Hf6IyE0xXD1buQdcIbir_EZWSHy0hhswTvjgP5lS-kuCRXNwqTK1vtp0xlFLAp_kQ5adjwyU87Ery6aFYcoGnT_xZOM_2HpSWs8MHaq_mnkHqFMaU8/s1600/Picture10.png" style="width:700px;"/>
+<span style="display:block;">Importância das funções de ativação não-lineares. Fonte: <a href="https://anjali-dl.blogspot.com/2020/03/importance-of-activation-functions.html" target="_blank">Anjali Kumari</a>.</span>
+<br/>
+</div>
+</div>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=6a60ea9d">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Feed-Forward-com-Ativa%C3%A7%C3%A3o-GELU">Feed-Forward com Ativação GELU<a class="anchor-link" href="#Feed-Forward-com-Ativa%C3%A7%C3%A3o-GELU">¶</a></h2><ul>
+<li>A função de ativação é a transformação não linear que fazemos ao longo do sinal de entrada.</li>
+<li>Quando não temos a função de ativação, os pesos e bias simplesmente fazem uma transformação linear. Uma equação linear é simples de resolver, mas é limitada na sua capacidade de resolver problemas complexos.</li>
+<li>Introduzir não‑linearidade nos neurônios, permitindo que redes profundas capturem padrões complexos e façam classificações em múltiplas classes.</li>
+</ul>
+</div>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=3117c335">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="GELU-(Gaussian-Error-Linear-Unit)"><strong>GELU (Gaussian Error Linear Unit)</strong><a class="anchor-link" href="#GELU-(Gaussian-Error-Linear-Unit)">¶</a></h3><hr/>
+<ul>
+<li>Presente nas arquiteturas GPT-2/3</li>
+<li><strong>Definição matemática</strong>: $\text{GELU}(x) = x \cdot \Phi(x)$, onde $\Phi(x)$ é a função de distribuição acumulada da normal padrão.</li>
+<li><strong>Propriedades</strong>:<ul>
+<li>Se comporta como identidade para valores positivos (mantém quase todos os sinais).</li>
+<li>Para valores negativos, atenua suavemente o valor em vez de cortá‑lo abruptamente como ReLU.</li>
+</ul>
+</li>
+<li><strong>Aproximação prática</strong> (usada na maioria das implementações):<br/>
+$$
+\text{GELU}(x) \approx 0.5\,x\,[1 + \tanh(\sqrt{\frac{2}{\pi}}(x + 0.044715x^{3}))]
+$$</li>
+<li>Evita o cálculo direto de funções exponenciais, reduzindo a carga computacional.</li>
+</ul>
+</div>
+</div>
+</div>
+</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=ffdd87ac">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [14]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [15]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">mean</span> <span class="o">=</span> <span class="n">out_ln</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="n">keepdim</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">var</span> <span class="o">=</span> <span class="n">out_ln</span><span class="o">.</span><span class="n">var</span><span class="p">(</span><span class="n">dim</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="n">unbiased</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">keepdim</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">GELU</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Mean:</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> <span class="n">mean</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Variance:</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> <span class="n">var</span><span class="p">)</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+        <span class="k">return</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">x</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">torch</span><span class="o">.</span><span class="n">tanh</span><span class="p">(</span>
+            <span class="n">torch</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span><span class="mf">2.0</span> <span class="o">/</span> <span class="n">torch</span><span class="o">.</span><span class="n">pi</span><span class="p">))</span> <span class="o">*</span> 
+            <span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="mf">0.044715</span> <span class="o">*</span> <span class="n">torch</span><span class="o">.</span><span class="n">pow</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+        <span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=b0c5de4e">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [16]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">torch</span>                       
+<span class="kn">import</span><span class="w"> </span><span class="nn">torch.nn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">nn</span>              
+
+<span class="n">gelu</span><span class="p">,</span> <span class="n">relu</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">GELU</span><span class="p">(),</span> <span class="n">nn</span><span class="o">.</span><span class="n">ReLU</span><span class="p">()</span>
+
+<span class="c1"># Cria dados simples para plotar as funções</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">y_gelu</span><span class="p">,</span> <span class="n">y_relu</span> <span class="o">=</span> <span class="n">gelu</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">relu</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=bb82a7a4">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="GELU-x-RELU">GELU x RELU<a class="anchor-link" href="#GELU-x-RELU">¶</a></h3><p>O que acontece com os gradientes nas duas funções?</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=4e3215f2">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [17]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">label</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="nb">zip</span><span class="p">([</span><span class="n">y_gelu</span><span class="p">,</span> <span class="n">y_relu</span><span class="p">],</span> <span class="p">[</span><span class="s2">"GELU"</span><span class="p">,</span> <span class="s2">"ReLU"</span><span class="p">]),</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">label</span><span class="si">}</span><span class="s2"> activation function"</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">"x"</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">label</span><span class="si">}</span><span class="s2">(x)"</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedImage jp-OutputArea-output" tabindex="0">
+<img alt="No description has been provided for this image" class="" src="data:image/png;base64,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"/>
+</div>
+</div>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=41d41d71">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Rede-Feed-Forward">Rede Feed-Forward<a class="anchor-link" href="#Rede-Feed-Forward">¶</a></h2><hr/>
+<p>Usamos GELU na implementação da camada Feed-Forward com duas camadas lineares.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=1bdf6ba8">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [18]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">FeedForward</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cfg</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">layers</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Sequential</span><span class="p">(</span>
+            <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">cfg</span><span class="p">[</span><span class="s2">"emb_dim"</span><span class="p">],</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">cfg</span><span class="p">[</span><span class="s2">"emb_dim"</span><span class="p">]),</span> <span class="n">GELU</span><span class="p">(),</span>
+            <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="mi">4</span> <span class="o">*</span> <span class="n">cfg</span><span class="p">[</span><span class="s2">"emb_dim"</span><span class="p">],</span> <span class="n">cfg</span><span class="p">[</span><span class="s2">"emb_dim"</span><span class="p">]),</span>
+        <span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">layers</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=6047cdf5">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>A camada Feed-Forward é crucial para melhorar a habilidade do modelo de generalizar os dados. Embora entrada e saída ambos tenham a mesma dimensionalidade, a camada escondida expande a dimensionalidade dos embeddings a um espaço dimensional muito maior.</p>
+<div style="align: left; text-align:center;">
+<img alt="Dimensionalidade dos Vetores" src="https://camo.githubusercontent.com/5b893aa5271d2f828f427f33208e4eadc1429c26c9bf4d2a1760b1384b1eeebc/68747470733a2f2f73656261737469616e72617363686b612e636f6d2f696d616765732f4c4c4d732d66726f6d2d736372617463682d696d616765732f636830345f636f6d707265737365642f30392e776562703f3132" style="width:450px;">
+<span style="display:block;">Dimensionalidade dos Vetores. Fonte: <a href="https://github.com/rasbt/LLMs-from-scratch/blob/main/ch04/01_main-chapter-code/ch04.ipynb" target="_blank">Sebastian Raschka</a>.</span>
+<br/>
+</img></div>
+</div>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=dabb6b55">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="4.-Conex%C3%B5es-de-Atalho-(Residual-Connections)">4. Conexões de Atalho (<em>Residual Connections</em>)<a class="anchor-link" href="#4.-Conex%C3%B5es-de-Atalho-(Residual-Connections)">¶</a></h2><hr/>
+<center>
+<table style="width:100%;border:none;">
+<tr>
+<td style="vertical-align:middle;text-align:left;border:none;width:40%;">
+<ul>
+<li>Propostas originalmente para mitigar os problemas do desaparecimento do gradiente.</li>
+<li>Ideia: Adicionar a saída de uma camada à saída de uma camada posterior, geralmente pulando (<em>skipping</em>) uma ou mais camadas no meio.</li>
+<li>Uma conexão atalho cria um caminho alternativo e mais curto para o gradiente fluir através da rede.</li>
+</ul>
+</td>
+<td style="vertical-align:middle;text-align:left;border:none;">
+<img alt="No description has been provided for this image" src="https://camo.githubusercontent.com/b1cb95fee4a11c35cb6ce14a2399ac09875c45dc92d344713a80913e05e04c20/68747470733a2f2f73656261737469616e72617363686b612e636f6d2f696d616765732f4c4c4d732d66726f6d2d736372617463682d696d616765732f636830345f636f6d707265737365642f31322e776562703f313233" width="100%"/>
+</td>
+</tr>
+</table>
+</center>
+</div>
+</div>
+</div>
+</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=28a8796a">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [19]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">SimpleDeepNeuralNetwork</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">layer_sizes</span><span class="p">,</span> <span class="n">use_shortcut</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">use_shortcut</span> <span class="o">=</span> <span class="n">use_shortcut</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">layers</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">ModuleList</span><span class="p">([</span>
+            <span class="n">nn</span><span class="o">.</span><span class="n">Sequential</span><span class="p">(</span>
+                <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">layer_sizes</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">layer_sizes</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span> <span class="n">GELU</span><span class="p">()),</span>
+            <span class="n">nn</span><span class="o">.</span><span class="n">Sequential</span><span class="p">(</span>
+                <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">layer_sizes</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">layer_sizes</span><span class="p">[</span><span class="mi">2</span><span class="p">]),</span> <span class="n">GELU</span><span class="p">()),</span>
+            <span class="n">nn</span><span class="o">.</span><span class="n">Sequential</span><span class="p">(</span>
+                <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">layer_sizes</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">layer_sizes</span><span class="p">[</span><span class="mi">3</span><span class="p">]),</span> <span class="n">GELU</span><span class="p">()),</span>
+            <span class="n">nn</span><span class="o">.</span><span class="n">Sequential</span><span class="p">(</span>
+                <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">layer_sizes</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">layer_sizes</span><span class="p">[</span><span class="mi">4</span><span class="p">]),</span> <span class="n">GELU</span><span class="p">()),</span>
+            <span class="n">nn</span><span class="o">.</span><span class="n">Sequential</span><span class="p">(</span>
+                <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">layer_sizes</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">layer_sizes</span><span class="p">[</span><span class="mi">5</span><span class="p">]),</span> <span class="n">GELU</span><span class="p">())</span>
+        <span class="p">])</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">layer</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">layers</span><span class="p">:</span>
+            <span class="n">layer_output</span> <span class="o">=</span> <span class="n">layer</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+            <span class="c1"># Verifica se o atalho pode ser aplicado</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">use_shortcut</span> <span class="ow">and</span> <span class="n">x</span><span class="o">.</span><span class="n">shape</span> <span class="o">==</span> <span class="n">layer_output</span><span class="o">.</span><span class="n">shape</span><span class="p">:</span>
+                <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">layer_output</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">x</span> <span class="o">=</span> <span class="n">layer_output</span>
+        <span class="k">return</span> <span class="n">x</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=ee5eb9ad">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="Gradientes-sem-conex%C3%B5es-de-atalho">Gradientes <strong>sem</strong> conexões de atalho<a class="anchor-link" href="#Gradientes-sem-conex%C3%B5es-de-atalho">¶</a></h3>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=ae32d97f">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [21]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">layer_sizes</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>  
+
+<span class="n">sample_input</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([[</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.</span><span class="p">]])</span>
+
+<span class="n">torch</span><span class="o">.</span><span class="n">manual_seed</span><span class="p">(</span><span class="mi">123</span><span class="p">)</span>
+<span class="n">model_without_shortcut</span> <span class="o">=</span> <span class="n">SimpleDeepNeuralNetwork</span><span class="p">(</span>
+    <span class="n">layer_sizes</span><span class="p">,</span> <span class="n">use_shortcut</span><span class="o">=</span><span class="kc">False</span>
+<span class="p">)</span>
+
+<span class="n">print_gradients</span><span class="p">(</span><span class="n">model_without_shortcut</span><span class="p">,</span> <span class="n">sample_input</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -8146,57 +8502,600 @@ Variance:
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Mean:
- tensor([[    -0.0000],
-        [     0.0000]], grad_fn=&lt;MeanBackward1&gt;)
-Variance:
- tensor([[1.0000],
-        [1.0000]], grad_fn=&lt;VarBackward0&gt;)
+<pre>layers.0.0.weight has gradient mean of 0.00020173587836325169
+layers.1.0.weight has gradient mean of 0.0001201116101583466
+layers.2.0.weight has gradient mean of 0.0007152041071094573
+layers.3.0.weight has gradient mean of 0.0013988735154271126
+layers.4.0.weight has gradient mean of 0.005049645435065031
 </pre>
 </div>
 </div>
 </div>
 </div>
 </div></section></section><section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=c9c359ba">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=e7faf5e0">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Observa%C3%A7%C3%B5es">Observações<a class="anchor-link" href="#Observa%C3%A7%C3%B5es">¶</a></h3><ul>
-<li><strong>Escala e deslocamento:</strong> além da normalização (subtração da média e divisão pela variância), são introduzidos dois parâmetros treináveis, <code>scale</code> e <code>shift</code>. Inicialmente eles não alteram o valor (multiplicação por 1 e adição de 0), mas podem ser ajustados durante o treinamento para otimizar a performance do modelo.</li>
-<li><strong>Variância enviesada:</strong> ao calcular a variância é usado <code>unbiased=False</code>, ou seja, a fórmula $\frac{\sum_i(x_i-\bar{x})^2}{n}$. Essa escolha produz uma estimativa enviesada, mas em dimensões de embedding muito grandes a diferença entre $n$ e $n-1$ é insignificante. O GPT‑2 foi treinado com essa configuração, portanto o mesmo padrão é adotado para garantir compatibilidade com pesos pré‑treinados.<br>
-O texto conclui convidando à experimentação prática do <code>LayerNorm</code>.</br></li>
-</ul>
+<h3 id="Gradientes-com-conex%C3%B5es-de-atalho">Gradientes <strong>com</strong> conexões de atalho<a class="anchor-link" href="#Gradientes-com-conex%C3%B5es-de-atalho">¶</a></h3>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=1fa0eae0">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [22]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">torch</span><span class="o">.</span><span class="n">manual_seed</span><span class="p">(</span><span class="mi">123</span><span class="p">)</span>
+<span class="n">model_with_shortcut</span> <span class="o">=</span> <span class="n">SimpleDeepNeuralNetwork</span><span class="p">(</span>
+    <span class="n">layer_sizes</span><span class="p">,</span> <span class="n">use_shortcut</span><span class="o">=</span><span class="kc">True</span>
+<span class="p">)</span>
+<span class="n">print_gradients</span><span class="p">(</span><span class="n">model_with_shortcut</span><span class="p">,</span> <span class="n">sample_input</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>layers.0.0.weight has gradient mean of 0.22169791162014008
+layers.1.0.weight has gradient mean of 0.20694106817245483
+layers.2.0.weight has gradient mean of 0.32896995544433594
+layers.3.0.weight has gradient mean of 0.2665732204914093
+layers.4.0.weight has gradient mean of 1.3258540630340576
+</pre>
+</div>
 </div>
 </div>
 </div>
 </div></section></section><section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=0ed2c32b">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=d544700b">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="Resumo">Resumo<a class="anchor-link" href="#Resumo">¶</a></h1><ul>
-<li><strong>Arquitetura GPT</strong><ul>
-<li>Bloco transformer auto‑regressivo (self‑attention + MLP).</li>
-<li>Pré‑treinado em previsão de próximo token; fine‑tune para tarefas específicas.</li>
-<li>Escalável: mais camadas, cabeças e dimensões → GPT‑2/3/4.</li>
+<h2 id="5.-Bloco-Transformer">5. Bloco Transformer<a class="anchor-link" href="#5.-Bloco-Transformer">¶</a></h2><hr/>
+<p>Agora, combinamos os conceitos anteriores em um <em>bloco transformer</em>:</p>
+<div style="align: left; text-align:center;">
+<img alt="Visão Geral GPT-2" src="https://camo.githubusercontent.com/6c8c392f72d5b9e86c94aeb9470beab435b888d24135926f1746eb88e0cc18fb/68747470733a2f2f73656261737469616e72617363686b612e636f6d2f696d616765732f4c4c4d732d66726f6d2d736372617463682d696d616765732f636830345f636f6d707265737365642f31332e776562703f31" style="width:400px;">
+<span style="display:block;">Visão Geral GPT-2. Fonte: <a href="https://github.com/rasbt/LLMs-from-scratch/blob/main/ch04/01_main-chapter-code/ch04.ipynb" target="_blank">Sebastian Raschka</a>.</span>
+<br/>
+</img></div>
+<p><img alt="" src=""/></p>
+</div>
+</div>
+</div>
+</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=84b9133b">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [24]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">TransformerBlock</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cfg</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">att</span> <span class="o">=</span> <span class="n">MultiHeadAttention</span><span class="p">(</span>
+            <span class="n">d_in</span><span class="o">=</span><span class="n">cfg</span><span class="p">[</span><span class="s2">"emb_dim"</span><span class="p">],</span>
+            <span class="n">d_out</span><span class="o">=</span><span class="n">cfg</span><span class="p">[</span><span class="s2">"emb_dim"</span><span class="p">],</span>
+            <span class="n">context_length</span><span class="o">=</span><span class="n">cfg</span><span class="p">[</span><span class="s2">"context_length"</span><span class="p">],</span>
+            <span class="n">num_heads</span><span class="o">=</span><span class="n">cfg</span><span class="p">[</span><span class="s2">"n_heads"</span><span class="p">],</span> 
+            <span class="n">dropout</span><span class="o">=</span><span class="n">cfg</span><span class="p">[</span><span class="s2">"drop_rate"</span><span class="p">],</span>
+            <span class="n">qkv_bias</span><span class="o">=</span><span class="n">cfg</span><span class="p">[</span><span class="s2">"qkv_bias"</span><span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ff</span> <span class="o">=</span> <span class="n">FeedForward</span><span class="p">(</span><span class="n">cfg</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">norm1</span> <span class="o">=</span> <span class="n">LayerNorm</span><span class="p">(</span><span class="n">cfg</span><span class="p">[</span><span class="s2">"emb_dim"</span><span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">norm2</span> <span class="o">=</span> <span class="n">LayerNorm</span><span class="p">(</span><span class="n">cfg</span><span class="p">[</span><span class="s2">"emb_dim"</span><span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">drop_shortcut</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Dropout</span><span class="p">(</span><span class="n">cfg</span><span class="p">[</span><span class="s2">"drop_rate"</span><span class="p">])</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+        <span class="c1"># Shortcut connection for attention block</span>
+        <span class="n">shortcut</span> <span class="o">=</span> <span class="n">x</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">norm1</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">att</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>  <span class="c1"># Shape [batch_size, num_tokens, emb_size]</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">drop_shortcut</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">shortcut</span>  <span class="c1"># Adiciona a entrada original de volta</span>
+        
+        <span class="n">shortcut</span> <span class="o">=</span> <span class="n">x</span> <span class="c1"># Conexão de atalho</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">norm2</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ff</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">drop_shortcut</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">shortcut</span>  <span class="c1"># Adiciona a entrada original de volta</span>
+
+        <span class="k">return</span> <span class="n">x</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=10d0b4c1">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [25]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">torch</span><span class="o">.</span><span class="n">manual_seed</span><span class="p">(</span><span class="mi">123</span><span class="p">)</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">768</span><span class="p">)</span>  <span class="c1"># Shape: [batch_size, num_tokens, emb_dim]</span>
+<span class="n">block</span> <span class="o">=</span> <span class="n">TransformerBlock</span><span class="p">(</span><span class="n">GPT_CONFIG_124M</span><span class="p">)</span>
+<span class="n">output</span> <span class="o">=</span> <span class="n">block</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Input shape:"</span><span class="p">,</span> <span class="n">x</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Output shape:"</span><span class="p">,</span> <span class="n">output</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Input shape: torch.Size([2, 4, 768])
+Output shape: torch.Size([2, 4, 768])
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=34a66791">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="6.-Modelo-GPT">6. Modelo GPT<a class="anchor-link" href="#6.-Modelo-GPT">¶</a></h2><ul>
+<li>Vamos integrar o bloco Transformer na arquitetura GPT e montar uma versão totalmente funcional da versão original de 124 milhões de parâmetros do GPT-2.</li>
+<li><strong>Tokenização e Embeddings:</strong> O texto tokenizado é convertido em embeddings de tokens, que são então combinados com embeddings posicionais.</li>
+<li><strong>Empilhamento de Blocos Transformadores:</strong> O tensor resultante é processado por uma série de 12 blocos transformadores empilhados, cada um contendo camadas de atenção multi-cabeça e redes neurais feed forward com dropout e normalização de camada.</li>
 </ul>
-</li>
-<li><strong>Normalização de Camada</strong><ul>
-<li>Estabiliza ativações sem depender do batch (útil em sequências variáveis).</li>
-<li>Colocada após cada sub‑camada e antes da soma residual.</li>
-<li>Melhora convergência, evita saturação de ativação e mantém gradientes adequados.</li>
+</div>
+</div>
+</div>
+</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=af3fef8a">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [26]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">GPTModel</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cfg</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tok_emb</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Embedding</span><span class="p">(</span>
+            <span class="n">cfg</span><span class="p">[</span><span class="s2">"vocab_size"</span><span class="p">],</span> <span class="n">cfg</span><span class="p">[</span><span class="s2">"emb_dim"</span><span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pos_emb</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Embedding</span><span class="p">(</span>
+            <span class="n">cfg</span><span class="p">[</span><span class="s2">"context_length"</span><span class="p">],</span> <span class="n">cfg</span><span class="p">[</span><span class="s2">"emb_dim"</span><span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">drop_emb</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Dropout</span><span class="p">(</span><span class="n">cfg</span><span class="p">[</span><span class="s2">"drop_rate"</span><span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">trf_blocks</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Sequential</span><span class="p">(</span>
+            <span class="o">*</span><span class="p">[</span><span class="n">TransformerBlock</span><span class="p">(</span><span class="n">cfg</span><span class="p">)</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">cfg</span><span class="p">[</span><span class="s2">"n_layers"</span><span class="p">])])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">final_norm</span> <span class="o">=</span> <span class="n">LayerNorm</span><span class="p">(</span><span class="n">cfg</span><span class="p">[</span><span class="s2">"emb_dim"</span><span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">out_head</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span>
+            <span class="n">cfg</span><span class="p">[</span><span class="s2">"emb_dim"</span><span class="p">],</span> <span class="n">cfg</span><span class="p">[</span><span class="s2">"vocab_size"</span><span class="p">],</span> <span class="n">bias</span><span class="o">=</span><span class="kc">False</span>
+        <span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">in_idx</span><span class="p">):</span>
+        <span class="n">batch_size</span><span class="p">,</span> <span class="n">seq_len</span> <span class="o">=</span> <span class="n">in_idx</span><span class="o">.</span><span class="n">shape</span>
+        <span class="n">tok_embeds</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">tok_emb</span><span class="p">(</span><span class="n">in_idx</span><span class="p">)</span>
+        <span class="n">pos_embeds</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pos_emb</span><span class="p">(</span>
+            <span class="n">torch</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">seq_len</span><span class="p">,</span> <span class="n">device</span><span class="o">=</span><span class="n">in_idx</span><span class="o">.</span><span class="n">device</span><span class="p">))</span>
+        <span class="c1"># Shape [batch_size, num_tokens, emb_size]</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">tok_embeds</span> <span class="o">+</span> <span class="n">pos_embeds</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">drop_emb</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">trf_blocks</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">final_norm</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="n">logits</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">out_head</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">logits</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=a8544e54">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Sa%C3%ADda-do-Modelo-GPT">Saída do Modelo GPT<a class="anchor-link" href="#Sa%C3%ADda-do-Modelo-GPT">¶</a></h2><p>O tensor de saída tem a forma [2, 4, 50257], já que passamos 2 textos de entrada com 4 tokens cada. A última dimensão, 50257, corresponde ao tamanho do vocabulário do tokenizador. Abaixo veremos como converter cada um desses vetores de saída 50257-dimensional de volta para tokens.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=d853b89a">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [27]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">torch</span><span class="o">.</span><span class="n">manual_seed</span><span class="p">(</span><span class="mi">123</span><span class="p">)</span>
+
+<span class="n">model</span> <span class="o">=</span> <span class="n">GPTModel</span><span class="p">(</span><span class="n">GPT_CONFIG_124M</span><span class="p">)</span>
+<span class="n">out</span> <span class="o">=</span> <span class="n">model</span><span class="p">(</span><span class="n">batch</span><span class="p">)</span>
+<span class="n">batch</span><span class="o">.</span><span class="n">shape</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Input batch:</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> <span class="n">batch</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">Output shape:"</span><span class="p">,</span> <span class="n">out</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">out</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Input batch:
+ tensor([[6109, 3626, 6100,  345],
+        [6109, 1110, 6622,  257]])
+
+Output shape: torch.Size([2, 4, 50257])
+tensor([[[ 0.3613,  0.4223, -0.0711,  ...,  0.3483,  0.4661, -0.2838],
+         [-0.1792, -0.5660, -0.9485,  ...,  0.0477,  0.5181, -0.3168],
+         [ 0.7120,  0.0332,  0.1085,  ...,  0.1018, -0.4327, -0.2553],
+         [-1.0076,  0.3418, -0.1190,  ...,  0.7195,  0.4023,  0.0532]],
+
+        [[-0.2564,  0.0900,  0.0335,  ...,  0.2659,  0.4454, -0.6806],
+         [ 0.1230,  0.3653, -0.2074,  ...,  0.7705,  0.2710,  0.2246],
+         [ 1.0558,  1.0318, -0.2800,  ...,  0.6936,  0.3205, -0.3178],
+         [-0.1565,  0.3926,  0.3288,  ...,  1.2630, -0.1858,  0.0388]]],
+       grad_fn=&lt;UnsafeViewBackward0&gt;)
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=0b36602a">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="N%C3%BAmero-de-Par%C3%A2metros">Número de Parâmetros<a class="anchor-link" href="#N%C3%BAmero-de-Par%C3%A2metros">¶</a></h3><p>O modelo tem 163M, e não 124M parâmetros</p>
+<p><strong>Amarração de pesos</strong> (weight tying): compartilhamento de pesos que é usado na arquitetura original do GPT-2, o que significa que a arquitetura original do GPT-2 está reutilizando os pesos da camada de embedding de token (<code>tok_emb</code>) em sua camada de saída, definindo assim <code>self.out_head.weight = self.tok_emb.weight</code>.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=a2105362">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [28]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">total_params</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">numel</span><span class="p">()</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">model</span><span class="o">.</span><span class="n">parameters</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Total number of parameters: </span><span class="si">{</span><span class="n">total_params</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Total number of parameters: 163,009,536
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=1cf4737d">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="N%C3%BAmero-de-Par%C3%A2metros-(cont.)">Número de Parâmetros (cont.)<a class="anchor-link" href="#N%C3%BAmero-de-Par%C3%A2metros-(cont.)">¶</a></h3><p>Como podemos ver com base nas saídas de impressão, os tensores de peso para ambas essas camadas têm a mesma forma.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=73d6510b">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [29]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"Token embedding layer shape:"</span><span class="p">,</span> <span class="n">model</span><span class="o">.</span><span class="n">tok_emb</span><span class="o">.</span><span class="n">weight</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Output layer shape:"</span><span class="p">,</span> <span class="n">model</span><span class="o">.</span><span class="n">out_head</span><span class="o">.</span><span class="n">weight</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Token embedding layer shape: torch.Size([50257, 768])
+Output layer shape: torch.Size([50257, 768])
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=dde4cf06">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="N%C3%BAmero-de-Par%C3%A2metros-(cont.)">Número de Parâmetros (cont.)<a class="anchor-link" href="#N%C3%BAmero-de-Par%C3%A2metros-(cont.)">¶</a></h3><p>Vamos remover a contagem de parâmetros da camada de saída da contagem total do modelo GPT-2, de acordo com a amarração de pesos:</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=bb26db71">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [30]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">out_head_params</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span>
+    <span class="n">p</span><span class="o">.</span><span class="n">numel</span><span class="p">()</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">model</span><span class="o">.</span><span class="n">out_head</span><span class="o">.</span><span class="n">parameters</span><span class="p">())</span>
+
+<span class="n">total_params_gpt2</span> <span class="o">=</span>  <span class="n">total_params</span> <span class="o">-</span> <span class="n">out_head_params</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Params. treináveis (weight tying): </span><span class="si">{</span><span class="n">total_params_gpt2</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Params. treináveis (weight tying): 124,412,160
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=c94e418d">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="Consumo-de-mem%C3%B3ria">Consumo de memória<a class="anchor-link" href="#Consumo-de-mem%C3%B3ria">¶</a></h3><p>A amarração de pesos reduz a pegada geral de memória e a complexidade computacional do modelo. No entanto, o uso de camadas separadas de embedding de token e saída resulta em melhor treinamento e desempenho do modelo.</p>
+<p>Podemos calcular os requisitos de memória do modelo da seguinte forma:</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=24f2073c">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [31]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Calcula o tamanho total em bytes </span>
+<span class="c1"># (assumindo float32, 4 bytes por parâmetro)</span>
+<span class="n">total_size_bytes</span> <span class="o">=</span> <span class="n">total_params</span> <span class="o">*</span> <span class="mi">4</span>
+<span class="c1"># Converte para megabytes</span>
+<span class="n">total_size_mb</span> <span class="o">=</span> <span class="n">total_size_bytes</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1024</span> <span class="o">*</span> <span class="mi">1024</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Tamanho total do modelo: </span><span class="si">{</span><span class="n">total_size_mb</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> MB"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Tamanho total do modelo: 621.83 MB
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=f025d176">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="7.-Gerando-Texto">7. Gerando Texto<a class="anchor-link" href="#7.-Gerando-Texto">¶</a></h2><hr/>
+<center>
+<table style="width:100%;border:none;">
+<tr>
+<td style="vertical-align:middle;text-align:left;border:none;width:40%;">
+<ul>
+<li><strong>Autoregessivo</strong>: Começando com um contexto de entrada inicial, o modelo estima um token subsequente em cada iteração, anexando-o ao contexto de entrada para a próxima rodada de previsão.</li>
+<li>O processo pelo qual um modelo GPT vai dos tensores de saída para o texto gerado envolve várias etapas que incluem decodificar os tensores de saída, selecionar tokens com base em uma distribuição de probabilidade e converter esses tokens em texto legível por humanos.</li>
 </ul>
-</li>
-<li><strong>Impacto</strong><ul>
-<li>Modelos GPT com LayerNorm treinam mais rápido, são mais robustos e mantêm desempenho consistente em geração de texto.</li>
-</ul>
-</li>
-</ul>
+</td>
+<td style="vertical-align:middle;text-align:left;border:none;">
+<img alt="No description has been provided for this image" src="https://camo.githubusercontent.com/be7b35733665766c48c64f651586173df9d1dd3a9ca985eca3593df5355db6a1/68747470733a2f2f73656261737469616e72617363686b612e636f6d2f696d616765732f4c4c4d732d66726f6d2d736372617463682d696d616765732f636830345f636f6d707265737365642f31362e77656270" width="400"/>
+</td>
+</tr>
+</table>
+</center>
+</div>
+</div>
+</div>
+</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=f7742285">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [32]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">generate_text_simple</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">idx</span><span class="p">,</span> <span class="n">max_new_tokens</span><span class="p">,</span> <span class="n">context_size</span><span class="p">):</span>
+    <span class="c1"># idx é um array (batch, n_tokens) de índices no contexto atual</span>
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">max_new_tokens</span><span class="p">):</span> <span class="c1"># quantas tokens você quer gerar</span>
+        <span class="c1"># Trunca o contexto atual se ele exceder </span>
+        <span class="c1"># o tamanho de contexto suportado</span>
+        <span class="c1"># Ex: se LLM suporta apenas 5 tokens, </span>
+        <span class="c1">#  e o tamanho do contexto é 10 então </span>
+        <span class="c1">#  apenas os últimos 5 tokens são usados como contexto</span>
+        <span class="n">idx_cond</span> <span class="o">=</span> <span class="n">idx</span><span class="p">[:,</span> <span class="o">-</span><span class="n">context_size</span><span class="p">:]</span>
+        
+        <span class="k">with</span> <span class="n">torch</span><span class="o">.</span><span class="n">no_grad</span><span class="p">():</span>
+            <span class="n">logits</span> <span class="o">=</span> <span class="n">model</span><span class="p">(</span><span class="n">idx_cond</span><span class="p">)</span>
+        
+        <span class="c1"># Foca apenas no último passo de tempo</span>
+        <span class="c1"># (batch, n_tokens, vocab_size) se torna (batch, vocab_size)</span>
+        <span class="n">logits</span> <span class="o">=</span> <span class="n">logits</span><span class="p">[:,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">:]</span> 
+
+        <span class="c1"># Aplica softmax para obter probabilidades</span>
+        <span class="n">probas</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">softmax</span><span class="p">(</span><span class="n">logits</span><span class="p">,</span> <span class="n">dim</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># (batch, vocab_size)</span>
+
+        <span class="c1"># Obtém o idx do vocabulário com maior probabilidde</span>
+        <span class="n">idx_next</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">probas</span><span class="p">,</span> <span class="n">dim</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="n">keepdim</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> 
+        <span class="c1"># argmax retorna a posição de índice do valor mais alto</span>
+
+        <span class="c1"># Anexa o índice amostrado à sequência em execução</span>
+        <span class="n">idx</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">((</span><span class="n">idx</span><span class="p">,</span> <span class="n">idx_next</span><span class="p">),</span> <span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># (batch, n_tokens+1)</span>
+
+    <span class="k">return</span> <span class="n">idx</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=12abc7bc">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Texto-de-Entrada-(Contexto)">Texto de Entrada (Contexto)<a class="anchor-link" href="#Texto-de-Entrada-(Contexto)">¶</a></h2>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=b89786f1">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [33]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">start_context</span> <span class="o">=</span> <span class="s2">"Hello, I am"</span>
+
+<span class="n">encoded</span> <span class="o">=</span> <span class="n">tokenizer</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="n">start_context</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"encoded:"</span><span class="p">,</span> <span class="n">encoded</span><span class="p">)</span>
+
+<span class="n">encoded_tensor</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span><span class="n">encoded</span><span class="p">)</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"encoded_tensor.shape:"</span><span class="p">,</span> <span class="n">encoded_tensor</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>encoded: [15496, 11, 314, 716]
+encoded_tensor.shape: torch.Size([1, 4])
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=c300eb23">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="Gera%C3%A7%C3%A3o-de-Texto">Geração de Texto<a class="anchor-link" href="#Gera%C3%A7%C3%A3o-de-Texto">¶</a></h3><p>Note que como não treinamos o modelo ainda, o resultado um texto sem sentido.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=c40da962">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [34]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">model</span><span class="o">.</span><span class="n">eval</span><span class="p">()</span> <span class="c1"># Desabilita dropout</span>
+<span class="n">out</span> <span class="o">=</span> <span class="n">generate_text_simple</span><span class="p">(</span>
+    <span class="n">model</span><span class="o">=</span><span class="n">model</span><span class="p">,</span>
+    <span class="n">idx</span><span class="o">=</span><span class="n">encoded_tensor</span><span class="p">,</span> 
+    <span class="n">max_new_tokens</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> 
+    <span class="n">context_size</span><span class="o">=</span><span class="n">GPT_CONFIG_124M</span><span class="p">[</span><span class="s2">"context_length"</span><span class="p">]</span>
+<span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Output:"</span><span class="p">,</span> <span class="n">out</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Output length:"</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">out</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+
+<span class="n">decoded_text</span> <span class="o">=</span> <span class="n">tokenizer</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">out</span><span class="o">.</span><span class="n">squeeze</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">tolist</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">decoded_text</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Output: tensor([[15496,    11,   314,   716, 27018, 24086, 47843, 30961, 42348,  7267]])
+Output length: 10
+Hello, I am Featureiman Byeswickattribute argue
+</pre>
+</div>
 </div>
 </div>
 </div>
@@ -8218,7 +9117,15 @@ O texto conclui convidando à experimentação prática do <code>LayerNorm</code
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p><img alt="" src="https://camo.githubusercontent.com/8ff24e3fedda0855855eacb08b6b1f78eac62471cef72b19539c068ec1c3bcda/68747470733a2f2f73656261737469616e72617363686b612e636f6d2f696d616765732f4c4c4d732d66726f6d2d736372617463682d696d616765732f636830345f636f6d707265737365642f30372e77656270"/></p>
+<ul>
+<li>Experimentar com Pre-LN x Post-LN.</li>
+<li>Modifique as configurações do modelo GPT-2 implementado aqui.</li>
+<li>Analisar as diferenças entre GPT-2 e modelos mais modernos como o GPT-OSS.</li>
+</ul>
+<center>
+<img alt="No description has been provided for this image" src="https://substackcdn.com/image/fetch/$s_!-dhg!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa8fb9d66-b650-441c-a2da-a0931fddb068_1425x769.png" width="600"/>
+
+</center>
 </div>
 </div>
 </div>
