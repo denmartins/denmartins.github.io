@@ -42,3 +42,4 @@ Nesta disciplina, vamos aprofundar os seguintes tópicos:
 | 3 | Busca Não-Informada | [PDF](https://denmartins.github.io/files/lectures/2025/AI/03-IA-Busca-Nao-Informada.pdf) | [HTML](https://denmartins.github.io/files/lectures/2025/AI/03-IA-Busca-Nao-Informada.html) |
 | 4 | Busca Informada | [PDF](https://denmartins.github.io/files/lectures/2025/AI/04-Busca-Informada.pdf) | [HTML](https://denmartins.github.io/files/lectures/2025/AI/04-Busca-Informada.html) |
 | 5 | Exercício de Busca Informada  | [PDF](https://denmartins.github.io/files/lectures/2025/AI/busca-informada-exercicios.pdf) | [HTML](https://denmartins.github.io/files/lectures/2025/AI/busca-informada-exercicios.html) |
+| 6 | Busca por Satisfação de Restrições | [PDF](https://denmartins.github.io/files/lectures/2025/AI/05-IA-Busca-CSP-Restricoes.pdf) | [HTML](https://denmartins.github.io/files/lectures/2025/AI/05-IA-Busca-CSP-Restricoes.html) |
