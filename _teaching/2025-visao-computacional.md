@@ -41,3 +41,4 @@ Nesta disciplina, vamos aprofundar os seguintes tópicos:
 | 3 | Filtragem Espacial | [PDF](https://denmartins.github.io/files/lectures/2025/VC/03-VC-Filtragem-Espacial.pdf) | [HTML](https://denmartins.github.io/files/lectures/2025/VC/03-VC-Filtragem-Espacial.html) | 
 | 4 | Filtragem Espacial (Demonstração) | - | [HTML](https://denmartins.github.io/files/lectures/2025/VC/VC-Filtragem-Espacial.slides.html) |
 | 5 | Processamento de Imagens Coloridas | [PDF](https://denmartins.github.io/files/lectures/2025/VC/04-VC-Processamento-Imagens-Coloridas.pdf) | [HTML](https://denmartins.github.io/files/lectures/2025/VC/VC-Processamento-Imagens-Coloridas.slides.html) | 
+| 6 | Introdução às Redes Neurais | [PDF](https://denmartins.github.io/files/lectures/2025/VC/VC-Redes-Neurais-MNIST.pdf) | [HTML](https://denmartins.github.io/files/lectures/2025/VC/VC-Redes-Neurais-MNIST.slides.html) | 
