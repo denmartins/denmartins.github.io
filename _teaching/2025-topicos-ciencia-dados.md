@@ -43,6 +43,9 @@ Este ano, vamos focar em Grandes Modelos de Linguagem (LLMs) e temas relacionado
 | Multi‑Head Attention: Implementação | [HTML](https://denmartins.github.io/files/lectures/2025/TopicosCD/code/03-TCD-Attention-Mechanisms.html) | [Jupyter Notebook](https://denmartins.github.io/files/lectures/2025/TopicosCD/code/03-TCD-Attention-Mechanisms.ipynb) |
 | Modelo GPT: Implementação | [PDF](https://denmartins.github.io/files/lectures/2025/TopicosCD/TCD-Modelo-GPT-Completo-slides.pdf) |  [HTML](https://denmartins.github.io/files/lectures/2025/TopicosCD/TCD-Modelo-GPT-Completo.slides.html) - [Jupyter Notebook](https://denmartins.github.io/files/lectures/2025/TopicosCD/code/TCD-Modelo-GPT-Completo.ipynb) |
 | Pré-treinamento: Conceito e Implementação | [PDF](https://denmartins.github.io/files/lectures/2025/TopicosCD/TCD-Pretraining-Slides.pdf) |  [HTML](https://denmartins.github.io/files/lectures/2025/TopicosCD/TCD-Pretraining.slides.html) - [Jupyter Notebook](https://denmartins.github.io/files/lectures/2025/TopicosCD/code/TCD-Pretraining.ipynb) |
+| Finetuning LLMs para Classificação | [PDF](https://denmartins.github.io/files/lectures/2025/TopicosCD/TCD_FT_LLMs_CLS.slides.pdf) |  [HTML](https://denmartins.github.io/files/lectures/2025/TopicosCD/TCD_FT_LLMs_CLS.slides.html) - [Jupyter Notebook](https://denmartins.github.io/files/lectures/2025/TopicosCD/code/TCD_FT_LLMs_CLS.ipynb) |
+
+
 
 
 
