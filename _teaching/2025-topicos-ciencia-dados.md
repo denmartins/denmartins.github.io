@@ -45,5 +45,8 @@ Este ano, vamos focar em Grandes Modelos de Linguagem (LLMs) e temas relacionado
 | Pré-treinamento: Conceito e Implementação | [PDF](https://denmartins.github.io/files/lectures/2025/TopicosCD/TCD-Pretraining-Slides.pdf) |  [HTML](https://denmartins.github.io/files/lectures/2025/TopicosCD/TCD-Pretraining.slides.html) - [Jupyter Notebook](https://denmartins.github.io/files/lectures/2025/TopicosCD/code/TCD-Pretraining.ipynb) |
 | Finetuning LLMs para Classificação | [PDF](https://denmartins.github.io/files/lectures/2025/TopicosCD/TCD_FT_LLMs_CLS.slides.pdf) |  [HTML](https://denmartins.github.io/files/lectures/2025/TopicosCD/TCD_FT_LLMs_CLS.slides.html) - [Jupyter Notebook](https://denmartins.github.io/files/lectures/2025/TopicosCD/code/TCD_FT_LLMs_CLS.ipynb) |
 | Finetuning LLMs de Instrução | [PDF](https://denmartins.github.io/files/lectures/2025/TopicosCD/TCD-Instruction-Finetuning-LLM-slides.pdf) |  [HTML](https://denmartins.github.io/files/lectures/2025/TopicosCD/TCD-Instruction-Finetuning-LLM.slides.html) - [Jupyter Notebook](https://denmartins.github.io/files/lectures/2025/TopicosCD/code/TCD-Instruction-Finetuning-LLM.ipynb) [HTML - Notebook](https://denmartins.github.io/files/lectures/2025/TopicosCD/code/TCD-Instruction-Finetuning-LLM.html) |
+| Arquiteturas de LLMs | [PDF](https://denmartins.github.io/files/lectures/2025/TopicosCD/TCD-Arquitetura-LLMs-slides.pdf) |  [HTML](https://denmartins.github.io/files/lectures/2025/TopicosCD/TCD-Arquitetura-LLMs-slides.html) |
+
+
 
 
