@@ -46,3 +46,4 @@ Nesta disciplina, vamos aprofundar os seguintes tópicos:
 | 7 | Busca Local e Hill Climbing | [PDF](https://denmartins.github.io/files/lectures/2025/AI/06-Busca-Local.pdf) | [HTML](https://denmartins.github.io/files/lectures/2025/AI/06-Busca-Local.html) |
 | 8 | Algoritmos Genéticos | [PDF](https://denmartins.github.io/files/lectures/2025/AI/07-IA-Algoritmos-Geneticos.pdf) | [HTML](https://denmartins.github.io/files/lectures/2025/AI/07-IA-Algoritmos-Geneticos.html) |
 | 9 | Lista de Exercícios - Prova P2 | [PDF](https://denmartins.github.io/files/lectures/2025/AI/lista-exercicios-2.pdf) | - |
+| 10 | Lógica e Representação de Conhecimento | [PDF](https://denmartins.github.io/files/lectures/2025/AI/IA-Logica.pdf) | - | 
