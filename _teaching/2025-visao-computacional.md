@@ -47,6 +47,4 @@ Nesta disciplina, vamos aprofundar os seguintes tópicos:
 | - | Lista de Exercícios - Preparação para Prova | [PDF](https://denmartins.github.io/files/lectures/2025/VC/VC-Lista-Preparacao-Prova.pdf) | - | 
 | 9 | Estratégias para Reduzir Overfitting | [PDF](https://denmartins.github.io/files/lectures/2025/VC/VC-Estrategias-Reduzir-Overfitting-slides.pdf) | [HTML](https://denmartins.github.io/files/lectures/2025/VC/VC-Estrategias-Reduzir-Overfitting-slides.html) | 
 | 10 | Transfer Learning e Arquiteturas de CNN | [PDF](https://denmartins.github.io/files/lectures/2025/VC/VC-TransferLearning-ArquiteturasCNN.pdf) | [HTML](https://denmartins.github.io/files/lectures/2025/VC/VC-TransferLearning-ArquiteturasCNN-slides.html) | 
-
-
-
+| 11 | Class Activation Map | [PDF](https://denmartins.github.io/files/lectures/2025/VC/VC-Class-Activation-Map-slides.pdf) | [HTML](https://denmartins.github.io/files/lectures/2025/VC/VC-Class-Activation-Map-slides.html) | 
