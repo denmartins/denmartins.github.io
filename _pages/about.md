@@ -7,10 +7,9 @@ redirect_from:
   - /about.html
 ---
 
-I am Denis M. L. Martins, a researcher with extensive experience in Artificial Intelligence and Data Science. My academic and professional journey combines high-impact research, international collaborations, and industry experience, developing innovative solutions that bridge theory and practice.
 
-With a strong background in applied research and technological development, I have led interdisciplinary projects involving Machine Learning and Data-intense systems. I also worked as a senior AI researcher specialist at the Samsung R&D Institute Brazil, where I contributed to the design and implementation of AI models for mobile and wearable devices for fitness and healthcare applications.
+Hi! I am a professor at the [Pontifical Catholic University of Campinas](https://www.puc-campinas.edu.br/) (PUC-Campinas), where I conduct research in Artificial Intelligence, Data Science, and Data-intense Systems. 
 
-My mission is to transform data into strategic knowledge, helping companies, researchers, and professionals apply AI and Data Science to drive innovation and real-world impact. Additionally, I am a speaker and mentor, guiding talent development and fostering the next generation of specialists in the field.
+Previously, I also worked as a senior AI researcher specialist at the [Samsung R&D Institute Brazil](https://research.samsung.com/srbr), where I contributed to the design and implementation of AI models for mobile and wearable devices for fitness and healthcare applications.
 
-Here, I share insights into my research, projects, and perspectives on the latest technological trends shaping the future of computing. Welcome!
+I earned my Ph.D. in Computer Science from the [University of Münster](https://www.wi.uni-muenster.de/department/mlde/people/denis-mayr-lima-martins-1), specializing in Machine Learning and Database Systems. I hold both a Master’s and Bachelor’s degree in Computer Engineering from the University of Pernambuco.

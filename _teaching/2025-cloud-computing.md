@@ -40,5 +40,5 @@ Partindo dos princípios teóricos de sistemas distribuídos, a disciplina inves
 | 4 | Caso Prático: Multicloud e Multitenancy | [PDF](https://denmartins.github.io/files/lectures/2025/cloud/MultiCloud-Multitenancy-Simplificado.pdf) | [HTML](https://denmartins.github.io/files/lectures/2025/cloud/MultiCloud-Multitenancy-Simplificado.html) |
 | 5 | Virtualização | [PDF](https://denmartins.github.io/files/lectures/2025/cloud/04-Cloud-Virtualizacao.pdf) | [HTML](https://denmartins.github.io/files/lectures/2025/cloud/04-Cloud-Virtualizacao.html) |
 | 6 | Contêinerização | [PDF](https://denmartins.github.io/files/lectures/2025/cloud/05-Cloud-Conteinerizacao.pdf) | [HTML](https://denmartins.github.io/files/lectures/2025/cloud/05-Cloud-Conteinerizacao.html) |
-<!-- | 7 | Gerenciamento de Dados na Nuvem | [PDF](https://denmartins.github.io/files/lectures/2025/cloud/06-Cloud-Gerenciamento-Dados.pdf) | [HTML](https://denmartins.github.io/files/lectures/2025/cloud/06-Cloud-Gerenciamento-Dados.html) | -->
-<!-- | 8 | Introdução à Microsoft Azure | [PDF](https://denmartins.github.io/files/lectures/2025/cloud/07-Cloud-Azure.pdf) | - | -->
+| 7 | Gerenciamento de Dados na Nuvem | [PDF](https://denmartins.github.io/files/lectures/2025/cloud/06-Cloud-Gerenciamento-Dados.pdf) | [HTML](https://denmartins.github.io/files/lectures/2025/cloud/06-Cloud-Gerenciamento-Dados.html) |
+| 8 | Introdução à Microsoft Azure | [PDF](https://denmartins.github.io/files/lectures/2025/cloud/07-Cloud-Azure.pdf) | - |

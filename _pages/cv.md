@@ -21,26 +21,26 @@ Education
 Work experience
 ======
 * 2025-Current: Professor 
-  * Pontifícia Universidade Católica de Campinas (PUC-Campinas)
+  * [Pontifical Catholic University of Campinas](https://www.puc-campinas.edu.br/) (PUC-Campinas)
   * Lead Program Coordinator - Specialization Course on Data Science for Business
   * Department of Computer Engineering, Data Science & AI
 
 * 2023-2025: Senior AI Researcher Specialist
-  * Samsung R&D Institute Brazil
+  * [Samsung R&D Institute Brazil](https://research.samsung.com/srbr)
   * Duties included: Machine Learning Engineering, Data Analysis, Software Engineering
 
 * 2021-2023: Postdoc Researcher
-  * University of Münster
+  * [University of Münster](https://www.wi.uni-muenster.de/department/mlde/people/denis-mayr-lima-martins-1)
   * Duties included: Teaching, Grant Preparation, Data Preparation and Analysis, Experiment Management
   * Supervisor: [Prof. Dr. Fabian Gieseke](https://www.wi.uni-muenster.de/department/mlde/people/fabian-gieseke)
 
 * 2020-2021: Postdoc Researcher
-  * University of Münster
+  * [University of Münster](https://www.wi.uni-muenster.de/department/mlde/people/denis-mayr-lima-martins-1)
   * Duties included: Teaching, Data Preparation and Analysis, Experiment Management
   * Supervisor: [Prof. Dr. Gottfried Vossen](https://www.wi.uni-muenster.de/department/former-groups/dbis/people/gottfried-vossen)
 
 * 2015-2021: Research Assistant
-  * University of Münster
+  * [University of Münster](https://www.wi.uni-muenster.de/department/mlde/people/denis-mayr-lima-martins-1)
   * Duties included: Teaching, Data Preparation and Analysis
   * Supervisor: [Prof. Dr. Gottfried Vossen](https://www.wi.uni-muenster.de/department/former-groups/dbis/people/gottfried-vossen)
 
