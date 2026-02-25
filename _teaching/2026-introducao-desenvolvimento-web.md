@@ -8,7 +8,7 @@ date: 2026-01-01
 location: "Ribeirão Preto, Brazil"
 ---
 
-A disciplina de Introdução ao Desenvolvimento Web oferece uma visão abrangente e prática das tecnologias que sustentam o ecossistema digital contemporâneo. A partir dos fundamentos históricos do World Wide Web, os estudantes mergulharão em protocolo HTTP/HTTPS, HTML, CSS e JavaScript, avançando para a criação de aplicações completas com acesso a bancos de dados relacionais e NoSQL, além da integração de APIs RESTful.
+A disciplina de Introdução ao Desenvolvimento Web (5954024) oferece uma visão abrangente e prática das tecnologias que sustentam o ecossistema digital contemporâneo. A partir dos fundamentos históricos da World Wide Web, os estudantes mergulharão em protocolo HTTP/HTTPS, HTML, CSS e JavaScript, avançando para a criação de aplicações completas com acesso a bancos de dados relacionais e NoSQL, além da integração de APIs RESTful.
 
 # O que esperar do curso?
 - Aulas dinâmicas combinando teoria e prática.
