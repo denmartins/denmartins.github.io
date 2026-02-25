@@ -20,7 +20,11 @@ Education
 
 Work experience
 ======
-* 2025-Current: Professor 
+* 2026-Current: Professor 
+  * [University of São Paulo](https://dcm.ffclrp.usp.br/) (USP)
+  * Department of Computer Science and Mathematics
+
+* 2025-2026 
   * [Pontifical Catholic University of Campinas](https://www.puc-campinas.edu.br/) (PUC-Campinas)
   * Lead Program Coordinator - Specialization Course on Data Science for Business
   * Department of Computer Engineering, Data Science & AI
