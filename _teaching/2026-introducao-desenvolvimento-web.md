@@ -27,4 +27,5 @@ A disciplina de Introdução ao Desenvolvimento Web (5954024) oferece uma visão
 
 | Aula| Conteúdo  | Slides (PDF)  | Slides (HTML) |
 |:---------|:-------|:--------|:--------|
-| 0 | Apresentação da Disciplina | [PDF](https://denmartins.github.io/files/lectures/web/00-WEB-Apresentacao.pdf)| [HTML](https://denmartins.github.io/files/lectures/web/00-WEB-Apresentacao.html)| 
+| 0 | Apresentação da Disciplina | [PDF](https://denmartins.github.io/files/lectures/web/00-WEB-Apresentacao.pdf)| [HTML](https://denmartins.github.io/files/lectures/web/00-WEB-Apresentacao.html)|
+| 1 | Histórico e Fundamentos | [PDF](https://denmartins.github.io/files/lectures/web/01-WEB-Fundamentos-e-Historico.pdf)| [HTML](https://denmartins.github.io/files/lectures/web/01-WEB-Fundamentos-e-Historico.html)|
