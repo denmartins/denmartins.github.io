@@ -25,7 +25,8 @@ A disciplina de Introdução ao Desenvolvimento Web (5954024) oferece uma visão
 
 # Material de aula
 
-| Aula| Conteúdo  | Slides (PDF)  | Slides (HTML) |
-|:---------|:-------|:--------|:--------|
-| 0 | Apresentação da Disciplina | [PDF](https://denmartins.github.io/files/lectures/web/00-WEB-Apresentacao.pdf)| [HTML](https://denmartins.github.io/files/lectures/web/00-WEB-Apresentacao.html)|
-| 1 | Histórico e Fundamentos | [PDF](https://denmartins.github.io/files/lectures/web/01-WEB-Fundamentos-e-Historico.pdf)| [HTML](https://denmartins.github.io/files/lectures/web/01-WEB-Fundamentos-e-Historico.html)|
+| Aula| Conteúdo  | Slides (PDF)  | Slides (HTML) | Observações |
+|:---------|:-------|:--------|:--------|:--------|
+| 0 | Apresentação da Disciplina | [PDF](https://denmartins.github.io/files/lectures/web/00-WEB-Apresentacao.pdf)| [HTML](https://denmartins.github.io/files/lectures/web/00-WEB-Apresentacao.html)| |
+| 1 | Histórico e Fundamentos | [PDF](https://denmartins.github.io/files/lectures/web/01-WEB-Fundamentos-e-Historico.pdf)| [HTML](https://denmartins.github.io/files/lectures/web/01-WEB-Fundamentos-e-Historico.html)| |
+| 2 | Introdução à HTML | [PDF](https://denmartins.github.io/files/lectures/web/02-WEB-HTML.pdf)| [HTML](https://denmartins.github.io/files/lectures/web/02-WEB-HTML.html)| [Lab Prático (em pdf)](https://denmartins.github.io/files/lectures/web/WEB-Lab-HTML.pdf) |
