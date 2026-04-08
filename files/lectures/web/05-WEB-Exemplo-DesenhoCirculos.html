@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Canvas Interativo: Clique para Desenhar, Botão Direito para Apagar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+
+        h2 { color: #333; }
+
+        canvas {
+            border: 2px solid #333;
+            background-color: white;
+            cursor: crosshair;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-top: 15px;
+        }
+
+        .instrucao {
+            margin-top: 10px;
+            color: #555;
+            font-size: 0.9em;
+            text-align: center;
+            max-width: 420px;
+        }
+
+        .dica-apagar {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 10px;
+            margin-top: 15px;
+            font-size: 0.85em;
+            color: #856404;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Canvas Interativo — Desenho e Apagamento</h2>
+    
+    <!-- Elemento Canvas onde o desenho acontecerá -->
+    <canvas id="meuCanvas" width="400" height="300"></canvas>
+    
+    <p class="instrucao">
+        🔵 <strong>Clique com botão esquerdo:</strong> Desenhe um círculo.<br>
+        🟡 <strong>Clique com botão direito:</strong> Apague todos os círculos.
+    </p>
+
+    <!-- Dica pedagógica -->
+    <div class="dica-apagar">
+        <strong>Dica:</strong> O evento <code>contextmenu</code> é disparado ao clicar com o botão direito. 
+        Use <code>event.preventDefault()</code> para evitar que o menu contextual padrão apareça.
+    </div>
+
+    <script>
+        // ============================================
+        // 1. CONFIGURAÇÃO INICIAL DO CANVAS
+        // ============================================
+        
+        const canvas = document.getElementById('meuCanvas');
+        const ctx = canvas.getContext('2d');
+
+        // ============================================
+        // 2. ESTADO DA APLICAÇÃO (Array para armazenar círculos)
+        // ============================================
+        
+        // Criamos um array para guardar todos os círculos desenhados
+        let circulos = []; 
+
+        // ============================================
+        // 3. FUNÇÃO PARA DESENHAR UM CÍRCULO
+        // ============================================
+        
+        function desenharCirculo(x, y, cor) {
+            // Adiciona o círculo ao array de estado
+            circulos.push({ x, y, cor });
+
+            // Desenha visualmente no canvas
+            ctx.beginPath();
+            ctx.arc(x, y, 20, 0, Math.PI * 2);
+            ctx.fillStyle = cor;
+            ctx.fill();
+            
+            // Adiciona borda preta para destacar
+            ctx.strokeStyle = '#333';
+            ctx.lineWidth = 2;
+            ctx.stroke();
+        }
+
+        // ============================================
+        // 4. EVENTO DE CLIQUE (BOTÃO ESQUERDO) — DESENHAR
+        // ============================================
+        
+        canvas.addEventListener('click', function(evento) {
+            
+            // Obter as coordenadas X e Y do clique dentro do canvas
+            const x = evento.offsetX;
+            const y = evento.offsetY;
+
+            // Gerar cor aleatória para cada novo círculo
+            const corAleatoria = '#' + Math.floor(Math.random()*16777215).toString(16);
+
+            // Chama a função de desenho
+            desenharCirculo(x, y, corAleatoria);
+        });
+
+        // ============================================
+        // 5. EVENTO DE CLIQUE DIREITO — APAGAR
+        // ============================================
+        
+        canvas.addEventListener('contextmenu', function(evento) {
+            
+            // IMPORTANTE: Impede que o menu contextual padrão apareça
+            evento.preventDefault();
+
+            // Limpa todos os círculos do array de estado
+            circulos = [];
+
+            // Limpa visualmente o canvas (remove tudo que foi desenhado)
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            // Feedback visual para o usuário (opcional)
+            console.log('Todos os círculos foram apagados!');
+        });
+
+    </script>
+</body>
+</html>
