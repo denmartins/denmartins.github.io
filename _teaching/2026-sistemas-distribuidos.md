@@ -1,5 +1,5 @@
 ---
-title: "5954025 - Sistemas Distribuídos"
+title: "Sistemas Distribuídos"
 collection: teaching
 type: "Undergraduate Program"
 permalink: /teaching/2026-desenvolvimento-web
