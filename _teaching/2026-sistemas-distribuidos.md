@@ -2,7 +2,7 @@
 title: "Sistemas Distribuídos"
 collection: teaching
 type: "Undergraduate Program"
-permalink: /teaching/2026-desenvolvimento-web
+permalink: /teaching/2026-sistemas-distribuidos
 venue: "Universidade de São Paulo, Ciência da Computação"
 date: 2026-01-01
 location: "Ribeirão Preto, Brazil"
