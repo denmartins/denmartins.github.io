@@ -22,4 +22,4 @@ A disciplina é compartilhada com o [Prof. Clever Farias](https://dcm.ffclrp.usp
 
 | Aula| Conteúdo  | Slides (PDF)  | Slides (HTML) | Material Adicional | 
 |:---------|:-------|:--------|:--------|
-| 7 | Comunicação via HTTP: gRPC | [PDF](https://denmartins.github.io/files/lectures/distributedsystems/07-SD-HTTP-gRPC.pdf)| [HTML](https://denmartins.github.io/files/lectures/distributedsystems/07-SD-HTTP-gRPC.html)| [Lab Prático](https://denmartins.github.io/labs/2026-04-17-sd-grpc)|
+| 7 | Comunicação via HTTP: gRPC | [PDF](https://denmartins.github.io/files/lectures/distributedsystems/07-SD-HTTP-gRPC.pdf)| [HTML](https://denmartins.github.io/files/lectures/distributedsystems/07-SD-HTTP-gRPC.html)| [Lab Prático](https://denmartins.github.io/labs/2026-04-17-sd-grpc) e [Lab Slides](https://denmartins.github.io/files/lectures/distributedsystems/07-SD-Lab-HTTP-gRPC.pdf)|
