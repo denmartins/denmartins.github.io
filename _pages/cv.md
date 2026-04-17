@@ -65,9 +65,9 @@ PostgreSQL, MySQL, MSSQL, SQLite, MongoDB, HTML, CSS, JavaScript, Django.
 
 Awards
 ======
-* Best Regular paper award: 15th ICCCI. 2023. [pdf](https://denmartins.github.io/files/certificates/ICCCI2023-Best-Regular-Paper.pdf)
-* Best Demo paper award: 31st ACM SIGSPATIAL, 2023. [pdf](https://denmartins.github.io/files/certificates/SIGSPATIAL2023-Best-Demo-Paper.pdf)
-* Best Evolutionary/Swarm Computation paper award: 6th IEEE LA-CCI, 2019. [pdf](https://denmartins.github.io/files/certificates/LACCI2019-Best-Paper-Award.pdf) 
+* Best Regular paper award: 15th ICCCI. 2023.
+* Best Demo paper award: 31st ACM SIGSPATIAL, 2023.
+* Best Evolutionary/Swarm Computation paper award: 6th IEEE LA-CCI, 2019.
 
 Certification
 ======
@@ -83,13 +83,13 @@ Publications
   <div class="wordwrap">You can find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
 {% endif %}
 
-  
+<!--   
 Teaching
 ======
   <ul>{% for post in site.teaching reversed %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
-
+ -->
 
 
 <!-- Talks
