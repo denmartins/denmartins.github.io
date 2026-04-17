@@ -22,7 +22,7 @@ Work experience
 ======
 * 2026-Current: Professor 
   * [University of São Paulo](https://dcm.ffclrp.usp.br/) (USP)
-  * Department of Computer Science and Mathematics
+  * Department of Computing and Mathematics
 
 * 2025-2026 
   * [Pontifical Catholic University of Campinas](https://www.puc-campinas.edu.br/) (PUC-Campinas)
