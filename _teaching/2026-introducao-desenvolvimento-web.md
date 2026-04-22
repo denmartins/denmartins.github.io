@@ -34,4 +34,6 @@ A disciplina de Introdução ao Desenvolvimento Web (5954024) oferece uma visão
 | 4 | Introdução à linguagem JavaScript (Parte 1)  | [PDF](https://denmartins.github.io/files/lectures/web/04-WEB-JavaScript-Parte1.pdf)| [HTML](https://denmartins.github.io/files/lectures/web/04-WEB-JavaScript-Parte1.html)|  |
 | 5 | Introdução à linguagem JavaScript (Parte 2)  | [PDF](https://denmartins.github.io/files/lectures/web/05-WEB-JavaScript-Parte2.pdf)| [HTML](https://denmartins.github.io/files/lectures/web/05-WEB-JavaScript-Parte2.html)| [Exemplo de Evento de Mouse](https://denmartins.github.io/files/lectures/web/05-WEB-Exemplo-DesenhoCirculos.html) |
 | 6 | Introdução à linguagem JavaScript (Parte 3)  | [PDF](https://denmartins.github.io/files/lectures/web/06-WEB-JavaScript-Parte3.pdf)| [HTML](https://denmartins.github.io/files/lectures/web/06-WEB-JavaScript-Parte3.html)|  |
+| 7 | Python Django  | [PDF](https://denmartins.github.io/files/lectures/web/07-WEB-PythonDjango.pdf)| [HTML](https://denmartins.github.io/files/lectures/web/07-WEB-PythonDjango.html)|  |
+
 
