@@ -2,7 +2,7 @@
 title: "Sistemas Distribuídos - Lab Prático WebSocket"
 collection: labs
 type: "Lab"
-permalink: /labs/2026-04-23-sd-websocket
+permalink: /labs/2026-04-23-sd-websockets
 date: 2026-04-23
 location: "Ribeirão Preto, Brazil"
 ---
