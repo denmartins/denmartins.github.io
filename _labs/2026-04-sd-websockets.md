@@ -57,7 +57,7 @@ O servidor deve ser o primeiro a rodar, pois ele é quem "abre as portas". Ele u
 import asyncio
 import websockets
 
-async def echo(websocket, web_context):
+async def echo(websocket):
     """Função de tratamento (handler) chamada para cada novo cliente."""
     print("Novo cliente conectado!")
     try:
