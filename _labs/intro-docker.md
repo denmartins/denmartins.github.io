@@ -13,18 +13,19 @@ Basicamente, um contêiner é apenas um processo (ou conjunto de processos) espe
 
 Sendo processos, todos os contêineres compartilham o mesmo kernel do Sistema Operacional, o que induz uma sobrecarga menor do que o uso de um SO separado por VM. Assim, os contêineres são geralmente mais eficientes do que as VMs.
 
-![](https://oer.gitlab.io/oer-courses/it-systems/figures/OS/containers.png)
+![Visão Geral de Contêineres em um Sistema Computacional](https://oer.gitlab.io/oer-courses/it-systems/figures/OS/containers.png)
+
+> A imagem acima mostra uma visão geral de contêineres em um sistema computacional. A imagem foi retirada do material de aula de [Jens Lechtenbörger](https://oer.gitlab.io/oer-courses/it-systems/17-Containerization.html).
 
 Em particular, podemos esperar que um novo contêiner, como processo, possa ser iniciado muito mais rápido do que uma nova VM, que essencialmente inicializa um novo SO.
 
+> Nota: Se você não está familiarizado(a) com o conceito de contêiner (ex.: nunca usou a ferramenta Docker), leia o artigo da [IBM](https://www.ibm.com/br-pt/think/topics/containers) sobre contêiner *antes* de continuar esta atividade.
 
-Nota: Se você não está familiarizado(a) com o conceito de contêiner (ex.: nunca usou a ferramenta Docker), leia o artigo da [IBM](https://www.ibm.com/br-pt/think/topics/containers) sobre contêiner *antes* de continuar esta atividade.
-
-Para isolar diferentes contêineres uns dos outros, múltiplos mecanismos de restrição são aplicados. Primeiramente, diferentes contêineres são gerenciados como processos distintos com espaços de endereço virtuais isolados. Adicionalmente, no caso do kernel Linux, namespaces limitam o que é visível dentro dos contêineres. Grupos de controle limitam os recursos disponíveis dentro dos contêineres. O sistema de arquivos dentro de um contêiner é amplamente independente do sistema de arquivos do hospedeiro, pode consistir em múltiplas camadas, que são sobrepostas umas sobre as outras, com um mecanismo de cópia na gravação que evita a cópia de todos os arquivos para novos contêineres enquanto nenhuma operação de gravação ocorrer.
+Para isolar diferentes contêineres uns dos outros, múltiplos mecanismos de restrição são aplicados. Primeiramente, diferentes contêineres são gerenciados como processos distintos com espaços de endereço virtuais isolados. Adicionalmente, no caso do _kernel_ Linux, _namespaces_ limitam o que é visível dentro dos contêineres. Grupos de controle limitam os recursos disponíveis dentro dos contêineres. O sistema de arquivos dentro de um contêiner é amplamente independente do sistema de arquivos do hospedeiro, pode consistir em múltiplas camadas, que são sobrepostas umas sobre as outras, com um mecanismo de cópia na gravação que evita a cópia de todos os arquivos para novos contêineres enquanto nenhuma operação de gravação ocorrer.
 
 Com Docker, e outras tecnologias de containerização, imagens servem como plantas para ambientes de execução virtualizados.
 
-Para uso em produção, ambientes de execução virtualizados devem ser implantáveis de forma reproduzível para garantir que o software seja sempre executado em seu ambiente necessário. Em particular, a síndrome "funciona na minha máquina" precisa ser evitada, onde um desenvolvedor instala todos os tipos de bibliotecas e dependências na máquina de desenvolvimento, mas esquece de documentar as peças necessárias. Mais tarde, no ambiente de produção, dependências podem estar faltando ou serem instaladas em versões incompatíveis, potencialmente levando a bugs sutis ou falhas.
+Para uso em produção, ambientes de execução virtualizados devem ser implantáveis de forma reproduzível para garantir que o _software_ seja sempre executado em seu ambiente necessário. Em particular, a síndrome "funciona na minha máquina" precisa ser evitada, onde um desenvolvedor instala todos os tipos de bibliotecas e dependências na máquina de desenvolvimento, mas esquece de documentar as peças necessárias. Mais tarde, no ambiente de produção, dependências podem estar faltando ou serem instaladas em versões incompatíveis, potencialmente levando a bugs sutis ou falhas.
 
 Para prevenir tais falhas, cada imagem é descrita por um **Dockerfile**, que é uma receita de construção em um formato de texto simples. Ele começa com uma imagem base, por exemplo, uma variante do SO, e descreve quais componentes devem ser instalados.
 
@@ -101,7 +102,7 @@ Execute o container em modo interativo (como na Atividade 1) e execute o comando
 
 Objetivo: Iniciar um container a partir da imagem oficial *Ubuntu 22.04*, explorar sua estrutura de diretórios e instalar o utilitário `curl` via `apt`, confirmando que a instalação ocorreu com sucesso.
 
-### 1. Criação do Container Interativo 
+### Criação do Container Interativo 
 
 ```bash
 docker run -it --name ubuntu-ex03 ubuntu:22.04 bash
@@ -118,7 +119,7 @@ docker run -it --name ubuntu-ex03 ubuntu:22.04 bash
 > **Obs.:** Ao executar o comando acima você será direcionado para um prompt de *shell* dentro do container.
 
 
-### 2. Navegação pelo Sistema de Arquivos
+### Navegação pelo Sistema de Arquivos
 
 No terminal do container, realize as seguintes operações:
 
@@ -141,7 +142,7 @@ cd ..
 > - `cd <caminho>` altera o diretório de trabalho para `<caminho>`.  
 > - `cd ..` volta um nível acima na hierarquia.
 
-### 3. Atualização dos Índices e Instalação do `curl`
+### Atualização dos Índices e Instalação do `curl`
 
 ```bash
 # Atualizar a lista de pacotes disponíveis nos repositórios
@@ -156,7 +157,7 @@ apt install curl -y
 > - `-y` evita que o processo de instalação pause para confirmação manual.
 
 
-### 4. Validação da Instalação
+### Validação da Instalação
 
 ```bash
 curl --version
@@ -170,7 +171,7 @@ curl 7.xx.x (x86_64-pc-linux-gnu) libcurl/7.xx.x OpenSSL/1.1.1z zlib/1.2.11 ...
 
 > Se o comando retornar a versão, a instalação foi concluída com êxito.
 
-### 5. Encerramento
+### Encerramento
 
 Para sair do container e removê‑lo da memória:
 
