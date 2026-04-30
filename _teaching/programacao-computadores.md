@@ -14,4 +14,4 @@ Programação de Computadores. Fundamentos de programação em linguagem C.
 
 | Aula| Conteúdo  | Slides (PDF)  | Slides (HTML) | Material Adicional | 
 |:---------|:-------|:--------|:--------|:--------|
-| 7 | Comunicação via HTTP: gRPC | [PDF](https://denmartins.github.io/files/lectures/programacaocomputadores/07-PC-Estruturas-de-Controle.pdf)| [HTML](https://denmartins.github.io/files/lectures/programacaocomputadores/07-PC-Estruturas-de-Controle.html)| |
+| 7 | Estruturas de Controle | [PDF](https://denmartins.github.io/files/lectures/programacaocomputadores/07-PC-Estruturas-de-Controle.pdf)| [HTML](https://denmartins.github.io/files/lectures/programacaocomputadores/07-PC-Estruturas-de-Controle.html)| |
