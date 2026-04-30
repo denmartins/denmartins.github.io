@@ -8,6 +8,8 @@ date: 2026-01-01
 location: "Ribeirão Preto, Brazil"
 ---
 
+Programação de Computadores. Fundamentos de programação em linguagem C.
+
 # Material de aula
 
 | Aula| Conteúdo  | Slides (PDF)  | Slides (HTML) | Material Adicional | 
