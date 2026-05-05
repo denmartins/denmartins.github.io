@@ -8,7 +8,20 @@ date: 2026-01-01
 location: "Ribeirão Preto, Brazil"
 ---
 
-Programação de Computadores. Fundamentos de programação em linguagem C.
+A disciplina de Programação de Computadores (5950257) visa capacitar os estudantes a desenvolver o raciocínio computacional e decompor desafios do cotidiano em comandos lógicos e eficientes que uma máquina possa executar. A disciplina aborda  desde os fundamentos conceituais de hardware, software e fluxo de informação até as estruturas avançadas de controle (condicionais, repetições) e o gerenciamento preciso da memória através de ponteiros.
+
+# Conteúdo Programático
+
+- Conceitos introdutórios de hardware e software;
+- O conceito de fluxo de informação;
+- Tipos de dados: escalares, multidimensionais e cadeias de caracteres;
+- Atribuições e estruturas seqüenciais, estruturas condicionais e estruturas de repetição;
+- Linguagem de programação e desenvolvimento de programas;
+- Modularização de programa e funções;
+- Passagem de parâmetro;
+- Utilização de endereços de variáveis e do operador de deferenciação (apontadores);
+- Ensino da linguagem C.
+
 
 # Material de aula
 
