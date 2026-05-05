@@ -1,13 +1,11 @@
 ---
-title: "Programação de Computadores - Lab Prático Estruturas de Controle"
+title: "Lab Prático Estruturas de Controle em Linguagem C"
 collection: labs
 type: "Lab"
 permalink: /labs/estruturas-de-controle-C
 date: 2026-05-05
 location: "Ribeirão Preto, Brazil"
 ---
-
-# Lab Prático: Estruturas de Controle
 
 **Estruturas de Controle** são mecanismos pelos quais determinamos e orquestramos o fluxo de execução do programa em função de condições lógicas ou repetição iterativa. 
 
