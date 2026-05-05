@@ -1,5 +1,5 @@
 ---
-title: "Lab Prático Estruturas de Controle em Linguagem C"
+title: "Lab Prático: Estruturas de Controle em Linguagem C"
 collection: labs
 type: "Lab"
 permalink: /labs/estruturas-de-controle-C
