@@ -3,7 +3,7 @@ title: "Ecossistemas de Dados Alimentam IA"
 collection: talks
 type: "Talk"
 permalink: /talks/ai-data-ecosystem
-venue: "Universidade de São Paulo, Ribeirão Preto"
+venue: "Universidade de São Paulo"
 date: 2026-05-06
 location: "Ribeirão Preto, SP, Brasil"
 ---
