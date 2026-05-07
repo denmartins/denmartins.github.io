@@ -2,7 +2,7 @@
 title: "Arquivos Estáticos em Django"
 collection: labs
 type: "Lab"
-permalink: /labs/python-django-static-files
+permalink: /labs/python-django-staticfiles
 date: 2026-05-06
 location: "Ribeirão Preto, Brazil"
 ---
