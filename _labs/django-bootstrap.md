@@ -2,7 +2,7 @@
 title: "Landing page Bootstrap em Django"
 collection: labs
 type: "Lab"
-permalink: /labs/django-bootstrap
+permalink: /labs/python-django-bootstrap
 date: 2026-05-06
 location: "Ribeirão Preto, Brazil"
 ---
