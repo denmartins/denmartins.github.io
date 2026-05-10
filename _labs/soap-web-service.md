@@ -2,7 +2,7 @@
 title: "Sistemas Distribuídos - Lab Prático SOAP Web Service"
 collection: labs
 type: "Lab"
-permalink: /labs/soap-web-service
+permalink: /labs/web-services-soap
 date: 2026-05-07
 location: "Ribeirão Preto, Brazil"
 ---
