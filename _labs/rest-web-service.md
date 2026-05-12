@@ -7,8 +7,6 @@ date: 2026-05-13
 location: "Ribeirão Preto, Brazil"
 ---
 
-# Laboratório Prático — REST API com Python
-
 Neste laboratório, você irá construir uma REST API para gerenciamento de tarefas acadêmicas. A implementação será feita de forma incremental, em três partes:
 
 1. **Parte 1:** CRUD de tarefas com banco SQLite
