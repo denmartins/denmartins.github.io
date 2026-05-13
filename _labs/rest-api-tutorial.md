@@ -448,8 +448,6 @@ http://127.0.0.1:8000
 
 Abra o arquivo `index.html` no navegador.
 
-O professor pode fazer isso de duas formas simples:
-
 ## Opção 1 — Abrir diretamente
 
 Clique duas vezes no arquivo `index.html`.
