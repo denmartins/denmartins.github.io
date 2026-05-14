@@ -27,7 +27,9 @@ A disciplina de Programação de Computadores (5950257) visa capacitar os estuda
 
 | Aula| Conteúdo  | Slides (PDF)  | Slides (HTML) | Material Adicional | 
 |:---------|:-------|:--------|:--------|:--------|
-| 7 | Estruturas de Controle | [PDF](https://denmartins.github.io/files/lectures/programacaocomputadores/07-PC-Estruturas-de-Controle.pdf)| [HTML](https://denmartins.github.io/files/lectures/programacaocomputadores/07-PC-Estruturas-de-Controle.html)| [Lab Prático](https://denmartins.github.io/labs/estruturas-de-controle-C) |
+| 7 | Estruturas de Controle | [PDF](https://denmartins.github.io/files/lectures/programacaocomputadores/07-PC-Estruturas-de-Controle.pdf)| [HTML](https://denmartins.github.io/files/lectures/programacaocomputadores/07-PC-Estruturas-de-Controle.html)| [Lab Prático](https://denmartins.github.io/labs/estruturas-de-controle-C)  e [Exercícios Adicionais de `continue` e `break`](https://denmartins.github.io/labs/comandos-break-continue-C)|
+
+
 
 # Material adicional
 
