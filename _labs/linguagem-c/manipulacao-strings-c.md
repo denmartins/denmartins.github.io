@@ -24,7 +24,7 @@ O programa deverá:
 ### Passo 1: Criando a estrutura básica do programa
 
 ```c
-##include <stdio.h>
+#include <stdio.h>
 
 int main() {
 
@@ -49,7 +49,7 @@ Isso significa que a variável `nome` pode armazenar até 49 caracteres, pois um
 Programa até aqui:
 
 ```c
-##include <stdio.h>
+#include <stdio.h>
 
 int main() {
 
@@ -72,7 +72,7 @@ fgets(nome, 50, stdin);
 Código:
 
 ```c
-##include <stdio.h>
+#include <stdio.h>
 
 int main() {
 
@@ -98,7 +98,7 @@ printf("Paciente: %s", nome);
 Código:
 
 ```c
-##include <stdio.h>
+#include <stdio.h>
 
 int main() {
 
@@ -120,7 +120,7 @@ int main() {
 Para usar funções de strings, precisamos incluir:
 
 ```c
-##include <string.h>
+#include <string.h>
 ```
 
 A função `strlen` retorna a quantidade de caracteres da string.
@@ -132,8 +132,8 @@ int tamanho = strlen(nome);
 Código:
 
 ```c
-##include <stdio.h>
-##include <string.h>
+#include <stdio.h>
+#include <string.h>
 
 int main() {
 
@@ -169,8 +169,8 @@ nome[strcspn(nome, "\n")] = '\0';
 Código ajustado:
 
 ```c
-##include <stdio.h>
-##include <string.h>
+#include <stdio.h>
+#include <string.h>
 
 int main() {
 
@@ -204,8 +204,8 @@ printf("Primeira letra: %c\n", nome[0]);
 Código:
 
 ```c
-##include <stdio.h>
-##include <string.h>
+#include <stdio.h>
+#include <string.h>
 
 int main() {
 
@@ -242,8 +242,8 @@ for(int i = 0; nome[i] != '\0'; i++) {
 Código final do tutorial:
 
 ```c
-##include <stdio.h>
-##include <string.h>
+#include <stdio.h>
+#include <string.h>
 
 int main() {
 

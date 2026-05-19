@@ -2,7 +2,7 @@
 title: "Tutorial: Interação com o Usuário em Linguagem C"
 collection: labs
 type: "Lab"
-permalink: /labs/interacao-usuario-C
+permalink: /labs/linguagem-c/interacao-usuario-C
 date: 2026-05-05
 location: "Ribeirão Preto, Brazil"
 ---

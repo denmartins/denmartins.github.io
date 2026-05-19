@@ -2,7 +2,7 @@
 title: "Exercícios Práticos: Uso de `break` e `continue` em loops"
 collection: labs
 type: "Lab"
-permalink: /labs/comandos-break-continue-C
+permalink: /labs/linguagem-c/comandos-break-continue-C
 date: 2026-05-14
 location: "Ribeirão Preto, Brazil"
 ---

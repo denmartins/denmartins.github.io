@@ -2,7 +2,7 @@
 title: "Lab Prático: Estruturas de Controle em Linguagem C"
 collection: labs
 type: "Lab"
-permalink: /labs/estruturas-de-controle-C
+permalink: /labs/linguagem-c/estruturas-de-controle-C
 date: 2026-05-05
 location: "Ribeirão Preto, Brazil"
 ---

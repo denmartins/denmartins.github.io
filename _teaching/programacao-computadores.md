@@ -27,11 +27,11 @@ A disciplina de Programação de Computadores (5950257) visa capacitar os estuda
 
 | Aula| Conteúdo  | Slides (PDF)  | Slides (HTML) | Material Adicional | 
 |:---------|:-------|:--------|:--------|:--------|
-| 7 | Estruturas de Controle | [PDF](https://denmartins.github.io/files/lectures/programacaocomputadores/07-PC-Estruturas-de-Controle.pdf)| [HTML](https://denmartins.github.io/files/lectures/programacaocomputadores/07-PC-Estruturas-de-Controle.html)| [Lab Prático](https://denmartins.github.io/labs/estruturas-de-controle-C)  e [Exercícios Adicionais de `continue` e `break`](https://denmartins.github.io/labs/comandos-break-continue-C)|
-| 8 | Arrays e Matrizes | [PDF](https://denmartins.github.io/files/lectures/programacaocomputadores/08-PC-Arrays-Matrizes.pdf)| [HTML](https://denmartins.github.io/files/lectures/programacaocomputadores/08-PC-Arrays-Matrizes.html)| [Lab Prático](https://denmartins.github.io/labs/arrays-matrizes-C) |
+| 7 | Estruturas de Controle | [PDF](https://denmartins.github.io/files/lectures/programacaocomputadores/07-PC-Estruturas-de-Controle.pdf)| [HTML](https://denmartins.github.io/files/lectures/programacaocomputadores/07-PC-Estruturas-de-Controle.html)| [Lab Prático](https://denmartins.github.io/labs/linguagem-c/estruturas-de-controle-C)  e [Exercícios Adicionais de `continue` e `break`](https://denmartins.github.io/labs/linguagem-c/comandos-break-continue-C)|
+| 8 | Arrays e Matrizes | [PDF](https://denmartins.github.io/files/lectures/programacaocomputadores/08-PC-Arrays-Matrizes.pdf)| [HTML](https://denmartins.github.io/files/lectures/programacaocomputadores/08-PC-Arrays-Matrizes.html)| [Lab Prático](https://denmartins.github.io/labs/linguagem-c/arrays-matrizes-C) |
 | 9 | Strings | [PDF](https://denmartins.github.io/files/lectures/programacaocomputadores/09-PC-Strings.pdf)| [HTML](https://denmartins.github.io/files/lectures/programacaocomputadores/09-PC-Strings.html)| [Lab Prático](https://denmartins.github.io/labs/linguagem-c/manipulacao-strings-c) |
 
 
 # Material adicional
 
-- [Tutorial: Interação com o Usuário em Linguagem C](https://denmartins.github.io/labs/interacao-usuario-C)
+- [Tutorial: Interação com o Usuário em Linguagem C](https://denmartins.github.io/labs/linguagem-c/interacao-usuario-C)
