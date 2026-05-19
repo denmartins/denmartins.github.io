@@ -35,7 +35,9 @@ tipo nome_da_matriz[num_linhas][num_colunas];
 float grade[3][4];
 ```
 
-> **Observação**: Entender profundamente *Arrays* significa dominar o conceito de endereçamento linear na memória. Cada índice é um cálculo preciso de deslocamento a partir do endereço base. Este entendimento é o que diferencia C de linguagens de mais alto nível. Para mais informações veja: https://wiki.inf.ufpr.br/maziero/doku.php?id=c:vetores
+> **Observação**: Entender profundamente *Arrays* significa dominar o conceito de endereçamento linear na memória. Cada índice é um cálculo preciso de deslocamento a partir do endereço base. Este entendimento é o que diferencia C de linguagens de mais alto nível. 
+
+Como material adicional, veja também o [material do Prof. Carlos Maziero (UFPR)](https://wiki.inf.ufpr.br/maziero/doku.php?id=c:vetores).
 
 
 ## Parte 2: Arrays Unidimensionais
