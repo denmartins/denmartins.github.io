@@ -28,8 +28,8 @@ A disciplina de Programação de Computadores (5950257) visa capacitar os estuda
 | Aula| Conteúdo  | Slides (PDF)  | Slides (HTML) | Material Adicional | 
 |:---------|:-------|:--------|:--------|:--------|
 | 7 | Estruturas de Controle | [PDF](https://denmartins.github.io/files/lectures/programacaocomputadores/07-PC-Estruturas-de-Controle.pdf)| [HTML](https://denmartins.github.io/files/lectures/programacaocomputadores/07-PC-Estruturas-de-Controle.html)| [Lab Prático](https://denmartins.github.io/labs/estruturas-de-controle-C)  e [Exercícios Adicionais de `continue` e `break`](https://denmartins.github.io/labs/comandos-break-continue-C)|
-| 8a | Array | [PDF](https://denmartins.github.io/files/lectures/programacaocomputadores/08a-PC-Array.pdf)| [HTML](https://denmartins.github.io/files/lectures/programacaocomputadores/08a-PC-Array.html)| |
-| 8b | Matrizes | [PDF](https://denmartins.github.io/files/lectures/programacaocomputadores/08b-PC-Matrizes.pdf)| [HTML](https://denmartins.github.io/files/lectures/programacaocomputadores/08b-PC-Matrizes.html)| |
+| 8a | Array | [PDF](https://denmartins.github.io/files/lectures/programacaocomputadores/08a-PC-Array.pdf)| [HTML](https://denmartins.github.io/files/lectures/programacaocomputadores/08a-PC-Array.html)| [Lab Prático](https://denmartins.github.io/labs/arrays-matrizes-C) |
+| 8b | Matrizes | [PDF](https://denmartins.github.io/files/lectures/programacaocomputadores/08b-PC-Matrizes.pdf)| [HTML](https://denmartins.github.io/files/lectures/programacaocomputadores/08b-PC-Matrizes.html)| [Lab Prático](https://denmartins.github.io/labs/arrays-matrizes-C) |
 
 
 
