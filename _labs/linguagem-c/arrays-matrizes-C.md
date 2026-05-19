@@ -2,7 +2,7 @@
 title: "Exercícios Práticos: Arrays e Matrizes em C"
 collection: labs
 type: "Lab"
-permalink: /labs/arrays-matrizes-C
+permalink: /labs/linguagem-c/arrays-matrizes-C
 date: 2026-05-19
 location: "Ribeirão Preto, Brazil"
 ---
