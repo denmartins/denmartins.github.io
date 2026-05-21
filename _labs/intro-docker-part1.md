@@ -1,8 +1,8 @@
 ---
-title: "Introdução ao Docker"
+title: "Introdução ao Docker: Parte 1"
 collection: labs
 type: "Lab"
-permalink: /labs/intro-docker
+permalink: /labs/intro-docker-part1
 date: 2026-04-30
 location: "Ribeirão Preto, Brazil"
 ---
