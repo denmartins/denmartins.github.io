@@ -101,8 +101,18 @@ E para listar os serviços em execução:
 $ docker compose ps
 ```
 
-### Contexto Avançado: Modularização e Orquestração
+### Mais informações
 
 Embora o Docker Compose seja excelente para desenvolvimento e implantações em *single host* (máquina única), para orquestração em larga escala e em ambientes de produção com múltiplos servidores, ferramentas mais robustas como o **Kubernetes (K8s)** são geralmente usadas. O Compose serve como um excelente trampolim para entender a lógica de orquestração declarativa que o Kubernetes utiliza (especificada em arquivos YAML).
 
-Recomendo fortemente que vocês explorem o restante dos comandos do Compose (`docker compose --help`) e pratiquem a criação de serviços adicionais, como bancos de dados persistentes, utilizando **Volumes** (que armazenam dados persistentes além do ciclo de vida do container).
+No contexto de computação em nuvem, provedores oferecem diversas formas de usar contêineres:
+*  **Virtual Private Server (VPS):** Basicamente uma VM.
+*  **Serviços de Execução de Aplicações (App Runner/Apps):** O provedor se oferece para executar seu contêiner em seus servidores.
+*  **Serviços Kubernetes:** Implantações de K8s, frequentemente com integrações específicas da plataforma de *cloud*.
+
+A conteinerização, combinada com sistemas de controle de versão (como Git), é um **facilitador das práticas DevOps**:
+*  **Objetivo:** Reduzir a lacuna entre desenvolvimento e operações, buscando ciclos de release rápidos e alto grau de automação e estabilidade (CI/CD).
+*   **Infraestrutura como Código (IaC):** Princípios que definem configurações de infraestrutura usando arquivos declarativos, simplificando a implantação.
+
+> Recomendo fortemente que vocês explorem o restante dos comandos do Compose (`docker compose --help`) e pratiquem a criação de serviços adicionais, como bancos de dados persistentes, utilizando **Volumes** (que armazenam dados persistentes além do ciclo de vida do container).
+
