@@ -40,7 +40,7 @@ cd awesome-compose
 cd flask-redis
 ```
 
-Então, siga os passos em: https://github.com/docker/awesome-compose/tree/master/flask-redis
+Então, siga os passos em: [https://github.com/docker/awesome-compose/tree/master/flask-redis](https://github.com/docker/awesome-compose/tree/master/flask-redis){:target="_blank" rel="noopener"}
 
 ### Atividade 2: Aplicação Nextcloud com Postgres
 
@@ -78,7 +78,7 @@ cd ..
 cd nextcloud-postgres
 ```
 
-Então, siga os passos em: https://github.com/docker/awesome-compose/tree/master/nextcloud-postgres
+Então, siga os passos em: [https://github.com/docker/awesome-compose/tree/master/nextcloud-postgres](https://github.com/docker/awesome-compose/tree/master/nextcloud-postgres){:target="_blank" rel="noopener"}
 
 
 ### Gerenciamento e Limpeza
