@@ -15,11 +15,11 @@ Sendo processos, todos os contêineres compartilham o mesmo kernel do Sistema Op
 
 ![Visão Geral de Contêineres em um Sistema Computacional](https://oer.gitlab.io/oer-courses/it-systems/figures/OS/containers.png)
 
-> A imagem acima mostra uma visão geral de contêineres em um sistema computacional. A imagem foi retirada do material de aula de [Jens Lechtenbörger](https://oer.gitlab.io/oer-courses/it-systems/17-Containerization.html).
+> A imagem acima mostra uma visão geral de contêineres em um sistema computacional. A imagem foi retirada do material de aula de [Jens Lechtenbörger](https://oer.gitlab.io/oer-courses/it-systems/17-Containerization.html){:target="_blank" rel="noopener"}.
 
 Em particular, podemos esperar que um novo contêiner, como processo, possa ser iniciado muito mais rápido do que uma nova VM, que essencialmente inicializa um novo SO.
 
-> Nota: Se você não está familiarizado(a) com o conceito de contêiner (ex.: nunca usou a ferramenta Docker), leia o artigo da [IBM](https://www.ibm.com/br-pt/think/topics/containers) sobre contêiner *antes* de continuar esta atividade.
+> Nota: Se você não está familiarizado(a) com o conceito de contêiner (ex.: nunca usou a ferramenta Docker), leia o artigo da [IBM](https://www.ibm.com/br-pt/think/topics/containers){:target="_blank" rel="noopener"} sobre contêiner *antes* de continuar esta atividade.
 
 Para isolar diferentes contêineres uns dos outros, múltiplos mecanismos de restrição são aplicados. Primeiramente, diferentes contêineres são gerenciados como processos distintos com espaços de endereço virtuais isolados. Adicionalmente, no caso do _kernel_ Linux, _namespaces_ limitam o que é visível dentro dos contêineres. Grupos de controle limitam os recursos disponíveis dentro dos contêineres. O sistema de arquivos dentro de um contêiner é amplamente independente do sistema de arquivos do hospedeiro, pode consistir em múltiplas camadas, que são sobrepostas umas sobre as outras, com um mecanismo de cópia na gravação que evita a cópia de todos os arquivos para novos contêineres enquanto nenhuma operação de gravação ocorrer.
 
@@ -35,18 +35,17 @@ Termos principais:
 - **Imagem**: Camada imutável e portátil que descreve a aplicação + dependências. Cada camada é armazenada em formato tarball com metadados. 
 - **Dockerfile**: Arquivo de texto contendo instruções (`FROM`, `RUN`, `COPY`, `CMD`…) que definem como construir uma imagem.
 - **Registry**: Repositório remoto que armazena e distribui imagens. Pode ser público (DockerHub) ou privado (Harbor, GitLab Container Registry).
-- **DockerHub** (https://hub.docker.com/): Registro público oficial da Docker Inc.; hospeda milhares de imagens oficiais e de terceiros, além de suporte a organizações e repositórios privados.
+- **DockerHub** (https://hub.docker.com/){:target="_blank" rel="noopener"}: Registro público oficial da Docker Inc.; hospeda milhares de imagens oficiais e de terceiros, além de suporte a organizações e repositórios privados.
 - **Volume**: Persistência de dados fora do ciclo de vida do container; mapeamento de diretórios do host para o container.
 
 **Referências adicionais**:
-- Artigo: https://www.datacamp.com/pt/blog/learn-docker
-- Vídeo: [Aprenda Docker do Zero, por Fernanda Kipper](https://youtu.be/DdoncfOdru8?si=ZaWT9vtlchMFFZd9)
-- Ferramenta: https://labex.io/
+- Artigo: [https://www.datacamp.com/pt/blog/learn-docker](https://www.datacamp.com/pt/blog/learn-docker){:target="_blank" rel="noopener"}
+- Vídeo: [Aprenda Docker do Zero, por Fernanda Kipper](https://youtu.be/DdoncfOdru8?si=ZaWT9vtlchMFFZd9){:target="_blank" rel="noopener"}
 
 
 ## Instalação Docker
 
-Siga as instruções em https://docs.docker.com/get-started/get-docker/ ou https://douglasnickson.com.br/2023/05/06/guia-completo-de-instalacao-do-docker/
+Siga as instruções em [https://docs.docker.com/get-started/get-docker/](https://docs.docker.com/get-started/get-docker/){:target="_blank" rel="noopener"} ou [https://douglasnickson.com.br/2023/05/06/guia-completo-de-instalacao-do-docker/](https://douglasnickson.com.br/2023/05/06/guia-completo-de-instalacao-do-docker/){:target="_blank" rel="noopener"}
 
 Usando o terminal:
 
@@ -87,11 +86,11 @@ Verifique se a instalação funcionou utilizando `docker run hello-world`
 
 ## Exercício 1: Servidor Web
 
-Crie um contêiner com [Nginx](https://hub.docker.com/_/nginx) que sirva uma página HTML customizada (index.html). Monte um volume local com esse arquivo para que ele apareça na raiz do site (/usr/share/nginx/html). Acesse a página via http://localhost.
+Crie um contêiner com [Nginx](https://hub.docker.com/_/nginx){:target="_blank" rel="noopener"} que sirva uma página HTML customizada (index.html). Monte um volume local com esse arquivo para que ele apareça na raiz do site (/usr/share/nginx/html). Acesse a página via http://localhost.
 
 ## Exercício 2: Variáveis de ambiente
 
-Construa um container para o banco de dados postgres (https://hub.docker.com/_/postgres). O container deve receber, por meio de variáveis de ambiente:
+Construa um container para o banco de dados postgres (https://hub.docker.com/_/postgres){:target="_blank" rel="noopener"}. O container deve receber, por meio de variáveis de ambiente:
 
 - `PGUSER` – usuário do banco;
 - `PGPASSWORD` – senha desse usuário.
@@ -184,4 +183,4 @@ docker rm -f ubuntu-ex03   # remove o container criado
 
 ## Exercício 4
 
-Suba um conteiner do [EmulatorJS](https://hub.docker.com/r/linuxserver/emulatorjs) para jogar algum jogo feito pela comunidade (escolha o jogo em https://nes-open-db.github.io/roms/).
+Suba um conteiner do [EmulatorJS](https://hub.docker.com/r/linuxserver/emulatorjs){:target="_blank" rel="noopener"} para jogar algum jogo feito pela comunidade (escolha o jogo em https://nes-open-db.github.io/roms/){:target="_blank" rel="noopener"}.
