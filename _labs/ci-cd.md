@@ -335,7 +335,7 @@ jobs:
 ## Referências & Leitura Adicional
 
 * **GitHub Docs – Actions:** [https://docs.github.com/actions](https://docs.github.com/actions)
+* **Continuous Integration for Data Science Projects** – Towards Data Science, 2024.
 * **scikit-learn – Classification Metrics:** [https://scikit-learn.org/stable/modules/model_evaluation.html](https://scikit-learn.org/stable/modules/model_evaluation.html)
 * **Pandoc User Guide:** [https://pandoc.org/MANUAL.html](https://pandoc.org/MANUAL.html)
 * **PyTest Documentation:** [https://docs.pytest.org/en/stable/](https://docs.pytest.org/en/stable/)
-* **Continuous Integration for Data Science Projects** – Towards Data Science, 2024.
