@@ -32,6 +32,7 @@ A disciplina de Programação de Computadores (5950257) visa capacitar os estuda
 | 9 | Strings | [PDF](https://denmartins.github.io/files/lectures/programacaocomputadores/09-PC-Strings.pdf){:target="_blank" rel="noopener"}| [HTML](https://denmartins.github.io/files/lectures/programacaocomputadores/09-PC-Strings.html){:target="_blank" rel="noopener"}| [Lab Prático](https://denmartins.github.io/labs/linguagem-c/manipulacao-strings-c){:target="_blank" rel="noopener"} |
 | 10 | Funções | [PDF](https://denmartins.github.io/files/lectures/programacaocomputadores/10-PC-Funcoes.pdf){:target="_blank" rel="noopener"} | [HTML](https://denmartins.github.io/files/lectures/programacaocomputadores/10-PC-Funcoes.html){:target="_blank" rel="noopener"}|  
 | 11 | Ponteiros e Alocação de Memória | [PDF](https://denmartins.github.io/files/lectures/programacaocomputadores/11-PC-Ponteiros.pdf){:target="_blank" rel="noopener} | [HTML](https://denmartins.github.io/files/lectures/programacaocomputadores/11-PC-Ponteiros.html){:target="_blank" rel="noopener"} |  
+| 12 | Estruturas | [PDF](https://denmartins.github.io/files/lectures/programacaocomputadores/12-PC-Structs.pdf){:target="_blank" rel="noopener} | [HTML](https://denmartins.github.io/files/lectures/programacaocomputadores/12-PC-Structs.html){:target="_blank" rel="noopener"} |  
 
 # Material adicional
 
