@@ -39,7 +39,28 @@ Qual das seguintes operações é considerada altamente arriscada em C e pode le
 
 ## Questão 5
 
-Em C, qual é a principal diferença conceitual entre usar uma estrutura `struct` e utilizar um `union`? Dê um exemplo de cenário onde o uso de `union` seria mais eficiente em termos de memória.
+Você está desenvolvendo um sistema de controle de estoque simples e precisa modelar os produtos que são vendidos. Cada produto possui um nome, uma quantidade em estoque e o preço unitário.
+
+```c
+#include <stdio.h>
+#include <string.h>
+
+// Definição da estrutura Produto
+typedef struct {
+    char nome[50];
+    int quantidade;
+    float precoUnitario;
+} Produto;
+```
+
+Você precisa implementar duas funções:
+1.  Uma função para **exibir** os detalhes do produto (apenas leitura).
+2.  Uma função para **aplicar um desconto** no preço unitário, alterando o valor original da estrutura.
+
+Qual é a diferença de comportamento entre passar uma `struct` por **valor** (`void funcao(Produto p)`) e passá-la por **ponteiro/referência** (`void funcao(Produto *p)`)? Em qual dos dois casos você deve usar o ponteiro para garantir que as alterações feitas dentro da função sejam permanentes no programa principal (`main`)?
+
+*   Crie a função `exibirProduto(Produto p)` que recebe a estrutura por **valor**. Esta função deve imprimir o nome, quantidade e preço unitário do produto recebido.
+*   Crie a função `aplicar_desconto(Produto *produto, float percentual)` que recebe um **ponteiro** para a estrutura. Esta função deve calcular o novo preço aplicando o desconto e **alterar permanentemente** o campo `precoUnitario` da estrutura original.
 
 ## Questão 6
 
