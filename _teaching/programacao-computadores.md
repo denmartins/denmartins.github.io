@@ -37,3 +37,4 @@ A disciplina de Programação de Computadores (5950257) visa capacitar os estuda
 # Material adicional
 
 - [Tutorial: Interação com o Usuário em Linguagem C](https://denmartins.github.io/labs/linguagem-c/interacao-usuario-C){:target="_blank" rel="noopener"}
+- [Lista de Exercícios de Preparação para Prova](https://denmartins.github.io/labs/linguagem-c/lista-exercicios-c){:target="_blank" rel="noopener"}
