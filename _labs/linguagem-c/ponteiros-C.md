@@ -2,7 +2,7 @@
 title: "Ponteiros em C"
 collection: labs
 type: "Lab"
-permalink: /labs/linguagem-c/ponteiros-C
+permalink: /labs/linguagem-c/ponteiros-c
 date: 2026-06-11
 location: "Ribeirão Preto, Brazil"
 ---
