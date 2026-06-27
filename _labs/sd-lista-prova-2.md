@@ -2,7 +2,7 @@
 title: "Sistemas Distribuídos - Lista de Preparação para Prova 2"
 collection: labs
 type: "Lab"
-permalink: /labs/sd-lista-prova-2.md
+permalink: /labs/sd-lista-prova-2
 date: 2026-06-27
 location: "Ribeirão Preto, Brazil"
 ---
