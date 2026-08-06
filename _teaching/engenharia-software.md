@@ -2,7 +2,7 @@
 title: "Engenharia de Software"
 collection: teaching
 type: "Undergraduate Program"
-permalink: /teaching/2026-engenharia-software
+permalink: /teaching/engenharia-software
 venue: "Universidade de São Paulo, Ciência da Computação"
 date: 2026-08-03
 location: "Ribeirão Preto, Brazil"
