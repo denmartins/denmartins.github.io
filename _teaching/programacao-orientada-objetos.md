@@ -18,4 +18,4 @@ A disciplina é compartilhada com a [Profa. Thaína Tosta](https://dcm.ffclrp.us
 | Aula| Conteúdo  | Material Adicional | 
 |:---------|:-------|:--------|
 | 1 | [Apresentação da Disciplina](https://denmartins.github.io/files/lectures/poo/01-POO-Apresentacao.pdf){:target="_blank" rel="noopener"} | |
-| 2 | [Paradigmas de Programação e Introdução à Programação Orientada a Objetos](https://denmartins.github.io/files/lectures/poo/02-POO-Paradigmas.pdf){:target="_blank" rel="noopener"} | |
+| 2 | [Paradigmas de Programação e Introdução à Programação Orientada a Objetos](https://denmartins.github.io/files/lectures/poo/02-POO-Paradigmas.pdf){:target="_blank" rel="noopener"} | [Prática: Command Line](https://denmartins.github.io/labs/cmdline){:target="_blank" rel="noopener"} |
