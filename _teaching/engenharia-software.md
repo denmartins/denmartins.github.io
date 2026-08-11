@@ -24,3 +24,5 @@ A disciplina também aborda qualidade de software, gerenciamento de configuraç�
 |:---------|:-------|:--------|
 | 1 | [Apresentação da Disciplina](https://denmartins.github.io/files/lectures/engsoft/01-ES-Apresentacao.pdf){:target="_blank" rel="noopener"} | |
 | 2 | [Conceitos Fundamentais em Engenharia de Software](https://denmartins.github.io/files/lectures/engsoft/02-ES-Conceitos-Fundamentais.pdf){:target="_blank" rel="noopener"}  | |
+| 3 | [Ciclo de Vida e Modelos de Processo](https://denmartins.github.io/files/lectures/engsoft/03-ES-Modelos-de-Processos.pdf){:target="_blank" rel="noopener"}  | |
+
