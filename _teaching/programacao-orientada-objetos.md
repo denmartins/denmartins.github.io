@@ -20,4 +20,10 @@ A disciplina é compartilhada com a [Profa. Thaína Tosta](https://dcm.ffclrp.us
 | 1 | [Apresentação da Disciplina](https://denmartins.github.io/files/lectures/poo/01-POO-Apresentacao.pdf){:target="_blank" rel="noopener"} | |
 | 2 | [Paradigmas de Programação e Introdução à Programação Orientada a Objetos](https://denmartins.github.io/files/lectures/poo/02-POO-Paradigmas.pdf){:target="_blank" rel="noopener"} | [Prática: Command Line](https://denmartins.github.io/labs/cmdline){:target="_blank" rel="noopener"} |
 | 3 | [Java - Parte 1: Fundamentos da Linguagem](https://denmartins.github.io/files/lectures/poo/03-POO-Java-Fundamentos.pdf){:target="_blank" rel="noopener"} | |
-| 3 | [Java - Parte 2: Estruturas de Controle](https://denmartins.github.io/files/lectures/poo/04-POO-Java-Estruturas-De-Controle.pdf){:target="_blank" rel="noopener"} | |
+| 4 | [Java - Parte 2: Estruturas de Controle](https://denmartins.github.io/files/lectures/poo/04-POO-Java-Estruturas-De-Controle.pdf){:target="_blank" rel="noopener"} | |
+| 5 | Classes e Objetos | |
+| 6 | Instanciação e Manipulação de Objetos | |
+| 7 | Construtores e Sobrecarga, Encapsulamento | |
+| 8 | Funções, Campos e Variáveis | |
+| 9 | Relacionamentos entre classes: Agregação e Composição | |
+| 10 | Arrays e passagens de argumentos| |
