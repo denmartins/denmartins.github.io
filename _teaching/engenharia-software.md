@@ -25,4 +25,15 @@ A disciplina também aborda qualidade de software, gerenciamento de configuraç�
 | 1 | [Apresentação da Disciplina](https://denmartins.github.io/files/lectures/engsoft/01-ES-Apresentacao.pdf){:target="_blank" rel="noopener"} | |
 | 2 | [Conceitos Fundamentais em Engenharia de Software](https://denmartins.github.io/files/lectures/engsoft/02-ES-Conceitos-Fundamentais.pdf){:target="_blank" rel="noopener"}  | |
 | 3 | [Ciclo de Vida e Modelos de Processo](https://denmartins.github.io/files/lectures/engsoft/03-ES-Modelos-de-Processos.pdf){:target="_blank" rel="noopener"}  | |
-| 4 | [Modelo Ágil](){:target="_blank" rel="noopener"}  |[Prática: XP Planning  Pocker](https://denmartins.github.io/labs/xp-planning-poker){:target="_blank" rel="noopener"} |
+| 4 | [Metodologias Ágeis](https://denmartins.github.io/files/lectures/engsoft/04-ES-Metodologias-Ageis.pdf){:target="_blank" rel="noopener"}  |[Prática: XP](https://denmartins.github.io/labs/xp-planning-poker){:target="_blank" rel="noopener"} e [Prática: Scrum](https://denmartins.github.io/labs/scrum-first-sprint){:target="_blank" rel="noopener"} |
+| 5 | Gerência de Projetos | |
+| 6 | Métricas e Indicadores | |
+| 7 | Planejamento e   Estimativa | |
+| 8 | Gerenciamento de Risco | |
+| 9 | Plano  de Projeto | |
+| 10 | Fundamentos da Engenharia de Requisitos | |
+| 11 | Documentação e Modelagem (UML) | |
+| 12 | Arquitetura de Software | |
+| 13 | Padrões de Projeto | |
+| 14 | Qualidade e Teste de Software | |
+| 15 | Gerência de Configuração e DevOps | |

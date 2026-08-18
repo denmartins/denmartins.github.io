@@ -21,7 +21,6 @@ A universidade deseja desenvolver um sistema para permitir que estudantes:
 
 Vocês são a equipe responsável por **estimar Histórias de Usuário**.
 
----
 
 # Histórias de Usuário
 
@@ -57,7 +56,6 @@ Vocês são a equipe responsável por **estimar Histórias de Usuário**.
 
 > Como estudante, quero alterar o horário de um agendamento existente sem precisar cancelar e criar outro.
 
----
 
 # Story Points
 
@@ -73,7 +71,6 @@ Considerem:
 
 > **Story Points não representam diretamente horas de trabalho.**
 
----
 
 # Escala de Estimativas
 
@@ -89,7 +86,6 @@ Significa:
 
 Quanto maior o número, maior o tamanho percebido da história em relação às demais.
 
----
 
 # História de Referência
 
@@ -103,7 +99,6 @@ Para cada nova história, perguntem:
 
 > É menor, semelhante ou maior do que **Consultar professores**?
 
----
 
 # Como funciona o Planning Poker?
 
@@ -117,7 +112,6 @@ Para cada nova história, perguntem:
 6. Discutam as diferenças.
 7. Façam uma nova rodada.
 
----
 
 # Regra importante
 
@@ -133,7 +127,6 @@ Evita que a primeira opinião apresentada:
 - gere ancoragem;
 - reduza a diversidade das estimativas.
 
----
 
 # Quando as estimativas forem diferentes
 
@@ -164,7 +157,6 @@ Depois:
 - esclareçam dúvidas;
 - façam uma **nova votação**.
 
----
 
 # Primeira Rodada
 
@@ -183,7 +175,6 @@ Depois:
 
 ## Escolham seus Story Points!
 
----
 
 # Segunda Rodada
 
@@ -200,7 +191,6 @@ O objetivo não é apenas chegar a um número.
 
 > O objetivo é construir um **entendimento compartilhado** sobre a história.
 
----
 
 # Agora é com vocês!
 
@@ -213,7 +203,6 @@ Estimem as seguintes histórias:
 
 Utilizem o Planning Poker para cada uma.
 
----
 
 # Registro das Estimativas
 
@@ -227,7 +216,6 @@ Preencham:
 | Enviar lembrete | | | |
 | Gerar relatório | | | |
 
----
 
 # Mudança de Requisito!
 
@@ -239,13 +227,10 @@ O cliente traz uma nova informação:
 
 Para isso, será necessário utilizar um **serviço externo que a equipe nunca utilizou**.
 
----
 
-# Reestimem!
+## Reestimem!
 
-Retornem à história:
-
-## Enviar lembrete
+Retornem à história **Enviar lembrete**
 
 Perguntas:
 
@@ -255,9 +240,8 @@ Perguntas:
 - A incerteza técnica aumentou?
 - Precisamos de mais informações?
 
-### Façam uma nova rodada de Planning Poker.
+> Façam uma nova rodada de Planning Poker.
 
----
 
 # O que Story Points estão capturando?
 
@@ -275,9 +259,7 @@ Quanto ainda não sabemos?
 ### Risco
 O que pode dar errado?
 
----
-
-# Produto da Atividade
+# Entrega
 
 Cada grupo deverá entregar:
 
@@ -297,7 +279,6 @@ Escolham a história com **maior divergência de estimativas** e expliquem:
 
 > Por que os integrantes do grupo inicialmente discordaram?
 
----
 
 # Discussão Final
 
@@ -309,7 +290,6 @@ Escolham a história com **maior divergência de estimativas** e expliquem:
 4. Story Points podem ser convertidos diretamente em horas?
 5. Quando utilizar `?` é uma boa decisão?
 
----
 
 # O principal aprendizado
 
