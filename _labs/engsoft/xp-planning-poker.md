@@ -259,27 +259,6 @@ Quanto ainda não sabemos?
 ### Risco
 O que pode dar errado?
 
-# Entrega
-
-Cada grupo deverá entregar:
-
-### 1. Tabela de estimativas
-
-- primeira rodada;
-- divergências;
-- estimativa final.
-
-### 2. Reestimativa da história de lembrete
-
-Antes e depois da mudança para WhatsApp.
-
-### 3. Breve justificativa
-
-Escolham a história com **maior divergência de estimativas** e expliquem:
-
-> Por que os integrantes do grupo inicialmente discordaram?
-
-
 # Discussão Final
 
 ## Conversem no grupo
