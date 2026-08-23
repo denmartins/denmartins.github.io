@@ -21,7 +21,7 @@ A disciplina é compartilhada com a [Profa. Thaína Tosta](https://dcm.ffclrp.us
 | 2 | [Paradigmas de Programação e Introdução à Programação Orientada a Objetos](https://denmartins.github.io/files/lectures/poo/02-POO-Paradigmas.pdf){:target="_blank" rel="noopener"} | [Prática: Command Line](https://denmartins.github.io/labs/cmdline){:target="_blank" rel="noopener"} |
 | 3 | [Java - Parte 1: Fundamentos da Linguagem](https://denmartins.github.io/files/lectures/poo/03-POO-Java-Fundamentos.pdf){:target="_blank" rel="noopener"} | |
 | 4 | [Java - Parte 2: Estruturas de Controle](https://denmartins.github.io/files/lectures/poo/04-POO-Java-Estruturas-De-Controle.pdf){:target="_blank" rel="noopener"} | |
-| 5 | [Classes e Objetos](https://denmartins.github.io/files/lectures/poo/05-POO-Classes-Objetos.pdf){:target="_blank" rel="noopener"} | |
+| 5 | [Classes e Objetos](https://denmartins.github.io/files/lectures/poo/05-POO-Classes-Objetos.pdf){:target="_blank" rel="noopener"} | [Prática: Classes e Objetos (Conta Bancária)](https://denmartins.github.io/labs/poo-classes-objetos){:target="_blank" rel="noopener"}|
 | 6 | Manipulação de Objetos | |
 | 7 | Funções, Campos e Variáveis | |
 | 8 | Relacionamentos entre classes: Agregação e Composição | |
