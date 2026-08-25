@@ -20,7 +20,7 @@ Ao final da atividade, o grupo deverá demonstrar que compreende que os 4 Ps sã
 
 ## Caso-base: Projeto UniConnect
 
-A Universidade Alfa está desenvolvendo o **UniConnect**, um aplicativo para estudantes.
+A universidade está desenvolvendo o **UniConnect**, um aplicativo para estudantes.
 
 A primeira versão deverá permitir:
 
@@ -36,7 +36,7 @@ O projeto possui inicialmente:
 * 2 desenvolvedores backend;
 * 2 desenvolvedores mobile;
 * 1 profissional de UX;
-* 1 testador.
+* 1 especialista em testes.
 
 O prazo previsto para desenvolvimento da primeira versão é de **cinco meses**.
 
@@ -150,8 +150,6 @@ A resposta deve possuir aproximadamente **3 a 5 linhas**.
 
 
 ## Compartilhamento com a turma
-
-**Tempo sugerido: 5 a 10 minutos**
 
 Cada grupo terá aproximadamente **1 minuto** para apresentar:
 

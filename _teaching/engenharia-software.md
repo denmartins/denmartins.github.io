@@ -26,11 +26,11 @@ A disciplina também aborda qualidade de software, gerenciamento de configuraç�
 | 2 | [Conceitos Fundamentais em Engenharia de Software](https://denmartins.github.io/files/lectures/engsoft/02-ES-Conceitos-Fundamentais.pdf){:target="_blank" rel="noopener"}  | |
 | 3 | [Ciclo de Vida e Modelos de Processo](https://denmartins.github.io/files/lectures/engsoft/03-ES-Modelos-de-Processos.pdf){:target="_blank" rel="noopener"}  | |
 | 4 | [Metodologias Ágeis](https://denmartins.github.io/files/lectures/engsoft/04-ES-Metodologias-Ageis.pdf){:target="_blank" rel="noopener"}  |[Prática: XP](https://denmartins.github.io/labs/xp-planning-poker){:target="_blank" rel="noopener"} e [Prática: Scrum](https://denmartins.github.io/labs/scrum-first-sprint){:target="_blank" rel="noopener"} |
-| 5 | [Gerência de Projetos](https://denmartins.github.io/files/lectures/engsoft/){:target="_blank" rel="noopener"} | [Prática: 4Ps e Impacto de Mudanças](https://denmartins.github.io/labs/4Ps-impactos){:target="_blank" rel="noopener"}|
+| 5 | [Gestão de Projetos de Software](https://denmartins.github.io/files/lectures/engsoft/05-ES-Gestao-Projetos-Software.pdf){:target="_blank" rel="noopener"} | [Prática: 4Ps e Impacto de Mudanças](https://denmartins.github.io/labs/4Ps-impactos){:target="_blank" rel="noopener"}|
 | 6 | Métricas e Indicadores | |
-| 7 | Planejamento e   Estimativa | |
+| 7 | Planejamento e Estimativa | |
 | 8 | Gerenciamento de Risco | |
-| 9 | Plano  de Projeto | |
+| 9 | Plano de Projeto | |
 | 10 | Fundamentos da Engenharia de Requisitos | |
 | 11 | Documentação e Modelagem (UML) | |
 | 12 | Arquitetura de Software | |
