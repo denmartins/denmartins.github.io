@@ -22,8 +22,6 @@ A disciplina é compartilhada com a [Profa. Thaína Tosta](https://dcm.ffclrp.us
 | 3 | [Java - Parte 1: Fundamentos da Linguagem](https://denmartins.github.io/files/lectures/poo/03-POO-Java-Fundamentos.pdf){:target="_blank" rel="noopener"} | |
 | 4 | [Java - Parte 2: Estruturas de Controle](https://denmartins.github.io/files/lectures/poo/04-POO-Java-Estruturas-De-Controle.pdf){:target="_blank" rel="noopener"} | |
 | 5 | [Classes e Objetos](https://denmartins.github.io/files/lectures/poo/05-POO-Classes-Objetos.pdf){:target="_blank" rel="noopener"} | [Prática: Classes e Objetos (Conta Bancária)](https://denmartins.github.io/labs/poo-classes-objetos){:target="_blank" rel="noopener"}|
-| 6 | Manipulação de Objetos | |
-| 7 | Funções, Campos e Variáveis | |
+| 6 | [Manipulação de Objetos](https://denmartins.github.io/files/lectures/poo/06-POO-Manipulacao-Objetos.pdf){:target="_blank" rel="noopener"} | [Prática: Manipulação de Objetos](https://denmartins.github.io/labs/poo-manipulacao-objetos){:target="_blank" rel="noopener"} |
+| 7 | Arrays e passagens de argumentos| |
 | 8 | Relacionamentos entre classes: Agregação e Composição | |
-| 9 | Arrays e passagens de argumentos| |
-| 10 | Herança e Polimorfismo | |
