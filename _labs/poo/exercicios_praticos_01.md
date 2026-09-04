@@ -2,7 +2,7 @@
 title: "Programação Orientada a Objetos: Exercícios Práticos 1"
 collection: labs
 type: "Lab"
-permalink: /labs/poo_exercicios_praticos_01
+permalink: /labs/poo-exercicios-praticos-01
 date: 2026-09-04
 location: "Ribeirão Preto, Brazil"
 ---
