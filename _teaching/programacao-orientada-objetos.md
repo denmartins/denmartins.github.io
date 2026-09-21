@@ -24,4 +24,4 @@ A disciplina é compartilhada com a [Profa. Thaína Tosta](https://dcm.ffclrp.us
 | 5 | [Classes e Objetos](https://denmartins.github.io/files/lectures/poo/05-POO-Classes-Objetos.pdf){:target="_blank" rel="noopener"} | [Prática: Classes e Objetos (Conta Bancária)](https://denmartins.github.io/labs/poo-classes-objetos){:target="_blank" rel="noopener"}|
 | 6 | [Manipulação de Objetos](https://denmartins.github.io/files/lectures/poo/06-POO-Manipulacao-Objetos.pdf){:target="_blank" rel="noopener"} | [Prática: Manipulação de Objetos](https://denmartins.github.io/labs/poo-manipulacao-objetos){:target="_blank" rel="noopener"} |
 | 7 | [Arrays](https://denmartins.github.io/files/lectures/poo/07-POO-Arrays.pdf){:target="_blank" rel="noopener"}| |
-| 8 | Relacionamentos entre classes: Agregação e Composição | |
+| 8 | [Relacionamentos entre classes: Agregação e Composição](https://denmartins.github.io/files/lectures/poo/08-POO-Associacao-Composicao.pdf){:target="_blank" rel="noopener"} | |
