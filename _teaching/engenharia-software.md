@@ -29,7 +29,7 @@ A disciplina também aborda qualidade de software, gerenciamento de configuraç�
 | 5 | [Gestão de Projetos de Software](https://denmartins.github.io/files/lectures/engsoft/05-ES-Gestao-Projetos-Software.pdf){:target="_blank" rel="noopener"} | [Prática: 4Ps e Impacto de Mudanças](https://denmartins.github.io/labs/4Ps-impactos){:target="_blank" rel="noopener"}|
 | 6 | [Métricas e Indicadores](https://denmartins.github.io/files/lectures/engsoft/06-ES-Metricas-Indicadores.pdf){:target="_blank" rel="noopener"} | [Lista de Exercícios: Preparação Prova P1](https://denmartins.github.io/labs/es-lista-exercicios-p1){:target="_blank" rel="noopener"} |
 | 7 | [Planejamento e Estimativa](https://denmartins.github.io/files/lectures/engsoft/07-ES-Planejamento-Estimativas.pdf){:target="_blank" rel="noopener"}  | [Análise de Pontos de Função](https://denmartins.github.io/labs/apf){:target="_blank" rel="noopener"}|
-| 8 | Gerenciamento de Risco | |
+| 8 | [Planejamento e Risco](https://denmartins.github.io/files/lectures/engsoft/08-ES-Planejamento-Riscos.pdf){:target="_blank" rel="noopener"} | |
 | 9 | Plano de Projeto | |
 | 10 | Fundamentos da Engenharia de Requisitos | |
 | 11 | Documentação e Modelagem (UML) | |
