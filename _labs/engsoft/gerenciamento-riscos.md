@@ -379,7 +379,8 @@ O documento deve conter somente:
 Apresente os riscos identificados e avaliados:
 
 | ID | Risco | Categoria | P | Impacto | RE |
-|---|---|---|---:|---:|---:|
+|:---:|:---:|:---:|:---:|---:|---:|
+|||||||
 
 Destaque visualmente os **3 riscos prioritários**.
 
@@ -391,6 +392,7 @@ Para os três riscos prioritários:
 
 | Risco | Estratégia | Ação | Indicador / Gatilho |
 |---|---|---|---|
+| | | | |
 
 ---
 
