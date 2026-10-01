@@ -32,6 +32,8 @@ Durante a atividade, o professor atuará como **stakeholder** do sistema.
 
 Cada grupo deverá produzir **um único documento final**, com aproximadamente **2–3 páginas, além do diagrama de casos de uso**, contendo os artefatos solicitados nas missões.
 
+> Faça o download do modelo do documento de entrega [aqui](https://denmartins.github.io/files/lectures/engsoft/Template_Entregavel_Laboratorio_Engenharia_de_Requisitos.docx)
+
 A atividade será realizada em etapas.
 
 > **Não avancem para a próxima missão antes da orientação do professor.**
