@@ -30,7 +30,7 @@ A disciplina também aborda qualidade de software, gerenciamento de configuraç�
 | 6 | [Métricas e Indicadores](https://denmartins.github.io/files/lectures/engsoft/06-ES-Metricas-Indicadores.pdf){:target="_blank" rel="noopener"} | [Lista de Exercícios: Preparação Prova P1](https://denmartins.github.io/labs/es-lista-exercicios-p1){:target="_blank" rel="noopener"} |
 | 7 | [Planejamento e Estimativa](https://denmartins.github.io/files/lectures/engsoft/07-ES-Planejamento-Estimativas.pdf){:target="_blank" rel="noopener"}  | [Análise de Pontos de Função](https://denmartins.github.io/labs/apf){:target="_blank" rel="noopener"}|
 | 8 | [Planejamento e Risco](https://denmartins.github.io/files/lectures/engsoft/08-ES-Planejamento-Riscos.pdf){:target="_blank" rel="noopener"} | [Gerenciamento de Risco em Projeto de Software](https://denmartins.github.io/labs/gerenciamento-risco){:target="_blank" rel="noopener"}|
-| 9 | [Fundamentos da Engenharia de Requisitos](https://denmartins.github.io/files/lectures/engsoft/09-ES-Engenharia-de-Requisitos.pdf){:target="_blank" rel="noopener"} | [Prática: Engenharia de Requisitos](https://denmartins.github.io/labs/)|
+| 9 | [Fundamentos da Engenharia de Requisitos](https://denmartins.github.io/files/lectures/engsoft/09-ES-Engenharia-de-Requisitos.pdf){:target="_blank" rel="noopener"} | [Prática: Engenharia de Requisitos](https://denmartins.github.io/labs/engenharia-requisitos)|
 | 10 | Documentação e Modelagem (UML) | |
 | 11 | Arquitetura de Software | |
 | 12 | Padrões de Projeto | |
