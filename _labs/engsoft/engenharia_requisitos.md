@@ -7,8 +7,6 @@ date: 2026-09-30
 location: "Ribeirão Preto, Brazil"
 ---
 
-# Laboratório: Engenharia de Requisitos na Prática
-
 # 1. Cenário
 
 A universidade deseja desenvolver um **Sistema de Reserva de Recursos**.
@@ -40,11 +38,9 @@ A atividade será realizada em etapas.
 
 ---
 
-# 3. Missão 1 — Preparar a elicitação
+# 3. Missão 1:  Preparar a elicitação
 
-**Tempo sugerido: 5 minutos**
-
-Antes de escrever qualquer requisito, o grupo deverá elaborar **5 perguntas** que ajudem a descobrir como o sistema deve funcionar.
+Antes de escrever qualquer requisito, elaborem **5 perguntas** que ajudem a descobrir como o sistema deve funcionar.
 
 As perguntas podem explorar temas como:
 
@@ -76,7 +72,7 @@ ELICITAR ≠ ESPECIFICAR
 Incluam no documento:
 
 ```text
-## Perguntas de elicitação
+Perguntas de elicitação
 
 1.
 2.
@@ -87,9 +83,7 @@ Incluam no documento:
 
 ---
 
-# 4. Missão 2 — Entrevista coletiva
-
-**Tempo sugerido: 10 minutos**
+# 4. Missão 2:  Entrevista coletiva
 
 O professor assumirá o papel de stakeholder.
 
@@ -127,9 +121,7 @@ Se algo não estiver claro:
 
 ---
 
-# 5. Missão 3 — Especificação inicial
-
-**Tempo sugerido: 15 minutos**
+# 5. Missão 3:  Especificação inicial
 
 Agora transformem as informações obtidas durante a elicitação em requisitos.
 
@@ -207,8 +199,8 @@ Para cada um, escrevam **um critério de aceitação**.
 
 | Requisito | Critério de aceitação |
 |---|---|
-| RF__ | CA01 — ... |
-| RNF__ | CA02 — ... |
+| RF__ | CA01:  ... |
+| RNF__ | CA02:  ... |
 
 ## Pergunta orientadora
 
@@ -216,13 +208,11 @@ Para cada um, escrevam **um critério de aceitação**.
 
 ---
 
-# 8. Missão 4 — Modelagem com Casos de Uso
-
-**Tempo sugerido: 10 minutos**
+# 8. Missão 4:  Modelagem com Casos de Uso
 
 Agora representem parte dos requisitos funcionais por meio de casos de uso.
 
-## Parte A — Diagrama de Casos de Uso
+## Parte A:  Diagrama de Casos de Uso
 
 Produzam um diagrama contendo:
 
@@ -266,12 +256,12 @@ Tela de recursos
 
 ---
 
-## Parte B — Descrição textual
+## Parte B:  Descrição textual
 
 Escolham **um dos casos de uso** e produzam uma descrição curta.
 
 ```text
-UC01 — Nome do Caso de Uso
+UC01:  Nome do Caso de Uso
 
 Ator principal:
 ...
@@ -297,9 +287,7 @@ O objetivo não é produzir uma especificação completa do caso de uso, mas rep
 
 ---
 
-# 9. Missão 5 — Revisão por pares
-
-**Tempo sugerido: 12 minutos**
+# 9. Missão 5:  Revisão por pares
 
 Troquem o documento com outro grupo.
 
@@ -340,8 +328,6 @@ Usem, quando aplicável:
 
 # 10. Correção rápida
 
-**Tempo sugerido: 5 minutos**
-
 Recebam novamente o documento do grupo.
 
 Analise os dois problemas apontados e corrijam aqueles que considerarem válidos.
@@ -359,15 +345,13 @@ Se discordarem de uma observação, registrem brevemente a justificativa.
 
 ---
 
-# 11. Missão 6 — Change Request e análise de impacto
-
-**Tempo sugerido: 15 minutos**
+# 11. Missão 6:  Change Request (CR) e análise de impacto
 
 Durante um projeto, requisitos podem mudar.
 
 Agora o cliente apresenta uma nova necessidade:
 
-> 🚨 **CR-01 — A partir de agora, alunos também podem reservar salas, mas somente com antecedência máxima de 7 dias.**
+> **CR-01:  A partir de agora, alunos também podem reservar salas, mas somente com antecedência máxima de 7 dias.**
 
 ## Desafio
 
@@ -386,7 +370,7 @@ Identifiquem:
 | Artefato | Item afetado | Ação necessária |
 |---|---|---|
 | Requisito | RF__ | Alterar |
-| Requisito | — | Criar novo requisito |
+| Requisito |:  | Criar novo requisito |
 | Caso de uso | UC__ | Alterar |
 | Critério de aceitação | CA__ | Revisar |
 
@@ -405,8 +389,8 @@ Incluam pelo menos os requisitos relacionados ao **Change Request** e os requisi
 | Origem | Requisito | Caso de Uso | Critério de Aceitação |
 |---|---|---|---|
 | ... | RF01 | UC01 | CA01 |
-| ... | RF02 | UC01 | — |
-| ... | RNF01 | — | CA02 |
+| ... | RF02 | UC01 |:  |
+| ... | RNF01 |:  | CA02 |
 
 ## Pergunta orientadora
 
@@ -429,8 +413,6 @@ Em projetos reais, essa relação pode continuar até projeto, implementação e
 ---
 
 # 13. Consolidação do documento
-
-**Tempo sugerido: 8 minutos**
 
 Organizem o documento final.
 
@@ -513,48 +495,12 @@ Ele deverá conter:
 
 ---
 
-# 15. Debriefing
-
-**Tempo sugerido: 5 minutos**
-
-Ao final da atividade, estejam preparados para discutir:
-
-1. **Qual informação importante só apareceu porque alguém fez uma boa pergunta?**
-2. **Que problema outro grupo encontrou que vocês não haviam percebido?**
-3. **Quando o requisito mudou, quais outros artefatos precisaram ser revisitados?**
-
----
-
-# 16. Entregável final
+# 15. Entregável final
 
 Cada grupo deverá entregar **um único arquivo** com aproximadamente **2–3 páginas, além do diagrama de casos de uso**, contendo todos os itens solicitados.
 
 O documento não será avaliado pela quantidade de texto.
 
 O foco é a **coerência entre os artefatos** e a qualidade das decisões tomadas durante o processo.
-
----
-
-# 17. Síntese da atividade
-
-Ao final, o grupo terá percorrido um ciclo simplificado de Engenharia de Requisitos:
-
-```text
-PERGUNTAR
-    ↓
-DESCOBRIR
-    ↓
-ESPECIFICAR
-    ↓
-MODELAR
-    ↓
-REVISAR
-    ↓
-CORRIGIR
-    ↓
-LIDAR COM MUDANÇA
-    ↓
-RASTREAR IMPACTOS
-```
 
 > **Requisitos não são apenas texto: são uma ponte entre necessidades do mundo real e o software que será desenvolvido.**
