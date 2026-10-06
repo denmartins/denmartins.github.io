@@ -1,5 +1,5 @@
 ---
-title: "5954001 - Introdução à Computação I (Optativa para Química)"
+title: "Introdução à Computação I (Optativa para Química)"
 collection: teaching
 type: "Undergraduate Program"
 permalink: /teaching/introcompquimica
@@ -27,6 +27,7 @@ location: "Ribeirão Preto, Brazil"
 |:-------|:--------|:--------|:--------|
 Arrays e Matrizes | [PDF](https://denmartins.github.io/files/lectures/ic1/ic1_arrays_matrizes.pdf){:target="_blank" rel="noopener"} | [Lab Prático](https://denmartins.github.io/labs/linguagem-c/arrays-matrizes-C){:target="_blank" rel="noopener"} |
 Ponteiros e Alocação de Memória | [PDF](https://denmartins.github.io/files/lectures/ic1/ic1_ponteiros.pdf){:target="_blank" rel="noopener} | [Lab Prático](https://denmartins.github.io/labs/linguagem-c/ponteiros-c){:target="_blank" rel="noopener"} |
+Funções e Recursão | [PDF](https://denmartins.github.io/files/lectures/){:target="_blank" rel="noopener} | - |
 
 # Material adicional
 
