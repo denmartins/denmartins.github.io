@@ -9,18 +9,32 @@ location: "Ribeirão Preto, Brazil"
 
 ## Objetivo da atividade
 
+Neste laboratório, vocês irão transformar uma descrição textual de requisitos em dois modelos UML:
+- 1 Diagrama de Atividades
+- 1 Diagrama de Sequência
+
+O foco da atividade é:
+
+- 20% PlantUML: aprender a representar modelos por meio de uma linguagem textual simples;
+- 80% modelagem + avaliação crítica: interpretar requisitos, escolher abstrações, revisar sugestões do LLM e justificar decisões.
+
+
 Segundo **Pressman & Maxim**, modelos ajudam a representar aspectos relevantes do sistema durante a análise e o projeto. Em **Sommerville**, diferentes modelos representam diferentes perspectivas de um mesmo sistema. Nesta atividade, vocês trabalharão com duas perspectivas:
 
 - **fluxo do processo**;
 - **interações entre participantes ao longo do tempo**.
 
-# Parte 1: Tutorial rápido de PlantUML
+> Importante: não é necessário conhecer Orientação a Objetos. 
+> No Diagrama de Sequência, considerem os elementos apenas como participantes da interação, por exemplo: estudante, sistema, administrador ou serviço de notificação. Não será exigido conhecimento sobre classes, objetos ou herança.
+
+
+## Parte 1: Tutorial rápido de PlantUML
 
 Antes da atividade prática, vocês irão aprender somente o necessário para construir os dois diagramas pedidos.
 
 O objetivo **não é dominar PlantUML**, mas aprender uma forma simples de transformar uma representação textual em um diagrama.
 
-## 1.1. Estrutura básica
+### 1.1. Estrutura básica
 
 Todo código PlantUML começa e termina com:
 
@@ -36,11 +50,11 @@ O código pode ser escrito em um editor PlantUML ou em ferramentas compatíveis.
 
 
 
-## 1.2. Diagrama de Atividades
+### 1.2. Diagrama de Atividades
 
 Um Diagrama de Atividades representa o **fluxo de um processo**.
 
-### Exemplo
+#### Exemplo
 
 ```plantuml
 @startuml
@@ -60,10 +74,10 @@ stop
 @enduml
 ```
 
-### Elementos mínimos
+#### Elementos mínimos
 
 | PlantUML | Significado |
-|||
+|:--|:--|
 | `start` | início do fluxo |
 | `stop` | fim do fluxo |
 | `:Atividade;` | uma atividade |
@@ -71,17 +85,17 @@ stop
 | `else` | caminho alternativo |
 | `endif` | fim da decisão |
 
-### Pergunta que esse modelo responde
+#### Pergunta que esse modelo responde
 
 > **Qual é o fluxo do processo e quais caminhos diferentes podem ocorrer?**
 
 
 
-## 1.3. Diagrama de Sequência
+### 1.3. Diagrama de Sequência
 
 Um Diagrama de Sequência representa **quem interage com quem e em qual ordem**.
 
-### Exemplo
+#### Exemplo
 
 ```plantuml
 @startuml
@@ -98,7 +112,7 @@ Sistema --> Usuario : apresentar resultado
 @enduml
 ```
 
-### Elementos mínimos
+#### Elementos mínimos
 
 | PlantUML | Significado |
 |:--|:--|
@@ -107,13 +121,13 @@ Sistema --> Usuario : apresentar resultado
 | `A -> B : mensagem` | interação entre participantes |
 | `A --> B : mensagem` | resposta, quando relevante |
 
-### Pergunta que esse modelo responde
+#### Pergunta que esse modelo responde
 
 > Quem interage com quem, e em qual ordem, para realizar um cenário?
 
 
 
-## 1.4. O papel do PlantUML
+### 1.4. O papel do PlantUML
 
 [PlantUML](https://www.plantuml.com/){:target="_blank" rel="noopener}  transforma uma descrição textual do diagrama em uma representação gráfica.
 
@@ -132,9 +146,9 @@ Mas ele **não sabe sozinho** se:
 
 Essas decisões são de **modelagem** e continuam sendo responsabilidade do grupo.
 
-# Parte 2: Atividade prática
+## Parte 2: Atividade prática
 
-## Cenário: Sistema de Reserva de Salas
+### Cenário: Sistema de Reserva de Salas
 
 A universidade disponibiliza um sistema para que estudantes reservem salas para atividades acadêmicas.
 
@@ -152,7 +166,7 @@ Quando uma reserva é confirmada, o estudante recebe uma notificação de confir
 
 
 
-## Diagrama de Casos de Uso fornecido
+### Diagrama de Casos de Uso fornecido
 
 O diagrama abaixo é uma das entradas da atividade.
 
@@ -189,7 +203,7 @@ O laboratório deverá se concentrar principalmente no caso de uso:
 
 > **Solicitar reserva**
 
-# Missão 1: Diagrama de Atividades
+## Missão 1: Diagrama de Atividades
 
 Criem um **Diagrama de Atividades em PlantUML** para representar o processo de solicitação de uma reserva.
 
@@ -207,17 +221,17 @@ O modelo deve deixar claro, no mínimo:
 
 Não é necessário representar telas, botões ou detalhes de implementação.
 
-### Pergunta que o modelo deve responder
+#### Pergunta que o modelo deve responder
 
 > Qual é o fluxo seguido por uma solicitação de reserva e quais caminhos diferentes ela pode percorrer?
 
 
 
-## Uso do LLM na Missão 1
+### Uso do LLM na Missão 1
 
 O grupo deve usar um LLM como apoio.
 
-### Etapa A: interpretação antes da geração
+#### Etapa A: interpretação antes da geração
 
 Antes de pedir código PlantUML, peçam ao LLM para analisar o cenário.
 
@@ -239,7 +253,7 @@ Depois apresente sua proposta de estrutura para um Diagrama de Atividades.
 [COLE A DESCRIÇÃO DO SISTEMA]
 ```
 
-### Etapa B: geração em PlantUML
+#### Etapa B: geração em PlantUML
 
 Depois da análise:
 
@@ -254,7 +268,7 @@ Use apenas:
 Mantenha o diagrama simples e baseado somente nos requisitos fornecidos.
 ```
 
-### Etapa C: revisão
+#### Etapa C: revisão
 
 Antes de aceitar o modelo:
 
@@ -268,7 +282,7 @@ Para cada elemento do diagrama:
 
 
 
-# Missão 2: Diagrama de Sequência
+## Missão 2: Diagrama de Sequência
 
 Criem um **Diagrama de Sequência em PlantUML** para o cenário específico abaixo:
 
@@ -295,13 +309,13 @@ O diagrama deve mostrar:
 - a confirmação;
 - a notificação ao estudante.
 
-### Pergunta que o modelo deve responder
+#### Pergunta que o modelo deve responder
 
 > **Quem interage com quem, e em qual ordem, para realizar esse cenário?**
 
 
 
-## Uso do LLM na Missão 2
+### Uso do LLM na Missão 2
 
 Exemplo de prompt:
 
@@ -330,7 +344,7 @@ Depois gere código PlantUML simples.
 
 
 
-# Regra principal do laboratório
+## Regra principal do laboratório
 
 > **O LLM gera uma proposta. O grupo continua sendo responsável pela modelagem.**
 
@@ -347,7 +361,7 @@ Antes de aceitar qualquer sugestão, verifiquem:
 
 
 
-# Alteração manual obrigatória
+## Alteração manual obrigatória
 
 Depois de gerar pelo menos um dos diagramas com apoio do LLM, o grupo deverá fazer **pelo menos uma alteração manual no código PlantUML**.
 
@@ -363,16 +377,16 @@ A alteração pode ser, por exemplo:
 
 O grupo deverá registrar essa alteração no entregável.
 
-### Exemplo
+#### Exemplo
 
 > **Alteração realizada:** o LLM adicionou um participante chamado `BancoDeDados`. Removemos esse participante porque a descrição do sistema não especifica como os dados são armazenados.
 
 
 
-# Cronograma sugerido: 30 minutos
+## Cronograma sugerido: 30 minutos
 
 | Tempo | Atividade |
-|:||
+|:--|:--|
 | **0–5 min** | Tutorial rápido de PlantUML |
 | **5–8 min** | Ler o cenário e identificar fluxo, decisões e participantes |
 | **8–15 min** | Criar o Diagrama de Atividades com apoio do LLM |
@@ -384,13 +398,13 @@ O grupo deverá registrar essa alteração no entregável.
 
 
 
-# Entregável
+## Entregável
 
 Cada grupo deverá enviar **um único arquivo PDF** no Moodle.
 
 O PDF deve conter:
 
-## 1. Diagrama de Atividades
+### 1. Diagrama de Atividades
 
 Incluam:
 
@@ -399,7 +413,7 @@ Incluam:
 
 
 
-## 2. Diagrama de Sequência
+### 2. Diagrama de Sequência
 
 Incluam:
 
@@ -408,7 +422,7 @@ Incluam:
 
 
 
-## 3. Decisões de modelagem ou de projeto
+### 3. Decisões de modelagem ou de projeto
 
 Incluam **3 a 5 decisões** tomadas pelo grupo.
 
@@ -422,7 +436,7 @@ Exemplos:
 
 
 
-## 4. Uso do LLM
+### 4. Uso do LLM
 
 Informem:
 
@@ -435,7 +449,7 @@ Não é necessário incluir todo o histórico da conversa.
 
 
 
-## 5. Alteração manual
+### 5. Alteração manual
 
 Descrevam brevemente:
 
@@ -444,7 +458,7 @@ Descrevam brevemente:
 
 
 
-# Checklist antes da entrega
+## Checklist antes da entrega
 
 Antes de gerar o PDF, verifiquem:
 
@@ -461,7 +475,7 @@ Antes de gerar o PDF, verifiquem:
 
 
 
-# Observação final
+## Observação final
 
 Não existe necessariamente um único modelo correto.
 
