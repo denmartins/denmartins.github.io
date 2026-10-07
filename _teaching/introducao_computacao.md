@@ -8,6 +8,10 @@ date: 2026-10-06
 location: "Ribeirão Preto, Brazil"
 ---
 
+A  disciplina Introdução à Computação I  tem como objetivo introduzir os conceitos fundamentais da programação de computadores através de uma abordagem metodológica para a construção de soluções algorítmicas. O foco das aulas é a omplementação de algoritmos em uma linguagem de programação procedural (essencialmente C).
+
+ 
+
 # Conteúdo Programático
 
 - Conceitos introdutórios de hardware e software;

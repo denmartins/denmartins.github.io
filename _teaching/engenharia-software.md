@@ -31,7 +31,7 @@ A disciplina também aborda qualidade de software, gerenciamento de configuraç�
 | 7 | [Planejamento e Estimativa](https://denmartins.github.io/files/lectures/engsoft/07-ES-Planejamento-Estimativas.pdf){:target="_blank" rel="noopener"}  | [Análise de Pontos de Função](https://denmartins.github.io/labs/apf){:target="_blank" rel="noopener"}|
 | 8 | [Planejamento e Risco](https://denmartins.github.io/files/lectures/engsoft/08-ES-Planejamento-Riscos.pdf){:target="_blank" rel="noopener"} | [Gerenciamento de Risco em Projeto de Software](https://denmartins.github.io/labs/gerenciamento-risco){:target="_blank" rel="noopener"}|
 | 9 | [Fundamentos da Engenharia de Requisitos](https://denmartins.github.io/files/lectures/engsoft/09-ES-Engenharia-de-Requisitos.pdf){:target="_blank" rel="noopener"} | [Prática: Engenharia de Requisitos](https://denmartins.github.io/labs/engenharia-requisitos){:target="_blank" rel="noopener"}|
-| 10 |[Modelagem de Software (UML)](https://denmartins.github.io/files/lectures/engsoft/10-ES-Modelagem-Software.pdf){:target="_blank" rel="noopener"} | [Prática: Modelagem de Software com apoio de LLM](https://denmartins.github.io/labs/modelagem-software){:target="_blank" rel="noopener"}|
+| 10 |[Modelagem de Software (UML)](https://denmartins.github.io/files/lectures/engsoft/10-ES-Modelagem-Software.pdf){:target="_blank" rel="noopener"} | [Prática: Modelagem de Software com apoio de LLM](https://denmartins.github.io/labs/){:target="_blank" rel="noopener"}|
 | 11 | Arquitetura de Software | |
 | 12 | Padrões de Projeto | |
 | 13 | Qualidade e Teste de Software | |
