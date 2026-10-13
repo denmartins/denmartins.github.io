@@ -32,7 +32,7 @@ A  disciplina Introdução à Computação I  tem como objetivo introduzir os co
 |Arrays e Matrizes | [PDF](https://denmartins.github.io/files/lectures/ic1/ic1_arrays_matrizes.pdf){:target="_blank" rel="noopener"} | [Lab Prático](https://denmartins.github.io/labs/linguagem-c/arrays-matrizes-C){:target="_blank" rel="noopener"} |
 | Strings | [PDF](https://denmartins.github.io/files/lectures/ic1/ic1_strings.pdf){:target="_blank" rel="noopener"} | [Tutorial: Interação com o Usuário em Linguagem C](https://denmartins.github.io/labs/linguagem-c/interacao-usuario-C){:target="_blank" rel="noopener"} |
 | Ponteiros e Alocação de Memória | [PDF](https://denmartins.github.io/files/lectures/ic1/ic1_ponteiros.pdf){:target="_blank" rel="noopener} | [Lab Prático](https://denmartins.github.io/labs/linguagem-c/ponteiros-c){:target="_blank" rel="noopener"} |
-Funções e Recursão | [PDF](https://denmartins.github.io/files/lectures/){:target="_blank" rel="noopener} | - |
+| Funções e Recursão | [PDF](https://denmartins.github.io/files/lectures/){:target="_blank" rel="noopener} | - |
 
 # Material adicional
 
