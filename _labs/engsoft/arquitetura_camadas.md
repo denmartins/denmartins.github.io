@@ -512,15 +512,3 @@ Escolham uma modificação funcional e uma atividade de análise. Acrescentem os
 **Trade-off:** o contrato atual é simples, mas a cada reserva carrega todos os registros para verificar conflitos. Isso facilita o estudo e limita o desempenho com uma base grande. Projetem uma alternativa de consulta por sala e intervalo e discutam como mantê-la independente de SQL.
 
 **Escopo da interface web:** o servidor HTTP da biblioteca padrão foi escolhido para um laboratório local e evita dependências adicionais. O projeto não implementa autenticação, autorização, HTTPS, disponibilidade elevada ou validação de desempenho. Não coloquem dados pessoais reais. A arquitetura é um ponto de partida para discutir esses requisitos, não uma demonstração de atendimento a eles.
-
-## 9. Entrega e apresentação
-
-Entreguem os arquivos Python, uma imagem do diagrama e um relato curto com:
-
-- a responsabilidade de cada camada e o contrato do repositório;
-- evidência das quatro combinações e da persistência após reiniciar;
-- resultado dos testes e a modificação escolhida;
-- uma relação com o RNF de manutenibilidade;
-- um trade-off e a limitação de concorrência identificada.
-
-Na demonstração, alternem apresentação e armazenamento sem copiar a regra de conflito. Cada integrante deve conseguir explicar pelo menos uma interação entre componentes.
