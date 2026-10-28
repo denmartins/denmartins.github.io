@@ -34,6 +34,6 @@ A disciplina também aborda qualidade de software, gerenciamento de configuraç�
 | 10 |[Modelagem de Software (UML)](https://denmartins.github.io/files/lectures/engsoft/10-ES-Modelagem-Software.pdf){:target="_blank" rel="noopener"} | [Prática: Modelagem de Software com apoio de LLM](https://denmartins.github.io/labs/modelagem-software){:target="_blank" rel="noopener"}|
 | 11 | [Princípios de Projeto de Software](https://denmartins.github.io/files/lectures/engsoft/11-ES-Principios-de-Projeto-Software.pdf){:target="_blank" rel="noopener"}  | |
 | 12 | [Arquitetura de Software](https://denmartins.github.io/files/lectures/engsoft/12-ES-Arquitetura-Software.pdf){:target="_blank" rel="noopener"}  |  [Tutorial: Arquitetura em Camadas](https://denmartins.github.io/labs/arquitetura-camadas){:target="_blank" rel="noopener"} e [Tutorial: Arquitetura Hexagonal](https://denmartins.github.io/labs/arquitetura-hexagonal){:target="_blank" rel="noopener"} |
-| 13 | Qualidade e Teste de Software | |
-| 14 | Gerência de Configuração | |
-| 15 | DevOps | |
+| 13 | [Gerência de Qualidade de Software](https://denmartins.github.io/files/lectures/engsoft/13-ES-Qualidade-Software){:target="_blank" rel="noopener"}  | |
+| 14 | Teste de Software | |
+| 15 | Gerência de Configuração e DevOps | |
