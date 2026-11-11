@@ -2,7 +2,7 @@
 title: "Engenharia de Software: Controle de Versão e Colaboração com Git e Github"
 collection: labs
 type: "Lab"
-permalink: /labs/controle-versao-github
+permalink: /labs/controle-versao-colaboracao
 date: 2026-09-12
 location: "Ribeirão Preto, Brazil"
 ---
