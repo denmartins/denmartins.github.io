@@ -7,13 +7,13 @@ date: 2026-09-12
 location: "Ribeirão Preto, Brazil"
 ---
 
-**Entrega:** três links no e-disciplinas.
-
 ## Objetivo
 
 Construir um cadastro simulado de salas e praticar o ciclo de desenvolvimento: implementar, testar, versionar, revisar e integrar. Ao final, o grupo terá um repositório GitHub com código, quatro testes automatizados e um workflow de integração contínua (CI).
 
 Usaremos `main` como linha principal e apenas um branch de curta duração, `feature/cadastro`, integrado por um Pull Request (PR) revisado por outro integrante. Esse fluxo é uma aproximação didática de Trunk-Based Development.
+
+**Entrega:** três links no e-disciplinas (ver seção final).
 
 ## Preparação
 
