@@ -37,4 +37,4 @@ A disciplina também aborda qualidade de software, gerenciamento de configuraç�
 | 12 | [Arquitetura de Software](https://denmartins.github.io/files/lectures/engsoft/12-ES-Arquitetura-Software.pdf){:target="_blank" rel="noopener"}  |  [Tutorial: Arquitetura em Camadas](https://denmartins.github.io/labs/arquitetura-camadas){:target="_blank" rel="noopener"} e [Tutorial: Arquitetura Hexagonal](https://denmartins.github.io/labs/arquitetura-hexagonal){:target="_blank" rel="noopener"} |
 | 13 | [Gerência de Qualidade de Software](https://denmartins.github.io/files/lectures/engsoft/13-ES-Qualidade-Software.pdf){:target="_blank" rel="noopener"}  | |
 | 14 | [Teste de Software](https://denmartins.github.io/files/lectures/engsoft/14-ES-Teste-Software.pdf){:target="_blank" rel="noopener"} | [Atividade: Teste de Software em Python](https://denmartins.github.io/labs/testes-software){:target="_blank" rel="noopener"} |
-| 15 | Gerência de Configuração e DevOps | |
+| 15 | [Gerência de Configuração e DevOps](https://denmartins.github.io/files/lectures/engsoft/15-ES-Gestao-Configuracao-DevOps.pdf){:target="_blank" rel="noopener"} | |
