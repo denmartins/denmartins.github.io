@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="dcterms.date" content="2026-11-12" />
+  <title>Engenharia de Software: Controle de Versão e Colaboração com Git e Github</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Engenharia de Software: Controle de Versão e
+Colaboração com Git e Github</h1>
+<p class="date">2026-11-12</p>
+</header>
+<h2 id="objetivo">Objetivo</h2>
+<p>Construir um cadastro simulado de salas e praticar o ciclo de
+desenvolvimento: implementar, testar, versionar, revisar e integrar. Ao
+final, o grupo terá um repositório GitHub com código, quatro testes
+automatizados e um workflow de integração contínua (CI).</p>
+<p>Usaremos <code>main</code> como linha principal e apenas um branch de
+curta duração, <code>feature/cadastro</code>, integrado por um Pull
+Request (PR) revisado por outro integrante. Esse fluxo é uma aproximação
+didática de Trunk-Based Development.</p>
+<p><strong>Entrega:</strong> três links no e-disciplinas (ver seção
+final).</p>
+<h2 id="preparação">Preparação</h2>
+<p>Em um terminal, conferir:</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> <span class="at">--version</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> <span class="at">--version</span></span></code></pre></div>
+<p>Se necessário, configurar a identidade do Git com seus próprios
+dados:</p>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.name <span class="st">&quot;Seu Nome&quot;</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.email <span class="st">&quot;seu-email-ou-noreply-do-github&quot;</span></span></code></pre></div>
+<p>A identidade do commit não substitui a autenticação no GitHub. Não
+usar a senha da conta como senha do Git: deixar o acesso por HTTPS com
+gerenciador de credenciais ou por SSH preparado antes da aula.</p>
+<p>Para antecipar o download das dependências, criar um ambiente fora do
+futuro repositório e mantê-lo ativo no terminal da atividade:</p>
+<p><strong>Linux/macOS:</strong></p>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> <span class="at">-m</span> venv ../venv-lab-salas</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> ../venv-lab-salas/bin/activate</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> pip install pytest==8.3.5</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> pytest <span class="at">--version</span></span></code></pre></div>
+<p><strong>Windows/PowerShell:</strong></p>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>py <span class="op">-</span><span class="dv">3.12</span> <span class="op">-</span>m venv <span class="op">..</span>\venv-lab-salas</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="op">..</span>\venv-lab-salas\Scripts\Activate<span class="op">.</span><span class="fu">ps1</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>python <span class="op">-</span>m pip install pytest<span class="op">==</span><span class="dv">8.3</span><span class="op">.</span><span class="dv">5</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="dt">python</span> <span class="op">-</span>m pytest <span class="op">--</span>version</span></code></pre></div>
+<p>Se a ativação estiver indisponível, usar o executável do ambiente no
+lugar de <code>python</code>: <code>../venv-lab-salas/bin/python</code>
+no Linux/macOS ou <code>..\venv-lab-salas\Scripts\python.exe</code> no
+Windows, considerando o caminho relativo à pasta atual.</p>
+<h2 id="papéis-e-dinâmica">Papéis e dinâmica</h2>
+<p>Trabalhar em <strong>um único clone compartilhado</strong>, em um
+computador, alternando quem opera o teclado. Todos acompanham as
+decisões. Não é necessário que cada integrante faça um commit ou crie um
+branch.</p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Integrante</th>
+<th>Responsabilidade</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>Criar e clonar o repositório; implementar o cadastro; abrir o
+PR.</td>
+</tr>
+<tr>
+<td>B</td>
+<td>Criar e executar os testes; relacionar cada teste às regras.</td>
+</tr>
+<tr>
+<td>C</td>
+<td>Configurar o GitHub Actions e acompanhar os logs.</td>
+</tr>
+<tr>
+<td>D, se houver</td>
+<td>Revisar o PR e organizar os links da entrega.</td>
+</tr>
+</tbody>
+</table>
+<p>Em trio, C também revisa o PR. A revisão deve ocorrer <strong>pela
+conta de outro integrante</strong>, em seu próprio navegador; o autor
+não aprova o próprio PR. Enquanto A e B trabalham no clone, C pode ler o
+workflow e D pode preparar a revisão, sem editar cópias
+concorrentes.</p>
+<p>Copiar os blocos fornecidos e conferir os caminhos dos arquivos. Não
+é necessário digitá-los integralmente. Não há demonstração obrigatória
+de falha, criação de tags ou PRs adicionais.</p>
+<h2 id="escopo-do-cadastro">Escopo do cadastro</h2>
+<p>Aqui, “mock” é um cadastro simulado em memória (tecnicamente, um
+<em>fake</em>), sem banco de dados, servidor ou interface gráfica. Os
+dados desaparecem quando o programa termina.</p>
+<p>As três regras são:</p>
+<ol type="1">
+<li><strong>Cadastrar:</strong> receber um código e uma capacidade e
+devolver os dados da sala cadastrada.</li>
+<li><strong>Rejeitar duplicado:</strong> impedir um segundo cadastro com
+o mesmo código, preservando a sala original.</li>
+<li><strong>Exigir capacidade positiva:</strong> rejeitar capacidade
+zero ou negativa.</li>
+</ol>
+<p>Para manter o escopo curto, os exemplos pressupõem código textual não
+vazio e capacidade inteira. Os códigos são comparados exatamente como
+recebidos: <code>A101</code> e <code>a101</code> são diferentes.
+Normalização e validação de outros tipos ficam fora desta atividade.</p>
+<h2 id="etapa-1-preparar-o-repositório-5-minutos">Etapa 1: Preparar o
+repositório (5 minutos)</h2>
+<ol type="1">
+<li>A cria no GitHub o repositório público
+<code>lab-cadastro-salas</code>, marcando <strong>Add a README
+file</strong>. Conferir que a branch principal se chama
+<code>main</code>.</li>
+<li>Em <strong>Settings → Collaborators</strong>, convidar os colegas,
+que devem aceitar o convite.</li>
+<li>Clonar e entrar na pasta. Substituir <code>USUARIO</code> pelo
+proprietário do repositório:</li>
+</ol>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/USUARIO/lab-cadastro-salas.git</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> lab-cadastro-salas</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span></code></pre></div>
+<p>Manter o ambiente Python preparado antes da aula ativo. Os comandos
+seguintes são executados <strong>na raiz do repositório</strong>. Não
+criar os arquivos pela interface web do GitHub em paralelo ao clone.</p>
+<h2 id="etapa-2-implementar-o-cadastro-8-minutos">Etapa 2: Implementar o
+cadastro (8 minutos)</h2>
+<p>A cria <code>salas.py</code> com o código completo:</p>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">&quot;&quot;&quot;Cadastro simulado: cada instância guarda suas salas em memória.&quot;&quot;&quot;</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> CadastroSalas:</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>):</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>._salas <span class="op">=</span> {}</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> cadastrar(<span class="va">self</span>, codigo: <span class="bu">str</span>, capacidade: <span class="bu">int</span>) <span class="op">-&gt;</span> <span class="bu">dict</span>:</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> capacidade <span class="op">&lt;=</span> <span class="dv">0</span>:</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>            <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="st">&quot;Capacidade deve ser positiva&quot;</span>)</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> codigo <span class="kw">in</span> <span class="va">self</span>._salas:</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>            <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="st">&quot;Sala já cadastrada&quot;</span>)</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>        sala <span class="op">=</span> {<span class="st">&quot;codigo&quot;</span>: codigo, <span class="st">&quot;capacidade&quot;</span>: capacidade}</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>._salas[codigo] <span class="op">=</span> sala</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> sala.copy()</span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">&quot;__main__&quot;</span>:</span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>    cadastro <span class="op">=</span> CadastroSalas()</span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(cadastro.cadastrar(<span class="st">&quot;A101&quot;</span>, <span class="dv">30</span>))</span></code></pre></div>
+<p>Executar:</p>
+<div class="sourceCode" id="cb7"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> salas.py</span></code></pre></div>
+<p>Saída esperada:</p>
+<pre class="text"><code>{&#39;codigo&#39;: &#39;A101&#39;, &#39;capacidade&#39;: 30}</code></pre>
+<p>A explica ao grupo onde o código impede duplicidade e capacidade
+inválida. Os arquivos ainda estão sem commit; serão registrados juntos
+no branch da etapa 4.</p>
+<h2 id="etapa-3-criar-e-executar-os-testes-7-minutos">Etapa 3: Criar e
+executar os testes (7 minutos)</h2>
+<p>B cria a pasta <code>tests</code> pelo editor e o arquivo
+<code>tests/test_salas.py</code>:</p>
+<div class="sourceCode" id="cb9"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pytest</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> salas <span class="im">import</span> CadastroSalas</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> test_cadastra_sala():</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>    cadastro <span class="op">=</span> CadastroSalas()</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> cadastro.cadastrar(<span class="st">&quot;A101&quot;</span>, <span class="dv">30</span>) <span class="op">==</span> {</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;codigo&quot;</span>: <span class="st">&quot;A101&quot;</span>,</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;capacidade&quot;</span>: <span class="dv">30</span>,</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> test_rejeita_duplicado_e_preserva_original():</span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>    cadastro <span class="op">=</span> CadastroSalas()</span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>    cadastro.cadastrar(<span class="st">&quot;A101&quot;</span>, <span class="dv">30</span>)</span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">with</span> pytest.raises(<span class="pp">ValueError</span>, match<span class="op">=</span><span class="st">&quot;Sala já cadastrada&quot;</span>):</span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>        cadastro.cadastrar(<span class="st">&quot;A101&quot;</span>, <span class="dv">50</span>)</span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>    <span class="co"># A tentativa rejeitada não deve sobrescrever a capacidade original.</span></span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> cadastro._salas[<span class="st">&quot;A101&quot;</span>] <span class="op">==</span> {<span class="st">&quot;codigo&quot;</span>: <span class="st">&quot;A101&quot;</span>, <span class="st">&quot;capacidade&quot;</span>: <span class="dv">30</span>}</span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> test_rejeita_capacidade_zero():</span>
+<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a>    cadastro <span class="op">=</span> CadastroSalas()</span>
+<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a>    <span class="cf">with</span> pytest.raises(<span class="pp">ValueError</span>, match<span class="op">=</span><span class="st">&quot;Capacidade deve ser positiva&quot;</span>):</span>
+<span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a>        cadastro.cadastrar(<span class="st">&quot;A101&quot;</span>, <span class="dv">0</span>)</span>
+<span id="cb9-27"><a href="#cb9-27" aria-hidden="true" tabindex="-1"></a>    <span class="co"># A tentativa rejeitada não deve reservar o código.</span></span>
+<span id="cb9-28"><a href="#cb9-28" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> cadastro.cadastrar(<span class="st">&quot;A101&quot;</span>, <span class="dv">30</span>)[<span class="st">&quot;capacidade&quot;</span>] <span class="op">==</span> <span class="dv">30</span></span>
+<span id="cb9-29"><a href="#cb9-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-30"><a href="#cb9-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-31"><a href="#cb9-31" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> test_rejeita_capacidade_negativa():</span>
+<span id="cb9-32"><a href="#cb9-32" aria-hidden="true" tabindex="-1"></a>    cadastro <span class="op">=</span> CadastroSalas()</span>
+<span id="cb9-33"><a href="#cb9-33" aria-hidden="true" tabindex="-1"></a>    <span class="cf">with</span> pytest.raises(<span class="pp">ValueError</span>, match<span class="op">=</span><span class="st">&quot;Capacidade deve ser positiva&quot;</span>):</span>
+<span id="cb9-34"><a href="#cb9-34" aria-hidden="true" tabindex="-1"></a>        cadastro.cadastrar(<span class="st">&quot;A101&quot;</span>, <span class="op">-</span><span class="dv">1</span>)</span>
+<span id="cb9-35"><a href="#cb9-35" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> cadastro.cadastrar(<span class="st">&quot;A101&quot;</span>, <span class="dv">30</span>)[<span class="st">&quot;capacidade&quot;</span>] <span class="op">==</span> <span class="dv">30</span></span></code></pre></div>
+<p>O acesso a <code>_salas</code> no teste de duplicidade é uma
+simplificação didática para conferir a preservação dos dados sem
+acrescentar uma operação de consulta ao exercício.</p>
+<p>Criar também <code>requirements-dev.txt</code> na raiz:</p>
+<pre class="text"><code>pytest==8.3.5</code></pre>
+<p>E <code>.gitignore</code> na raiz:</p>
+<pre class="text"><code>.venv/
+venv/
+__pycache__/
+.pytest_cache/
+*.py[cod]
+.DS_Store</code></pre>
+<p>Instalar as dependências declaradas e executar:</p>
+<div class="sourceCode" id="cb12"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> pip install <span class="at">-r</span> requirements-dev.txt</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> pytest <span class="at">-q</span></span></code></pre></div>
+<p>Resultado esperado: <strong><code>4 passed</code></strong>. São
+quatro funções de teste, sem parametrização: um cadastro válido, uma
+duplicidade, capacidade zero e capacidade negativa. Cada teste cria um
+cadastro independente.</p>
+<h2 id="etapa-4-versionar-no-branch-da-funcionalidade-5-minutos">Etapa
+4: Versionar no branch da funcionalidade (5 minutos)</h2>
+<p>A cria o branch <strong>antes do primeiro commit dos arquivos
+novos</strong>. Como eles ainda não foram registrados, permanecem
+disponíveis no branch criado:</p>
+<div class="sourceCode" id="cb13"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout <span class="at">-b</span> feature/cadastro</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add salas.py tests/test_salas.py requirements-dev.txt .gitignore</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> diff <span class="at">--cached</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">&quot;feat: adiciona cadastro de salas e quatro testes&quot;</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push <span class="at">-u</span> origin feature/cadastro</span></code></pre></div>
+<p><code>checkout -b</code> cria e seleciona o branch; <code>add</code>
+prepara os arquivos; <code>commit</code> registra uma versão local;
+<code>push</code> publica essa versão. Conferir no GitHub que os
+arquivos estão em <code>feature/cadastro</code>. A <code>main</code>
+ainda contém apenas o README inicial.</p>
+<h2 id="etapa-5-configurar-a-ci-7-minutos">Etapa 5: Configurar a CI (7
+minutos)</h2>
+<p>C cria, pelo editor, as pastas <code>.github/workflows</code> e o
+arquivo <code>.github/workflows/ci.yml</code>. Manter espaços na
+indentação, sem tabulações:</p>
+<div class="sourceCode" id="cb14"><pre
+class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">name</span><span class="kw">:</span><span class="at"> CI Python</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="fu">on</span><span class="kw">:</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">push</span><span class="kw">:</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">pull_request</span><span class="kw">:</span></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="fu">permissions</span><span class="kw">:</span></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">contents</span><span class="kw">:</span><span class="at"> read</span></span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a><span class="fu">jobs</span><span class="kw">:</span></span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">testes</span><span class="kw">:</span></span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">runs-on</span><span class="kw">:</span><span class="at"> ubuntu-latest</span></span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">timeout-minutes</span><span class="kw">:</span><span class="at"> </span><span class="dv">5</span></span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">steps</span><span class="kw">:</span></span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Obter código</span></span>
+<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> actions/checkout@v6</span></span>
+<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Preparar Python</span></span>
+<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> actions/setup-python@v6</span></span>
+<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">with</span><span class="kw">:</span></span>
+<span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a><span class="at">          </span><span class="fu">python-version</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;3.12&quot;</span></span>
+<span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Instalar dependências</span></span>
+<span id="cb14-22"><a href="#cb14-22" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">run</span><span class="kw">:</span><span class="at"> python -m pip install -r requirements-dev.txt</span></span>
+<span id="cb14-23"><a href="#cb14-23" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Executar testes</span></span>
+<span id="cb14-24"><a href="#cb14-24" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">run</span><span class="kw">:</span><span class="at"> python -m pytest -q</span></span></code></pre></div>
+<p>Ainda no mesmo branch <code>feature/cadastro</code>, executar:</p>
+<div class="sourceCode" id="cb15"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> pytest <span class="at">-q</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .github/workflows/ci.yml</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> diff <span class="at">--cached</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">&quot;ci: executa pytest em push e pull request&quot;</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push origin feature/cadastro</span></code></pre></div>
+<ol type="1">
+<li>Abrir a aba <strong>Actions</strong> do repositório.</li>
+<li>Abrir a execução <strong>CI Python</strong> do último push em
+<code>feature/cadastro</code>.</li>
+<li>Abrir o job <strong>testes</strong> e o passo <strong>Executar
+testes</strong>. Conferir <code>4 passed</code> e conclusão verde.</li>
+</ol>
+<p>A CI instala as dependências em um ambiente novo e executa o mesmo
+comando usado localmente. O primeiro push da etapa 4 não tinha workflow;
+é esperado que ele não tenha execução de CI. O push desta etapa já
+inclui código, testes e workflow.</p>
+<p>Enquanto a CI executa, preparar o título e a descrição do PR da
+próxima etapa.</p>
+<h2 id="etapa-6-revisar-e-integrar-um-único-pr-5-minutos">Etapa 6:
+Revisar e integrar um único PR (5 minutos)</h2>
+<ol type="1">
+<li>A abre <strong>Pull requests → New pull request</strong> com
+<strong>base <code>main</code></strong> e <strong>compare
+<code>feature/cadastro</code></strong>.</li>
+<li>Usar o título
+<code>Adiciona cadastro de salas com testes e CI</code> e a
+descrição:</li>
+</ol>
+<pre class="text"><code>Implementa cadastro em memória, rejeição de duplicidade e capacidade positiva.
+Inclui quatro testes pytest e CI em push e pull_request.
+Validação local: python -m pytest -q → 4 passed.</code></pre>
+<ol start="3" type="1">
+<li>D (ou C no trio), autenticado com sua própria conta e com acesso de
+colaborador, abre <strong>Files changed</strong>. Confere as três
+regras, os quatro testes e o comando do workflow. Registra um comentário
+técnico, por exemplo: “Conferi que a tentativa de cadastro duplicado
+preserva a capacidade original”. Usa <strong>Review changes → Approve →
+Submit review</strong>, se estiver correto.</li>
+<li>Na página do PR, aguardar os checks do <strong>commit mais
+recente</strong> ficarem verdes. Abrir o check de CI e confirmar
+<code>4 passed</code>. A abertura do PR dispara outra execução por
+<code>pull_request</code>.</li>
+<li>Após revisão e CI verde, A usa <strong>Merge pull request → Confirm
+merge</strong>. Conferir o estado <strong>Merged</strong>. Se houver
+opção, usar <strong>Create a merge commit</strong>.</li>
+</ol>
+<p>Se a revisão encontrar um erro, corrigir no mesmo clone e no mesmo
+branch, executar os testes, fazer novo commit e push. O PR é atualizado
+automaticamente; aguardar a nova CI e nova conferência do revisor. Não
+criar outro PR para a correção.</p>
+<h2 id="etapa-7-sincronizar-e-entregar-3-minutos">Etapa 7: Sincronizar e
+entregar (3 minutos)</h2>
+<p>Após o merge, sincronizar o clone compartilhado:</p>
+<div class="sourceCode" id="cb17"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout main</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> pull <span class="at">--ff-only</span> origin main</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> pytest <span class="at">-q</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span></code></pre></div>
+<p>Resultado esperado: <code>4 passed</code> e árvore de trabalho limpa.
+Na aba <strong>Actions</strong>, conferir também a execução disparada
+por <strong>push na <code>main</code></strong> após o merge; ela deve
+terminar verde com quatro testes aprovados.</p>
+<p>Um integrante envia no campo de texto da atividade do Moodle:</p>
+<pre class="text"><code>Equipe: NOME (USUARIO_GITHUB), NOME (USUARIO_GITHUB), ...
+Repositório: https://github.com/USUARIO/lab-cadastro-salas
+PR revisado e integrado: https://github.com/USUARIO/lab-cadastro-salas/pull/NUMERO
+CI verde da main após o merge: https://github.com/USUARIO/lab-cadastro-salas/actions/runs/ID</code></pre>
+<p>Copiar os endereços reais do navegador. O link de CI deve abrir uma
+<strong>execução específica</strong>, associada ao merge entregue, e não
+apenas a aba Actions. <strong>Não entregar PDF, capturas de tela ou
+relatório adicional.</strong></p>
+<h2 id="conferência-da-entrega">Conferência da entrega</h2>
+<ul>
+<li>Repositório público com <code>salas.py</code>, quatro testes,
+dependências e workflow.</li>
+<li>Um PR de <code>feature/cadastro</code> para <code>main</code>, com
+revisão de outro integrante e estado <strong>Merged</strong>.</li>
+<li>Execução verde de CI na <code>main</code>, após o merge, com
+<strong>quatro testes aprovados</strong>.</li>
+</ul>
+<p>Estrutura final esperada:</p>
+<pre class="text"><code>lab-cadastro-salas/
+├── README.md
+├── .gitignore
+├── requirements-dev.txt
+├── salas.py
+├── tests/
+│   └── test_salas.py
+└── .github/
+    └── workflows/
+        └── ci.yml</code></pre>
+<p>O README é o arquivo criado inicialmente pelo GitHub. Não é
+necessário ampliá-lo nesta atividade.</p>
+<h2 id="notas-rápidas-sincronização-e-ci">Notas rápidas: sincronização e
+CI</h2>
+<ul>
+<li><strong>Um clone, um branch de trabalho:</strong> os responsáveis
+alternam o teclado. A revisão ocorre por outra conta no GitHub. Não é
+preciso sincronizar três implementações nem abrir PRs separados para
+código, testes e CI.</li>
+<li><strong>Outros clones:</strong> quem quiser conferir em seu próprio
+computador deve aguardar o merge, clonar o repositório ou executar
+<code>git checkout main</code> e
+<code>git pull --ff-only origin main</code> com a árvore de trabalho
+limpa. Preparar seu ambiente Python antes de testar. Não executar
+<code>pull</code> sobre alterações locais pendentes; usar
+<code>git status</code> e pedir orientação.</li>
+<li><strong>Duas execuções podem aparecer:</strong> com
+<code>push</code> e <code>pull_request</code> ativos, um push em branch
+com PR aberto pode disparar ambos os eventos. Conferir branch, evento e
+commit para não usar um resultado antigo como evidência.</li>
+<li><strong>CI vermelha:</strong> abrir o primeiro passo com falha.
+Conferir caminho de <code>requirements-dev.txt</code>, indentação do
+YAML, localização dos testes e erros nos logs. Corrigir no branch do PR
+e enviar novo commit. Não integrar com falha conhecida.</li>
+<li><strong>CI em fila:</strong> enquanto aguarda, realizar a revisão e
+organizar os links. A fila do GitHub pode ultrapassar o tempo planejado.
+Se houver indisponibilidade, avisar o professor e registrar a execução
+pendente; completar a evidência no prazo que ele definir. Teste local
+aprovado não significa CI verde.</li>
+<li><strong>Regra de merge:</strong> neste laboratório, o grupo aguarda
+revisão e CI verde. O GitHub só impede tecnicamente o merge por falha
+quando há regra de proteção com check obrigatório; essa configuração não
+faz parte dos 40 minutos.</li>
+<li><strong>Escopo da automação:</strong> o workflow executa integração
+contínua; não publica nem implanta o programa. A versão direta do pytest
+está fixada, mas o arquivo de dependências não é um lock completo de
+dependências transitivas.</li>
+</ul>
+<h2 id="referências-de-apoio">Referências de apoio</h2>
+<ul>
+<li><a href="https://github.com/actions/checkout/tree/releases/v6">Ação
+oficial actions/checkout</a></li>
+<li><a href="https://github.com/actions/setup-python/tree/v6">Ação
+oficial actions/setup-python</a></li>
+<li><a
+href="https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows">Eventos
+que iniciam workflows</a></li>
+</ul>
+</body>
+</html>
