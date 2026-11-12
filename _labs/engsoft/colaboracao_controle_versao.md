@@ -13,9 +13,7 @@ Construir um cadastro simulado de salas e praticar o ciclo de desenvolvimento: i
 
 Usaremos `main` como linha principal e apenas um branch de curta duração, `feature/cadastro`, integrado por um Pull Request (PR) revisado por outro integrante. Esse fluxo é uma aproximação didática de Trunk-Based Development.
 
-## Preparação antes da aula
-
-Cada integrante deve ter conta GitHub, Git, Python 3.12, editor e autenticação para `git push` já funcionando em sua máquina. O responsável pelo repositório deve poder convidar colaboradores e executar GitHub Actions. Resolver instalação e acesso antes de iniciar os 40 minutos.
+## Preparação
 
 Conferir no terminal:
 
@@ -24,7 +22,11 @@ git --version
 python3 --version
 ```
 
-No Windows, conferir Python com `py -3.12 --version`. Configurar a identidade de cada integrante com seus próprios dados:
+No Windows, conferir Python com `py -3.12 --version`. 
+
+> **Importante**: Cada integrante deve criar uma conta GitHub.
+
+Configurar a identidade de cada integrante com seus próprios dados:
 
 ```bash
 git config --global user.name "Seu Nome"
@@ -32,8 +34,6 @@ git config --global user.email "seu-email-ou-noreply-do-github"
 ```
 
 A identidade do commit não substitui a autenticação no GitHub. Deixar preparado o acesso por HTTPS com gerenciador de credenciais ou por SSH. Não usar a senha da conta como senha do Git.
-
-Para antecipar o download, cada integrante pode criar um ambiente de preparação e instalar `pytest==8.3.5` antes da aula. Na etapa 1, cada clone terá seu próprio ambiente `.venv`. Copiar os blocos fornecidos, em vez de digitá-los integralmente.
 
 ## Papéis e dinâmica de colaboração
 
@@ -52,24 +52,9 @@ O branch é compartilhado no GitHub, mas cada clone tem sua própria cópia loca
 
 **Plano B: computadores compartilhados.** Se não houver uma máquina para cada integrante, usar um clone por computador disponível e alternar quem opera o teclado. No mesmo clone, não recriar um branch que já existe: usar `git checkout feature/cadastro`. Antes do commit, conferir a identidade com `git config user.name` e `git config user.email`; se necessário, configurá-la apenas nesse repositório com `git config user.name "Seu Nome"` e `git config user.email "Seu Email"`. A revisão continua sendo enviada pela conta GitHub de outro integrante. Não é obrigatório um commit por pessoa nesse plano.
 
-## Cronograma de 40 minutos
-
-| Etapa | Atividade | Intervalo | Duração |
-|---|---|---|---|
-| 1 | Criar repositório, aceitar convites, clonar e preparar ambientes | 0–5 min | 5 min |
-| 2 | A implementa e publica cadastro e configuração inicial | 5–13 min | 8 min |
-| 3 | B sincroniza, cria e executa os testes | 13–20 min | 7 min |
-| 4 | B confere e publica os testes no branch compartilhado | 20–25 min | 5 min |
-| 5 | C sincroniza, publica o workflow e acompanha a CI | 25–32 min | 7 min |
-| 6 | A abre o PR; colega revisa; grupo confere CI e integra | 32–37 min | 5 min |
-| 7 | Todos sincronizam a main e organizam a entrega | 37–40 min | 3 min |
-| **Total** | | | **40 min** |
-
-A criação do branch e o primeiro commit ocorrem na etapa 2 para disponibilizar o cadastro a B. A etapa 4 consolida os testes e permite conferir a sincronização. Não há demonstração obrigatória de falha, tags ou PRs adicionais.
-
 ## Escopo do cadastro
 
-Aqui, “mock” é um cadastro simulado em memória (tecnicamente, um *fake*), sem banco de dados, servidor ou interface gráfica. Os dados desaparecem quando o programa termina.
+Aqui, "mock" é um cadastro simulado em memória (tecnicamente, um *fake*), sem banco de dados, servidor ou interface gráfica. Os dados desaparecem quando o programa termina.
 
 As três regras são:
 
