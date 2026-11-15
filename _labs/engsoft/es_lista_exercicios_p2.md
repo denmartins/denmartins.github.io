@@ -79,11 +79,11 @@ Avalie as afirmações:
 
 É correto o que se afirma em:
 
-A) I e III, apenas.  
-B) II, apenas.  
-C) I e II, apenas.  
-D) II e III, apenas.  
-E) I, II e III.
+- (A) I e III, apenas.  
+- (B) II, apenas.  
+- (C) I e II, apenas.  
+- (D) II e III, apenas.  
+- (E) I, II e III.
 
 **Justifique sua escolha.**
 
@@ -137,10 +137,10 @@ Cada um dos três profissionais poderá dedicar **20 horas semanais** ao increme
 
 **Tarefas:**
 
-- (A) Calcule o esforço total e o custo estimado.  
-- (B) Calcule a capacidade semanal da equipe e o limite inferior de duração obtido pela divisão esforço/capacidade, admitindo aproveitamento integral dessa capacidade.  
-- (C) Explique por que esse resultado não garante uma data de conclusão. Apresente duas premissas da estimativa e dois fatores que podem aumentar sua duração.  
-- (D) A integração passa a exigir 50 pessoa-horas. Recalcule o esforço e o custo e explique o que deve ser reavaliado no planejamento.
+- (a) Calcule o esforço total e o custo estimado.  
+- (b) Calcule a capacidade semanal da equipe e o limite inferior de duração obtido pela divisão esforço/capacidade, admitindo aproveitamento integral dessa capacidade.  
+- (c) Explique por que esse resultado não garante uma data de conclusão. Apresente duas premissas da estimativa e dois fatores que podem aumentar sua duração.  
+- (d) A integração passa a exigir 50 pessoa-horas. Recalcule o esforço e o custo e explique o que deve ser reavaliado no planejamento.
 
 ### Questão 7
 
